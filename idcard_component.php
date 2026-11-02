@@ -1,4 +1,5 @@
-<!-- idcard_component.php - Komponen ID Card Mahasiswa (Fatkhul Umam - NPM 24430121) -->
+<?php require_once __DIR__ . '/logo_karomah.php'; ?>
+<!-- idcard_component.php - Komponen ID Card Mahasiswa Resmi Pondok Muhammadiyah Akrom (KAROMAH) -->
 <div class="idcard-wrapper">
     <div class="idcard">
         <!-- Lubang Gantungan ID Card (Lanyard Slot) -->
@@ -7,29 +8,20 @@
         <!-- Header ID Card -->
         <div class="idcard-header">
             <div class="idcard-org">
-                <div class="idcard-crest">
-                    <!-- Emblem Gold SVG -->
-                    <svg width="42" height="42" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="32" cy="32" r="28" stroke="#eab308" stroke-width="2.5"/>
-                        <ellipse cx="32" cy="32" rx="14" ry="28" stroke="#eab308" stroke-width="1.8"/>
-                        <line x1="4" y1="32" x2="60" y2="32" stroke="#eab308" stroke-width="1.8"/>
-                        <line x1="8" y1="20" x2="56" y2="20" stroke="#eab308" stroke-width="1.5"/>
-                        <line x1="8" y1="44" x2="56" y2="44" stroke="#eab308" stroke-width="1.5"/>
-                        <path d="M32 10L37 22H27L32 10Z" fill="#fef08a"/>
-                        <circle cx="32" cy="32" r="6" fill="#eab308"/>
-                    </svg>
+                <div class="idcard-crest" style="background:none; border:none; box-shadow:none; width:auto; height:auto;">
+                    <?php echo renderLogoKaromah(68); ?>
                 </div>
                 <div class="idcard-org-text">
                     <h2>PONDOK MUHAMMADIYAH AKROM</h2>
-                    <h4>FAKULTAS ILMU KOMPUTER &bull; KOTA METRO</h4>
-                    <p>Investing in Knowledge, Building the Future of Big Data</p>
+                    <h4>KAROMAH &bull; FAKULTAS ILMU KOMPUTER KOTA METRO</h4>
+                    <p>Keluarga Besar Pondok Muhammadiyah Akrom (KAROMAH) &ndash; Building the Future</p>
                 </div>
             </div>
 
             <div class="idcard-verified">
                 <div class="idcard-verified-icon">&#128274;</div>
                 <div class="idcard-verified-text">
-                    VERIFIED<br>&amp; SECURED
+                    KAROMAH<br>VERIFIED ID
                 </div>
             </div>
         </div>
@@ -88,16 +80,21 @@
 
             <!-- Kanan: Informasi Mahasiswa, Signature, Issue Date, QR -->
             <div class="idcard-right">
+                <!-- Watermark Logo Karomah Halus di Latar Kanan -->
+                <div style="position:absolute; right:18px; top:18px; opacity:0.08; pointer-events:none;">
+                    <?php echo renderLogoKaromah(150); ?>
+                </div>
+
                 <div>
                     <div class="idcard-name">FATKHUL UMAM</div>
-                    <div class="idcard-role">MAHASISWA &ndash; FAKULTAS ILMU KOMPUTER</div>
+                    <div class="idcard-role">MAHASISWA &ndash; PONDOK MUHAMMADIYAH AKROM (KAROMAH)</div>
 
                     <div class="idcard-details">
                         <div class="idcard-detail-item">
                             <div class="idcard-detail-icon">&#128100;</div>
                             <div class="idcard-detail-text">
-                                <strong>DEPARTMENT / FAKULTAS</strong>
-                                <span>Fakultas Ilmu Komputer &bull; Pondok Muhammadiyah Akrom Kota Metro</span>
+                                <strong>INSTITUTION &amp; FAKULTAS</strong>
+                                <span>Fakultas Ilmu Komputer &bull; Pondok Muhammadiyah Akrom (Karomah) Kota Metro</span>
                             </div>
                         </div>
 
@@ -135,7 +132,6 @@
 
                     <div class="idcard-qr-box">
                         <div class="idcard-qr-frame">
-                            <!-- Crisp QR Code SVG -->
                             <svg width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect x="2" y="2" width="18" height="18" stroke="#064e3b" stroke-width="3"/>
                                 <rect x="7" y="7" width="8" height="8" fill="#064e3b"/>
@@ -171,7 +167,7 @@
 
         <!-- Footer Strip ID Card -->
         <div class="idcard-footer">
-            INTEGRITY &nbsp;&bull;&nbsp; TRANSPARENCY &nbsp;&bull;&nbsp; SECURITY &nbsp;&bull;&nbsp; TRUST
+            KAROMAH &nbsp;&bull;&nbsp; INTEGRITY &nbsp;&bull;&nbsp; EXCELLENCE &nbsp;&bull;&nbsp; TRUST
         </div>
     </div>
 </div>

@@ -1,5 +1,6 @@
 <?php
-// layout_header.php - Navbar Atas (WellCare Style: Background Putih, Garis Tepi Emas, Gradasi Hijau)
+// layout_header.php - Navbar Atas dengan Logo Resmi Pondok Muhammadiyah Akrom (KAROMAH)
+require_once __DIR__ . '/logo_karomah.php';
 if (!isset($active_menu)) {
     $active_menu = 'home';
 }
@@ -12,7 +13,7 @@ if (!isset($active_menu)) {
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <title><?php echo isset($page_title) ? $page_title : 'Pondok Muhammadiyah Akrom Kota Metro - Big Data'; ?></title>
+    <title><?php echo isset($page_title) ? $page_title : 'Pondok Muhammadiyah Akrom (KAROMAH) Kota Metro - Big Data'; ?></title>
     <style>
         <?php 
         $css_file = __DIR__ . '/style.css';
@@ -25,14 +26,14 @@ if (!isset($active_menu)) {
 </head>
 <body>
 
-<!-- 1. TOP NAVBAR -->
+<!-- 1. TOP NAVBAR DENGAN LOGO KAROMAH -->
 <header class="navbar">
     <div class="container navbar-inner">
         <a href="index.php" class="brand">
-            <div class="brand-icon">&#127891;</div>
+            <div style="flex-shrink:0;"><?php echo renderLogoKaromah(46); ?></div>
             <div class="brand-text">
                 <h2>Pondok Muhammadiyah Akrom</h2>
-                <span>Aplikasi Pendataan MHS &bull; Kota Metro</span>
+                <span>KAROMAH &bull; Aplikasi Pendataan MHS Kota Metro</span>
             </div>
         </a>
 
@@ -40,7 +41,7 @@ if (!isset($active_menu)) {
             <a href="index.php" class="nav-link <?php echo ($active_menu == 'home') ? 'active' : ''; ?>">Home</a>
             <a href="viewmhsaja.php" class="nav-link <?php echo ($active_menu == 'datamhs') ? 'active' : ''; ?>">Data Mahasiswa</a>
             <a href="viewfilterwanita.php" class="nav-link <?php echo ($active_menu == 'wanita') ? 'active' : ''; ?>">Filter Wanita</a>
-            <a href="me.php" class="nav-link <?php echo ($active_menu == 'about') ? 'active' : ''; ?>">About Pembuat</a>
+            <a href="me.php" class="nav-link <?php echo ($active_menu == 'about') ? 'active' : ''; ?>">ID Card Pembuat</a>
             <a href="viewmhsall.php" class="nav-link <?php echo ($active_menu == 'all') ? 'active' : ''; ?>">Tabel Lengkap</a>
         </nav>
 

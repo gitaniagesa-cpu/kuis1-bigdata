@@ -1,8 +1,9 @@
 <?php
-// index.php - 1 Link All-in-One: Landing Page, Data Mhs, Filter Wanita & ID Card (Pondok Muhammadiyah Akrom)
+// index.php - 1 Link All-in-One: Landing Page, Data Mhs, Filter Wanita & ID Card (Pondok Muhammadiyah Akrom - KAROMAH)
 require_once 'koneksi.php';
+require_once __DIR__ . '/logo_karomah.php';
 
-$page_title = "Aplikasi Pendataan MHS - Pondok Muhammadiyah Akrom Kota Metro";
+$page_title = "Aplikasi Pendataan MHS - Pondok Muhammadiyah Akrom (KAROMAH) Kota Metro";
 $active_menu = "home";
 
 // Ambil seluruh data mahasiswa dari MySQL
@@ -49,10 +50,10 @@ if ($result && mysqli_num_rows($result) > 0) {
 <header class="navbar">
     <div class="container navbar-inner">
         <a href="#home" onclick="switchPage('home'); return false;" class="brand">
-            <div class="brand-icon">&#127891;</div>
+            <div style="flex-shrink:0;"><?php echo renderLogoKaromah(46); ?></div>
             <div class="brand-text">
                 <h2>Pondok Muhammadiyah Akrom</h2>
-                <span>Aplikasi Pendataan MHS &bull; Kota Metro</span>
+                <span>KAROMAH &bull; Aplikasi Pendataan MHS Kota Metro</span>
             </div>
         </a>
 
@@ -401,9 +402,9 @@ if ($result && mysqli_num_rows($result) > 0) {
 <div class="container">
     <div class="bottom-banner">
         <div class="banner-left">
-            <div class="banner-icon">&#128187;</div>
+            <div style="flex-shrink:0;"><?php echo renderLogoKaromah(58); ?></div>
             <div>
-                <h3>Pondok Muhammadiyah Akrom Kota Metro</h3>
+                <h3>Pondok Muhammadiyah Akrom (KAROMAH) Kota Metro</h3>
                 <p>Aplikasi Pendataan Mahasiswa &bull; Dikembangkan untuk memenuhi tugas Kuis 1 Praktikum Big Data oleh Fatkhul Umam (NPM: 24430121), Fakultas Ilmu Komputer.</p>
             </div>
         </div>
