@@ -2,7 +2,7 @@
 // viewfilterwanita.php - Menampilkan id, nama_mhs, jenis_kelamin (wanita) (Soal Kuis No. 5 & 6)
 require_once 'koneksi.php';
 
-$page_title = "Filter Data Mahasiswa Wanita - Pondok Muhammadiyah Akrom Kota Metro";
+$page_title = "Filter Data Mahasiswa Wanita - Pondok Santap Enak Kota Metro";
 $active_menu = "wanita";
 
 $query = "SELECT id, nama_mhs, jenis_kelamin 
@@ -18,7 +18,7 @@ include 'layout_header.php';
     <div class="container">
         <div class="data-section-box">
             <div class="content-header-bar">
-                DAFTAR DATA MAHASISWA "WANITA" &bull; PONDOK MUHAMMADIYAH AKROM KOTA METRO
+                DAFTAR DATA MAHASISWA "WANITA" &bull; PONDOK SANTAP ENAK KOTA METRO
             </div>
 
             <div class="info-box">

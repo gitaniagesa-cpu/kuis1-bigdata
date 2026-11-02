@@ -20,7 +20,7 @@
             <!-- 2. Header Teks di Atas Foto -->
             <div class="holo-id-label">STUDENT ID &bull; NPM 24430121</div>
             <h2 class="holo-main-title">Fatkhul Umam</h2>
-            <div class="holo-sub-role">Fakultas Ilmu Komputer &bull; Karomah</div>
+            <div class="holo-sub-role">Fakultas Ilmu Komputer &bull; Pondok Santap Enak</div>
 
             <!-- 3. Bingkai Foto Tengah Bersinar (Utuh Tanpa Crop & Proporsional) -->
             <div class="holo-avatar-ring">
@@ -34,7 +34,7 @@
             </div>
 
             <p class="holo-bio-text">
-                Pondok Muhammadiyah Akrom (KAROMAH) Kota Metro<br>
+                Pondok Santap Enak Kota Metro<br>
                 Praktikum Big Data &bull; Dosen: Arif Hidayat, S.T., M.Kom<br>
                 <span class="holo-link-text">localhost/bigdata/me.php</span>
             </p>

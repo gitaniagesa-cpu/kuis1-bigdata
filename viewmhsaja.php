@@ -2,7 +2,7 @@
 // viewmhsaja.php - Menampilkan id, npm, nama_mhs, usia (Soal Kuis No. 3 & 4)
 require_once 'koneksi.php';
 
-$page_title = "Data Mahasiswa & Usia - Pondok Muhammadiyah Akrom Kota Metro";
+$page_title = "Data Mahasiswa & Usia - Pondok Santap Enak Kota Metro";
 $active_menu = "datamhs";
 
 $query = "SELECT id, npm, nama_mhs, tgl_lahir, 
@@ -17,7 +17,7 @@ include 'layout_header.php';
     <div class="container">
         <div class="data-section-box">
             <div class="content-header-bar">
-                DAFTAR DATA MHS &bull; PONDOK MUHAMMADIYAH AKROM KOTA METRO
+                DAFTAR DATA MHS &bull; PONDOK SANTAP ENAK KOTA METRO
             </div>
 
             <div class="info-box">

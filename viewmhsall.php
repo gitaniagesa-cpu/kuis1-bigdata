@@ -2,7 +2,7 @@
 // viewmhsall.php - Menampilkan Daftar Data Mahasiswa (Sesuai Rancangan No. 8)
 require_once 'koneksi.php';
 
-$page_title = "Daftar Data Mahasiswa - Pondok Muhammadiyah Akrom Kota Metro";
+$page_title = "Daftar Data Mahasiswa - Pondok Santap Enak Kota Metro";
 $active_menu = "all";
 
 $query = "SELECT id, npm, nama_mhs, tgl_lahir, 
@@ -17,11 +17,11 @@ include 'layout_header.php';
     <div class="container">
         <div class="data-section-box">
             <div class="content-header-bar">
-                DAFTAR DATA MHS &bull; PONDOK MUHAMMADIYAH AKROM KOTA METRO
+                DAFTAR DATA MHS &bull; PONDOK SANTAP ENAK KOTA METRO
             </div>
 
             <div class="info-box">
-                <span>&#128202; <strong>Rancangan No. 8 (viewmhsall.php):</strong> Menampilkan seluruh arsip data mahasiswa Pondok Muhammadiyah Akrom Kota Metro beserta nomor pokok dan usia.</span>
+                <span>&#128202; <strong>Rancangan No. 8 (viewmhsall.php):</strong> Menampilkan seluruh arsip data mahasiswa Pondok Santap Enak Kota Metro beserta nomor pokok dan usia.</span>
             </div>
 
             <div class="toolbar-row">

@@ -1,9 +1,9 @@
 <?php
-// index.php - 1 Link All-in-One: Landing Page, Data Mhs, Filter Wanita & ID Card (Pondok Muhammadiyah Akrom - KAROMAH)
+// index.php - 1 Link All-in-One: Landing Page, Data Mhs, Filter Wanita & ID Card (Pondok Santap Enak - KAROMAH)
 require_once 'koneksi.php';
 require_once __DIR__ . '/logo_karomah.php';
 
-$page_title = "Aplikasi Pendataan MHS - Pondok Muhammadiyah Akrom (KAROMAH) Kota Metro";
+$page_title = "Aplikasi Pendataan MHS - Pondok Santap Enak Kota Metro";
 $active_menu = "home";
 
 // Ambil seluruh data mahasiswa dari MySQL
@@ -52,8 +52,8 @@ if ($result && mysqli_num_rows($result) > 0) {
         <a href="#home" onclick="switchPage('home'); return false;" class="brand">
             <div style="flex-shrink:0;"><?php echo renderLogoKaromah(46); ?></div>
             <div class="brand-text">
-                <h2>Pondok Muhammadiyah Akrom</h2>
-                <span>KAROMAH &bull; Aplikasi Pendataan MHS Kota Metro</span>
+                <h2>Pondok Santap Enak</h2>
+                <span>PONDOK SANTAP ENAK &bull; Aplikasi Pendataan MHS Kota Metro</span>
             </div>
         </a>
 
@@ -81,10 +81,10 @@ if ($result && mysqli_num_rows($result) > 0) {
                 <span class="hero-tag">&#10024; Kuis 1 Praktikum Big Data &bull; Halaman 19</span>
                 <h1 class="hero-title">
                     Aplikasi Pendataan MHS
-                    <span>Pondok Muhammadiyah Akrom Kota Metro</span>
+                    <span>Pondok Santap Enak Kota Metro</span>
                 </h1>
                 <p class="hero-desc">
-                    Sistem informasi terpadu untuk mengelola basis data mahasiswa Pondok Muhammadiyah Akrom Kota Metro, menghitung usia secara otomatis dari tanggal lahir, serta memfilter data mahasiswi secara presisi dalam 1 link praktis.
+                    Sistem informasi terpadu untuk mengelola basis data mahasiswa Pondok Santap Enak Kota Metro, menghitung usia secara otomatis dari tanggal lahir, serta memfilter data mahasiswi secara presisi dalam 1 link praktis.
                 </p>
                 <div class="hero-buttons">
                     <button type="button" onclick="switchPage('datamhs')" class="btn-pill-primary" style="cursor:pointer;">
@@ -142,7 +142,7 @@ if ($result && mysqli_num_rows($result) > 0) {
                 <div class="feature-VisualCard">
                     <div>
                         <span class="hero-tag" style="background:#fff; margin-bottom:12px;">Rancangan No. 8</span>
-                        <h3>Pondok Muhammadiyah Akrom Kota Metro</h3>
+                        <h3>Pondok Santap Enak Kota Metro</h3>
                         <p>Semua fitur soal Kuis 1 (No. 1 s/d No. 8) terintegrasi dalam 1 halaman praktis.</p>
                     </div>
                     <a href="#tabel-utama" class="btn-pill-outline" style="width:fit-content;">
@@ -189,7 +189,7 @@ if ($result && mysqli_num_rows($result) > 0) {
             <div class="students-layout">
                 <div class="section-intro">
                     <span class="category-tag" style="display:inline-block; margin-bottom:10px;">Record Database</span>
-                    <h3>Daftar <span>Mahasiswa</span> Pondok Akrom</h3>
+                    <h3>Daftar <span>Mahasiswa</span> Pondok Santap Enak</h3>
                     <p>Data diambil secara langsung dari tabel <code>mahasiswa4</code> pada server MySQL.</p>
                     <button type="button" onclick="switchPage('datamhs')" class="btn-pill-primary" style="cursor:pointer;">Lihat Detail Usia &rarr;</button>
                 </div>
@@ -218,7 +218,7 @@ if ($result && mysqli_num_rows($result) > 0) {
         <div class="container">
             <div class="data-section-box">
                 <div class="content-header-bar">
-                    APLIKASI PENDATAAN MHS PONDOK MUHAMMADIYAH AKROM KOTA METRO
+                    APLIKASI PENDATAAN MHS PONDOK SANTAP ENAK KOTA METRO
                 </div>
 
                 <div class="info-box">
@@ -260,7 +260,7 @@ if ($result && mysqli_num_rows($result) > 0) {
                 </div>
 
                 <div class="text-right-small">
-                    * Menampilkan total <?php echo count($students); ?> record mahasiswa Pondok Muhammadiyah Akrom Kota Metro
+                    * Menampilkan total <?php echo count($students); ?> record mahasiswa Pondok Santap Enak Kota Metro
                 </div>
             </div>
         </div>
@@ -285,7 +285,7 @@ if ($result && mysqli_num_rows($result) > 0) {
         <div class="container">
             <div class="data-section-box">
                 <div class="content-header-bar">
-                    DAFTAR DATA MHS &bull; PONDOK MUHAMMADIYAH AKROM KOTA METRO
+                    DAFTAR DATA MHS &bull; PONDOK SANTAP ENAK KOTA METRO
                 </div>
 
                 <div class="info-box">
@@ -334,7 +334,7 @@ if ($result && mysqli_num_rows($result) > 0) {
         <div class="container">
             <div class="data-section-box">
                 <div class="content-header-bar">
-                    DAFTAR DATA MAHASISWA "WANITA" &bull; PONDOK MUHAMMADIYAH AKROM KOTA METRO
+                    DAFTAR DATA MAHASISWA "WANITA" &bull; PONDOK SANTAP ENAK KOTA METRO
                 </div>
 
                 <div class="info-box">
@@ -404,7 +404,7 @@ if ($result && mysqli_num_rows($result) > 0) {
         <div class="banner-left">
             <div style="flex-shrink:0;"><?php echo renderLogoKaromah(58); ?></div>
             <div>
-                <h3>Pondok Muhammadiyah Akrom (KAROMAH) Kota Metro</h3>
+                <h3>Pondok Santap Enak Kota Metro</h3>
                 <p>Aplikasi Pendataan Mahasiswa &bull; Dikembangkan untuk memenuhi tugas Kuis 1 Praktikum Big Data oleh Fatkhul Umam (NPM: 24430121), Fakultas Ilmu Komputer.</p>
             </div>
         </div>

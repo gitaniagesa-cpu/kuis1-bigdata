@@ -4,7 +4,7 @@
         <div class="banner-left">
             <div class="banner-icon">&#128187;</div>
             <div>
-                <h3>Pondok Muhammadiyah Akrom Kota Metro</h3>
+                <h3>Pondok Santap Enak Kota Metro</h3>
                 <p>Aplikasi Pendataan Mahasiswa &bull; Dikembangkan untuk memenuhi tugas Kuis 1 Praktikum Big Data oleh Fatkhul Umam (NPM: 24430121), Fakultas Ilmu Komputer.</p>
             </div>
         </div>

@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <title>Aplikasi Pendataan MHS - Pondok Muhammadiyah Akrom (KAROMAH) Kota Metro</title>
-    <style>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <title>Aplikasi Pendataan MHS - Pondok Santap Enak Kota Metro</title>
+    <style>
         /* style.css - Tema WellCare Layout: Background Putih, Garis Tepi Emas, Gradasi Hijau Emerald */
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
@@ -1959,21 +1959,21 @@ a {
     background: radial-gradient(ellipse at center, rgba(16, 185, 129, 0.75) 0%, rgba(254, 240, 138, 0.45) 45%, transparent 75%);
     filter: blur(12px);
 }
-        .page-view { display: none; animation: fadeInView 0.25s ease-out; }
-        .page-view.active { display: block; }
-        @keyframes fadeInView {
-            from { opacity: 0; transform: translateY(6px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .nav-link { cursor: pointer; background: none; border: none; }
-    </style>
-</head>
-<body>
-
-<!-- 1. TOP NAVBAR (1 LINK NAVIGATION) -->
-<header class="navbar">
-    <div class="container navbar-inner">
-        <a href="#home" onclick="switchPage('home'); return false;" class="brand">
+        .page-view { display: none; animation: fadeInView 0.25s ease-out; }
+        .page-view.active { display: block; }
+        @keyframes fadeInView {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .nav-link { cursor: pointer; background: none; border: none; }
+    </style>
+</head>
+<body>
+
+<!-- 1. TOP NAVBAR (1 LINK NAVIGATION) -->
+<header class="navbar">
+    <div class="container navbar-inner">
+        <a href="#home" onclick="switchPage('home'); return false;" class="brand">
             <div style="flex-shrink:0;">
     <svg width="46" height="46" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;">
         <defs>
@@ -1989,344 +1989,335 @@ a {
             </linearGradient>
         </defs>
 
-        <!-- Bingkai Perisai Segi Delapan / Lingkaran Emas Luar -->
+        <!-- Bingkai Lingkaran Emas Luar -->
         <circle cx="60" cy="60" r="56" fill="url(#greenGrad)" stroke="url(#goldGrad)" stroke-width="4"/>
         <circle cx="60" cy="60" r="49" fill="none" stroke="#FEF08A" stroke-width="1.2" stroke-dasharray="3 2"/>
 
-        <!-- 12 Sinar Matahari Muhammadiyah / Karomah -->
-        <g stroke="url(#goldGrad)" stroke-width="2.6" stroke-linecap="round">
-            <line x1="60" y1="14" x2="60" y2="24"/>
-            <line x1="60" y1="96" x2="60" y2="106"/>
-            <line x1="14" y1="60" x2="24" y2="60"/>
-            <line x1="96" y1="60" x2="106" y2="60"/>
-            <line x1="27.5" y1="27.5" x2="34.5" y2="34.5"/>
-            <line x1="85.5" y1="85.5" x2="92.5" y2="92.5"/>
-            <line x1="92.5" y1="27.5" x2="85.5" y2="34.5"/>
-            <line x1="34.5" y1="85.5" x2="27.5" y2="92.5"/>
-            <line x1="42" y1="17.5" x2="46" y2="26.5"/>
-            <line x1="78" y1="17.5" x2="74" y2="26.5"/>
-            <line x1="17.5" y1="42" x2="26.5" y2="46"/>
-            <line x1="102.5" y1="42" x2="93.5" y2="46"/>
-        </g>
+        <!-- Bintang Mahkota Kuliner / Keunggulan di Atas -->
+        <circle cx="60" cy="21" r="3.5" fill="#FEF08A"/>
+        <circle cx="46" cy="24" r="2.5" fill="url(#goldGrad)"/>
+        <circle cx="74" cy="24" r="2.5" fill="url(#goldGrad)"/>
 
-        <!-- Untaian Daun Emas Karomah (Kiri & Kanan) -->
-        <path d="M30 82 C20 65, 22 42, 36 30" stroke="url(#goldGrad)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-        <path d="M90 82 C100 65, 98 42, 84 30" stroke="url(#goldGrad)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <!-- Untaian Daun Emas (Kiri & Kanan) -->
+        <path d="M28 80 C18 63, 20 40, 35 28" stroke="url(#goldGrad)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <path d="M92 80 C102 63, 100 40, 85 28" stroke="url(#goldGrad)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
 
-        <!-- Kubah Masjid Pondok Akrom -->
-        <path d="M40 58 C40 42, 60 32, 60 28 C60 32, 80 42, 80 58 Z" fill="url(#goldGrad)"/>
-        <!-- Bulan Sabit Puncak Kubah -->
-        <circle cx="60" cy="24" r="3" fill="#FEF08A"/>
+        <!-- Kubah / Tudung Saji Mewah Emas (Simbol Pondok Santap Enak) -->
+        <path d="M35 60 C35 40, 46 31, 60 31 C74 31, 85 40, 85 60 Z" fill="url(#goldGrad)"/>
+        <circle cx="60" cy="28" r="4" fill="#FEF08A"/>
+        <!-- Garis Piring Saji -->
+        <rect x="30" y="61" width="60" height="5" rx="2.5" fill="#FFFFFF" stroke="url(#goldGrad)" stroke-width="1.5"/>
 
-        <!-- Kitab Terbuka (Al-Quran & Ilmu Pengetahuan) -->
-        <path d="M36 62 L58 66 L58 80 L36 75 Z" fill="#FFFFFF" stroke="url(#goldGrad)" stroke-width="1.5"/>
-        <path d="M84 62 L62 66 L62 80 L84 75 Z" fill="#FFFFFF" stroke="url(#goldGrad)" stroke-width="1.5"/>
+        <!-- Uap Aroma Hangat di Atas -->
+        <path d="M52 44 C50 39, 54 36, 52 33" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M60 42 C58 37, 62 34, 60 31" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M68 44 C66 39, 70 36, 68 33" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
 
-        <!-- Pita Bawah Bertuliskan KAROMAH -->
-        <rect x="26" y="83" width="68" height="15" rx="7.5" fill="url(#goldGrad)" stroke="#042F2E" stroke-width="1.5"/>
-        <text x="60" y="93.5" text-anchor="middle" fill="#042F2E" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="900" font-size="9.5" letter-spacing="1.2">KAROMAH</text>
-    </svg></div>
-            <div class="brand-text">
-                <h2>Pondok Muhammadiyah Akrom</h2>
-                <span>KAROMAH &bull; Aplikasi Pendataan MHS Kota Metro</span>
-            </div>
-        </a>
-
-        <nav class="nav-links">
-            <button type="button" id="nav-home" class="nav-link active" onclick="switchPage('home')">Home (Rancangan)</button>
-            <button type="button" id="nav-datamhs" class="nav-link" onclick="switchPage('datamhs')">Data Mahasiswa (No. 3)</button>
-            <button type="button" id="nav-wanita" class="nav-link" onclick="switchPage('wanita')">Filter Wanita (No. 5)</button>
-            <button type="button" id="nav-about" class="nav-link" onclick="switchPage('about')">ID Card Pembuat (No. 7)</button>
-        </nav>
-
-        <div class="nav-actions">
-            <button type="button" onclick="switchPage('about')" class="btn-pill-primary" style="cursor:pointer;">
-                &#129706; ID Card Fatkhul Umam &rarr;
-            </button>
-        </div>
-    </div>
-</header>
-
-<!-- ==================== VIEW 1: HOME (ALL-IN-ONE LANDING PAGE) ==================== -->
-<div id="view-home" class="page-view active">
-    <!-- HERO SECTION -->
-    <section class="hero-section">
-        <div class="container hero-grid">
-            <div>
-                <span class="hero-tag">&#10024; Kuis 1 Praktikum Big Data &bull; Halaman 19</span>
-                <h1 class="hero-title">
-                    Aplikasi Pendataan MHS
-                    <span>Pondok Muhammadiyah Akrom Kota Metro</span>
-                </h1>
-                <p class="hero-desc">
-                    Sistem informasi terpadu untuk mengelola basis data mahasiswa Pondok Muhammadiyah Akrom Kota Metro, menghitung usia secara otomatis dari tanggal lahir, serta memfilter data mahasiswi secara presisi dalam 1 link praktis.
-                </p>
-                <div class="hero-buttons">
-                    <button type="button" onclick="switchPage('datamhs')" class="btn-pill-primary" style="cursor:pointer;">
-                        &#128203; Lihat Data Mahasiswa &rarr;
-                    </button>
-                    <button type="button" onclick="switchPage('wanita')" class="btn-pill-outline" style="cursor:pointer;">
-                        &#128105; Filter Mahasiswi "Wanita"
-                    </button>
-                </div>
-
-                <div class="hero-trust-row">
-                    <div class="trust-item">
-                        <div class="trust-icon">&#128451;</div>
-                        <div class="trust-text">
-                            <strong>Tabel mahasiswa4</strong>
-                            <span>MySQL Database Aktif</span>
-                        </div>
-                    </div>
-                    <div class="trust-item">
-                        <div class="trust-icon">&#128101;</div>
-                        <div class="trust-text">
-                            <strong>5 Mahasiswa</strong>
-                            <span>3 Pria &amp; 2 Wanita</span>
-                        </div>
-                    </div>
-                    <div class="trust-item">
-                        <div class="trust-icon">&#127891;</div>
-                        <div class="trust-text">
-                            <strong>Fatkhul Umam</strong>
-                            <span>NPM: 24430121 &bull; FIKOM</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="hero-visual">
-                <div class="hero-blob">
-                    <img src="img/foto_profil.jpg" alt="Fatkhul Umam" onerror="this.onerror=null; this.src='img/foto.png';">
-                </div>
-                <div class="floating-badge">
-                    <div class="floating-badge-icon">&#10004;</div>
-                    <div class="floating-badge-text">
-                        <strong>Fatkhul Umam</strong>
-                        <span>NPM: 24430121</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4-CARD FEATURE SECTION -->
-    <section class="section">
-        <div class="container">
-            <div class="features-grid">
-                <div class="feature-VisualCard">
-                    <div>
-                        <span class="hero-tag" style="background:#fff; margin-bottom:12px;">Rancangan No. 8</span>
-                        <h3>Pondok Muhammadiyah Akrom Kota Metro</h3>
-                        <p>Semua fitur soal Kuis 1 (No. 1 s/d No. 8) terintegrasi dalam 1 halaman praktis.</p>
-                    </div>
-                    <a href="#tabel-utama" class="btn-pill-outline" style="width:fit-content;">
-                        Tabel Utama &darr;
-                    </a>
-                </div>
-
-                <div class="feature-card">
-                    <div>
-                        <div class="feature-icon">&#128203;</div>
-                        <h4>Data Mhs &amp; Usia</h4>
-                        <span class="sub-cat">viewmhsaja.php &bull; Soal No. 3</span>
-                        <p>Menampilkan kolom ID, NPM, Nama Mahasiswa, dan kalkulasi Usia otomatis dari tanggal lahir.</p>
-                    </div>
-                    <button type="button" onclick="switchPage('datamhs')" class="btn-card-link" style="cursor:pointer;">Buka viewmhsaja &rarr;</button>
-                </div>
-
-                <div class="feature-card">
-                    <div>
-                        <div class="feature-icon">&#128105;</div>
-                        <h4>Filter Wanita</h4>
-                        <span class="sub-cat">viewfilterwanita.php &bull; Soal No. 5</span>
-                        <p>Menampilkan daftar mahasiswi khusus berjenis kelamin Wanita (Mujiyanti &amp; Fatimah).</p>
-                    </div>
-                    <button type="button" onclick="switchPage('wanita')" class="btn-card-link" style="cursor:pointer;">Buka Filter Wanita &rarr;</button>
-                </div>
-
-                <div class="feature-card">
-                    <div>
-                        <div class="feature-icon">&#127891;</div>
-                        <h4>ID Card Pembuat</h4>
-                        <span class="sub-cat">me.php &bull; Soal No. 7</span>
-                        <p>Kartu Identitas Mahasiswa resmi: NPM 24430121, Fatkhul Umam, Fakultas Ilmu Komputer, dan Foto.</p>
-                    </div>
-                    <button type="button" onclick="switchPage('about')" class="btn-card-link" style="cursor:pointer;">Buka ID Card Me &rarr;</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- STUDENT PROFILE CARDS SECTION -->
-    <section class="section" style="padding-top: 10px;">
-        <div class="container">
-            <div class="students-layout">
-                <div class="section-intro">
-                    <span class="category-tag" style="display:inline-block; margin-bottom:10px;">Record Database</span>
-                    <h3>Daftar <span>Mahasiswa</span> Pondok Akrom</h3>
-                    <p>Data diambil secara langsung dari tabel <code>mahasiswa4</code> pada server MySQL.</p>
-                    <button type="button" onclick="switchPage('datamhs')" class="btn-pill-primary" style="cursor:pointer;">Lihat Detail Usia &rarr;</button>
-                </div>
-
-                <div class="student-cards-grid">
-                                        <div class="student-card">
-                        <div class="student-avatar">A</div>
-                        <h5>Agus Salim</h5>
-                        <span class="npm-tag">NPM: 25510001</span>
-                        <div class="meta-info">
-                            &#128197; 22 Tahun &bull; Pria                        </div>
-                        <button type="button" onclick="switchPage('datamhs')" class="pill-mini" style="cursor:pointer;">ID #1 &rarr;</button>
-                    </div>
-                                        <div class="student-card">
-                        <div class="student-avatar">W</div>
-                        <h5>Wendiyanto</h5>
-                        <span class="npm-tag">NPM: 25510002</span>
-                        <div class="meta-info">
-                            &#128197; 22 Tahun &bull; Pria                        </div>
-                        <button type="button" onclick="switchPage('datamhs')" class="pill-mini" style="cursor:pointer;">ID #2 &rarr;</button>
-                    </div>
-                                        <div class="student-card">
-                        <div class="student-avatar">M</div>
-                        <h5>Mujiyanti</h5>
-                        <span class="npm-tag">NPM: 25510003</span>
-                        <div class="meta-info">
-                            &#128197; 22 Tahun &bull; Wanita                        </div>
-                        <button type="button" onclick="switchPage('datamhs')" class="pill-mini" style="cursor:pointer;">ID #3 &rarr;</button>
-                    </div>
-                                        <div class="student-card">
-                        <div class="student-avatar">F</div>
-                        <h5>Fatimah</h5>
-                        <span class="npm-tag">NPM: 25510004</span>
-                        <div class="meta-info">
-                            &#128197; 22 Tahun &bull; Wanita                        </div>
-                        <button type="button" onclick="switchPage('datamhs')" class="pill-mini" style="cursor:pointer;">ID #4 &rarr;</button>
-                    </div>
-                                        <div class="student-card">
-                        <div class="student-avatar">A</div>
-                        <h5>Andri Hakim</h5>
-                        <span class="npm-tag">NPM: 25510005</span>
-                        <div class="meta-info">
-                            &#128197; 22 Tahun &bull; Pria                        </div>
-                        <button type="button" onclick="switchPage('datamhs')" class="pill-mini" style="cursor:pointer;">ID #5 &rarr;</button>
-                    </div>
-                                    </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TABEL DATA LENGKAP -->
-    <section class="section" id="tabel-utama" style="padding-top: 10px;">
-        <div class="container">
-            <div class="data-section-box">
-                <div class="content-header-bar">
-                    APLIKASI PENDATAAN MHS PONDOK MUHAMMADIYAH AKROM KOTA METRO
-                </div>
-
-                <div class="info-box">
-                    <span>&#128204; <strong>Daftar Data Mahasiswa (No. 8):</strong> Menampilkan NO, NPM, NAMA MHS, dan USIA dengan hasil rata tengah, garis tepi emas, dan gradasi hijau.</span>
-                </div>
-
-                <div class="toolbar-row">
-                    <span class="category-tag">Tabel Database: mahasiswa4</span>
-                    <input type="text" class="search-input" placeholder="&#128269; Cari NPM atau Nama Mahasiswa..." onkeyup="filterTable(this)">
-                </div>
-
-                <div class="table-wrapper">
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th style="width: 60px;">NO</th>
-                                <th style="width: 140px;">NPM</th>
-                                <th>NAMA MHS</th>
-                                <th style="width: 120px;">USIA</th>
-                                <th style="width: 140px;">JENIS KELAMIN</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                                                        <tr>
-                                <td><strong>1</strong></td>
-                                <td><span class="npm-pill">25510001</span></td>
-                                <td><strong>Agus Salim</strong></td>
-                                <td><span class="usia-pill">22 Tahun</span></td>
-                                <td>
-                                    <span class="badge badge-pria">
-                                        Pria                                    </span>
-                                </td>
-                            </tr>
-                                                        <tr>
-                                <td><strong>2</strong></td>
-                                <td><span class="npm-pill">25510002</span></td>
-                                <td><strong>Wendiyanto</strong></td>
-                                <td><span class="usia-pill">22 Tahun</span></td>
-                                <td>
-                                    <span class="badge badge-pria">
-                                        Pria                                    </span>
-                                </td>
-                            </tr>
-                                                        <tr>
-                                <td><strong>3</strong></td>
-                                <td><span class="npm-pill">25510003</span></td>
-                                <td><strong>Mujiyanti</strong></td>
-                                <td><span class="usia-pill">22 Tahun</span></td>
-                                <td>
-                                    <span class="badge badge-wanita">
-                                        Wanita                                    </span>
-                                </td>
-                            </tr>
-                                                        <tr>
-                                <td><strong>4</strong></td>
-                                <td><span class="npm-pill">25510004</span></td>
-                                <td><strong>Fatimah</strong></td>
-                                <td><span class="usia-pill">22 Tahun</span></td>
-                                <td>
-                                    <span class="badge badge-wanita">
-                                        Wanita                                    </span>
-                                </td>
-                            </tr>
-                                                        <tr>
-                                <td><strong>5</strong></td>
-                                <td><span class="npm-pill">25510005</span></td>
-                                <td><strong>Andri Hakim</strong></td>
-                                <td><span class="usia-pill">22 Tahun</span></td>
-                                <td>
-                                    <span class="badge badge-pria">
-                                        Pria                                    </span>
-                                </td>
-                            </tr>
-                                                    </tbody>
-                    </table>
-                </div>
-
-                <div class="text-right-small">
-                    * Menampilkan total 5 record mahasiswa Pondok Muhammadiyah Akrom Kota Metro
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SEKSI ID CARD MAHASISWA PEMBUAT PROGRAM -->
-    <section class="section" style="padding-top: 10px;">
-        <div class="container">
-            <div class="data-section-box">
-                <div class="content-header-bar">
-                    ID CARD MAHASISWA RESMI &bull; PEMBUAT PROGRAM (ME.PHP)
-                </div>
-                <!-- idcard_component.php - Holographic Glassmorphism ID Card di Atas Background Gedung Mewah -->
-<div class="luxury-stage">
-    <!-- Ornamen Cahaya & Siluet Arsitektur Gedung Mewah -->
-    <div class="luxury-building-bg"></div>
-    <div class="luxury-light-orb orb-1"></div>
-    <div class="luxury-light-orb orb-2"></div>
-
-    <!-- KARTU KACA TRANSPARAN HOLOGRAFIK (SEPERTI GAMBAR REFERENSI) -->
-    <div class="glass-card-container">
-        <div class="holo-glass-card">
-            <!-- Kilau Cahaya Kaca Diagonal -->
-            <div class="glass-sheen"></div>
-
-            <!-- 1. Ikon / Logo Bersinar di Atas -->
-            <div class="holo-top-logo">
+        <!-- Pita Bawah Bertuliskan SANTAP ENAK -->
+        <rect x="18" y="81" width="84" height="16" rx="8" fill="url(#goldGrad)" stroke="#042F2E" stroke-width="1.5"/>
+        <text x="60" y="92" text-anchor="middle" fill="#042F2E" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="900" font-size="8.5" letter-spacing="0.9">SANTAP ENAK</text>
+    </svg></div>
+            <div class="brand-text">
+                <h2>Pondok Santap Enak</h2>
+                <span>PONDOK SANTAP ENAK &bull; Aplikasi Pendataan MHS Kota Metro</span>
+            </div>
+        </a>
+
+        <nav class="nav-links">
+            <button type="button" id="nav-home" class="nav-link active" onclick="switchPage('home')">Home (Rancangan)</button>
+            <button type="button" id="nav-datamhs" class="nav-link" onclick="switchPage('datamhs')">Data Mahasiswa (No. 3)</button>
+            <button type="button" id="nav-wanita" class="nav-link" onclick="switchPage('wanita')">Filter Wanita (No. 5)</button>
+            <button type="button" id="nav-about" class="nav-link" onclick="switchPage('about')">ID Card Pembuat (No. 7)</button>
+        </nav>
+
+        <div class="nav-actions">
+            <button type="button" onclick="switchPage('about')" class="btn-pill-primary" style="cursor:pointer;">
+                &#129706; ID Card Fatkhul Umam &rarr;
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- ==================== VIEW 1: HOME (ALL-IN-ONE LANDING PAGE) ==================== -->
+<div id="view-home" class="page-view active">
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="container hero-grid">
+            <div>
+                <span class="hero-tag">&#10024; Kuis 1 Praktikum Big Data &bull; Halaman 19</span>
+                <h1 class="hero-title">
+                    Aplikasi Pendataan MHS
+                    <span>Pondok Santap Enak Kota Metro</span>
+                </h1>
+                <p class="hero-desc">
+                    Sistem informasi terpadu untuk mengelola basis data mahasiswa Pondok Santap Enak Kota Metro, menghitung usia secara otomatis dari tanggal lahir, serta memfilter data mahasiswi secara presisi dalam 1 link praktis.
+                </p>
+                <div class="hero-buttons">
+                    <button type="button" onclick="switchPage('datamhs')" class="btn-pill-primary" style="cursor:pointer;">
+                        &#128203; Lihat Data Mahasiswa &rarr;
+                    </button>
+                    <button type="button" onclick="switchPage('wanita')" class="btn-pill-outline" style="cursor:pointer;">
+                        &#128105; Filter Mahasiswi "Wanita"
+                    </button>
+                </div>
+
+                <div class="hero-trust-row">
+                    <div class="trust-item">
+                        <div class="trust-icon">&#128451;</div>
+                        <div class="trust-text">
+                            <strong>Tabel mahasiswa4</strong>
+                            <span>MySQL Database Aktif</span>
+                        </div>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">&#128101;</div>
+                        <div class="trust-text">
+                            <strong>5 Mahasiswa</strong>
+                            <span>3 Pria &amp; 2 Wanita</span>
+                        </div>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">&#127891;</div>
+                        <div class="trust-text">
+                            <strong>Fatkhul Umam</strong>
+                            <span>NPM: 24430121 &bull; FIKOM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-blob">
+                    <img src="img/foto_profil.jpg" alt="Fatkhul Umam" onerror="this.onerror=null; this.src='img/foto.png';">
+                </div>
+                <div class="floating-badge">
+                    <div class="floating-badge-icon">&#10004;</div>
+                    <div class="floating-badge-text">
+                        <strong>Fatkhul Umam</strong>
+                        <span>NPM: 24430121</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4-CARD FEATURE SECTION -->
+    <section class="section">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-VisualCard">
+                    <div>
+                        <span class="hero-tag" style="background:#fff; margin-bottom:12px;">Rancangan No. 8</span>
+                        <h3>Pondok Santap Enak Kota Metro</h3>
+                        <p>Semua fitur soal Kuis 1 (No. 1 s/d No. 8) terintegrasi dalam 1 halaman praktis.</p>
+                    </div>
+                    <a href="#tabel-utama" class="btn-pill-outline" style="width:fit-content;">
+                        Tabel Utama &darr;
+                    </a>
+                </div>
+
+                <div class="feature-card">
+                    <div>
+                        <div class="feature-icon">&#128203;</div>
+                        <h4>Data Mhs &amp; Usia</h4>
+                        <span class="sub-cat">viewmhsaja.php &bull; Soal No. 3</span>
+                        <p>Menampilkan kolom ID, NPM, Nama Mahasiswa, dan kalkulasi Usia otomatis dari tanggal lahir.</p>
+                    </div>
+                    <button type="button" onclick="switchPage('datamhs')" class="btn-card-link" style="cursor:pointer;">Buka viewmhsaja &rarr;</button>
+                </div>
+
+                <div class="feature-card">
+                    <div>
+                        <div class="feature-icon">&#128105;</div>
+                        <h4>Filter Wanita</h4>
+                        <span class="sub-cat">viewfilterwanita.php &bull; Soal No. 5</span>
+                        <p>Menampilkan daftar mahasiswi khusus berjenis kelamin Wanita (Mujiyanti &amp; Fatimah).</p>
+                    </div>
+                    <button type="button" onclick="switchPage('wanita')" class="btn-card-link" style="cursor:pointer;">Buka Filter Wanita &rarr;</button>
+                </div>
+
+                <div class="feature-card">
+                    <div>
+                        <div class="feature-icon">&#127891;</div>
+                        <h4>ID Card Pembuat</h4>
+                        <span class="sub-cat">me.php &bull; Soal No. 7</span>
+                        <p>Kartu Identitas Mahasiswa resmi: NPM 24430121, Fatkhul Umam, Fakultas Ilmu Komputer, dan Foto.</p>
+                    </div>
+                    <button type="button" onclick="switchPage('about')" class="btn-card-link" style="cursor:pointer;">Buka ID Card Me &rarr;</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STUDENT PROFILE CARDS SECTION -->
+    <section class="section" style="padding-top: 10px;">
+        <div class="container">
+            <div class="students-layout">
+                <div class="section-intro">
+                    <span class="category-tag" style="display:inline-block; margin-bottom:10px;">Record Database</span>
+                    <h3>Daftar <span>Mahasiswa</span> Pondok Santap Enak</h3>
+                    <p>Data diambil secara langsung dari tabel <code>mahasiswa4</code> pada server MySQL.</p>
+                    <button type="button" onclick="switchPage('datamhs')" class="btn-pill-primary" style="cursor:pointer;">Lihat Detail Usia &rarr;</button>
+                </div>
+
+                <div class="student-cards-grid">
+                                        <div class="student-card">
+                        <div class="student-avatar">A</div>
+                        <h5>Agus Salim</h5>
+                        <span class="npm-tag">NPM: 25510001</span>
+                        <div class="meta-info">
+                            &#128197; 22 Tahun &bull; Pria                        </div>
+                        <button type="button" onclick="switchPage('datamhs')" class="pill-mini" style="cursor:pointer;">ID #1 &rarr;</button>
+                    </div>
+                                        <div class="student-card">
+                        <div class="student-avatar">W</div>
+                        <h5>Wendiyanto</h5>
+                        <span class="npm-tag">NPM: 25510002</span>
+                        <div class="meta-info">
+                            &#128197; 22 Tahun &bull; Pria                        </div>
+                        <button type="button" onclick="switchPage('datamhs')" class="pill-mini" style="cursor:pointer;">ID #2 &rarr;</button>
+                    </div>
+                                        <div class="student-card">
+                        <div class="student-avatar">M</div>
+                        <h5>Mujiyanti</h5>
+                        <span class="npm-tag">NPM: 25510003</span>
+                        <div class="meta-info">
+                            &#128197; 22 Tahun &bull; Wanita                        </div>
+                        <button type="button" onclick="switchPage('datamhs')" class="pill-mini" style="cursor:pointer;">ID #3 &rarr;</button>
+                    </div>
+                                        <div class="student-card">
+                        <div class="student-avatar">F</div>
+                        <h5>Fatimah</h5>
+                        <span class="npm-tag">NPM: 25510004</span>
+                        <div class="meta-info">
+                            &#128197; 22 Tahun &bull; Wanita                        </div>
+                        <button type="button" onclick="switchPage('datamhs')" class="pill-mini" style="cursor:pointer;">ID #4 &rarr;</button>
+                    </div>
+                                        <div class="student-card">
+                        <div class="student-avatar">A</div>
+                        <h5>Andri Hakim</h5>
+                        <span class="npm-tag">NPM: 25510005</span>
+                        <div class="meta-info">
+                            &#128197; 22 Tahun &bull; Pria                        </div>
+                        <button type="button" onclick="switchPage('datamhs')" class="pill-mini" style="cursor:pointer;">ID #5 &rarr;</button>
+                    </div>
+                                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TABEL DATA LENGKAP -->
+    <section class="section" id="tabel-utama" style="padding-top: 10px;">
+        <div class="container">
+            <div class="data-section-box">
+                <div class="content-header-bar">
+                    APLIKASI PENDATAAN MHS PONDOK SANTAP ENAK KOTA METRO
+                </div>
+
+                <div class="info-box">
+                    <span>&#128204; <strong>Daftar Data Mahasiswa (No. 8):</strong> Menampilkan NO, NPM, NAMA MHS, dan USIA dengan hasil rata tengah, garis tepi emas, dan gradasi hijau.</span>
+                </div>
+
+                <div class="toolbar-row">
+                    <span class="category-tag">Tabel Database: mahasiswa4</span>
+                    <input type="text" class="search-input" placeholder="&#128269; Cari NPM atau Nama Mahasiswa..." onkeyup="filterTable(this)">
+                </div>
+
+                <div class="table-wrapper">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 60px;">NO</th>
+                                <th style="width: 140px;">NPM</th>
+                                <th>NAMA MHS</th>
+                                <th style="width: 120px;">USIA</th>
+                                <th style="width: 140px;">JENIS KELAMIN</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                                        <tr>
+                                <td><strong>1</strong></td>
+                                <td><span class="npm-pill">25510001</span></td>
+                                <td><strong>Agus Salim</strong></td>
+                                <td><span class="usia-pill">22 Tahun</span></td>
+                                <td>
+                                    <span class="badge badge-pria">
+                                        Pria                                    </span>
+                                </td>
+                            </tr>
+                                                        <tr>
+                                <td><strong>2</strong></td>
+                                <td><span class="npm-pill">25510002</span></td>
+                                <td><strong>Wendiyanto</strong></td>
+                                <td><span class="usia-pill">22 Tahun</span></td>
+                                <td>
+                                    <span class="badge badge-pria">
+                                        Pria                                    </span>
+                                </td>
+                            </tr>
+                                                        <tr>
+                                <td><strong>3</strong></td>
+                                <td><span class="npm-pill">25510003</span></td>
+                                <td><strong>Mujiyanti</strong></td>
+                                <td><span class="usia-pill">22 Tahun</span></td>
+                                <td>
+                                    <span class="badge badge-wanita">
+                                        Wanita                                    </span>
+                                </td>
+                            </tr>
+                                                        <tr>
+                                <td><strong>4</strong></td>
+                                <td><span class="npm-pill">25510004</span></td>
+                                <td><strong>Fatimah</strong></td>
+                                <td><span class="usia-pill">22 Tahun</span></td>
+                                <td>
+                                    <span class="badge badge-wanita">
+                                        Wanita                                    </span>
+                                </td>
+                            </tr>
+                                                        <tr>
+                                <td><strong>5</strong></td>
+                                <td><span class="npm-pill">25510005</span></td>
+                                <td><strong>Andri Hakim</strong></td>
+                                <td><span class="usia-pill">22 Tahun</span></td>
+                                <td>
+                                    <span class="badge badge-pria">
+                                        Pria                                    </span>
+                                </td>
+                            </tr>
+                                                    </tbody>
+                    </table>
+                </div>
+
+                <div class="text-right-small">
+                    * Menampilkan total 5 record mahasiswa Pondok Santap Enak Kota Metro
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEKSI ID CARD MAHASISWA PEMBUAT PROGRAM -->
+    <section class="section" style="padding-top: 10px;">
+        <div class="container">
+            <div class="data-section-box">
+                <div class="content-header-bar">
+                    ID CARD MAHASISWA RESMI &bull; PEMBUAT PROGRAM (ME.PHP)
+                </div>
+                <!-- idcard_component.php - Holographic Glassmorphism ID Card di Atas Background Gedung Mewah -->
+<div class="luxury-stage">
+    <!-- Ornamen Cahaya & Siluet Arsitektur Gedung Mewah -->
+    <div class="luxury-building-bg"></div>
+    <div class="luxury-light-orb orb-1"></div>
+    <div class="luxury-light-orb orb-2"></div>
+
+    <!-- KARTU KACA TRANSPARAN HOLOGRAFIK (SEPERTI GAMBAR REFERENSI) -->
+    <div class="glass-card-container">
+        <div class="holo-glass-card">
+            <!-- Kilau Cahaya Kaca Diagonal -->
+            <div class="glass-sheen"></div>
+
+            <!-- 1. Ikon / Logo Bersinar di Atas -->
+            <div class="holo-top-logo">
                 
     <svg width="62" height="62" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;">
         <defs>
@@ -2342,283 +2333,274 @@ a {
             </linearGradient>
         </defs>
 
-        <!-- Bingkai Perisai Segi Delapan / Lingkaran Emas Luar -->
+        <!-- Bingkai Lingkaran Emas Luar -->
         <circle cx="60" cy="60" r="56" fill="url(#greenGrad)" stroke="url(#goldGrad)" stroke-width="4"/>
         <circle cx="60" cy="60" r="49" fill="none" stroke="#FEF08A" stroke-width="1.2" stroke-dasharray="3 2"/>
 
-        <!-- 12 Sinar Matahari Muhammadiyah / Karomah -->
-        <g stroke="url(#goldGrad)" stroke-width="2.6" stroke-linecap="round">
-            <line x1="60" y1="14" x2="60" y2="24"/>
-            <line x1="60" y1="96" x2="60" y2="106"/>
-            <line x1="14" y1="60" x2="24" y2="60"/>
-            <line x1="96" y1="60" x2="106" y2="60"/>
-            <line x1="27.5" y1="27.5" x2="34.5" y2="34.5"/>
-            <line x1="85.5" y1="85.5" x2="92.5" y2="92.5"/>
-            <line x1="92.5" y1="27.5" x2="85.5" y2="34.5"/>
-            <line x1="34.5" y1="85.5" x2="27.5" y2="92.5"/>
-            <line x1="42" y1="17.5" x2="46" y2="26.5"/>
-            <line x1="78" y1="17.5" x2="74" y2="26.5"/>
-            <line x1="17.5" y1="42" x2="26.5" y2="46"/>
-            <line x1="102.5" y1="42" x2="93.5" y2="46"/>
-        </g>
+        <!-- Bintang Mahkota Kuliner / Keunggulan di Atas -->
+        <circle cx="60" cy="21" r="3.5" fill="#FEF08A"/>
+        <circle cx="46" cy="24" r="2.5" fill="url(#goldGrad)"/>
+        <circle cx="74" cy="24" r="2.5" fill="url(#goldGrad)"/>
 
-        <!-- Untaian Daun Emas Karomah (Kiri & Kanan) -->
-        <path d="M30 82 C20 65, 22 42, 36 30" stroke="url(#goldGrad)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-        <path d="M90 82 C100 65, 98 42, 84 30" stroke="url(#goldGrad)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <!-- Untaian Daun Emas (Kiri & Kanan) -->
+        <path d="M28 80 C18 63, 20 40, 35 28" stroke="url(#goldGrad)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <path d="M92 80 C102 63, 100 40, 85 28" stroke="url(#goldGrad)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
 
-        <!-- Kubah Masjid Pondok Akrom -->
-        <path d="M40 58 C40 42, 60 32, 60 28 C60 32, 80 42, 80 58 Z" fill="url(#goldGrad)"/>
-        <!-- Bulan Sabit Puncak Kubah -->
-        <circle cx="60" cy="24" r="3" fill="#FEF08A"/>
+        <!-- Kubah / Tudung Saji Mewah Emas (Simbol Pondok Santap Enak) -->
+        <path d="M35 60 C35 40, 46 31, 60 31 C74 31, 85 40, 85 60 Z" fill="url(#goldGrad)"/>
+        <circle cx="60" cy="28" r="4" fill="#FEF08A"/>
+        <!-- Garis Piring Saji -->
+        <rect x="30" y="61" width="60" height="5" rx="2.5" fill="#FFFFFF" stroke="url(#goldGrad)" stroke-width="1.5"/>
 
-        <!-- Kitab Terbuka (Al-Quran & Ilmu Pengetahuan) -->
-        <path d="M36 62 L58 66 L58 80 L36 75 Z" fill="#FFFFFF" stroke="url(#goldGrad)" stroke-width="1.5"/>
-        <path d="M84 62 L62 66 L62 80 L84 75 Z" fill="#FFFFFF" stroke="url(#goldGrad)" stroke-width="1.5"/>
+        <!-- Uap Aroma Hangat di Atas -->
+        <path d="M52 44 C50 39, 54 36, 52 33" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M60 42 C58 37, 62 34, 60 31" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M68 44 C66 39, 70 36, 68 33" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
 
-        <!-- Pita Bawah Bertuliskan KAROMAH -->
-        <rect x="26" y="83" width="68" height="15" rx="7.5" fill="url(#goldGrad)" stroke="#042F2E" stroke-width="1.5"/>
-        <text x="60" y="93.5" text-anchor="middle" fill="#042F2E" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="900" font-size="9.5" letter-spacing="1.2">KAROMAH</text>
-    </svg>            </div>
-
-            <!-- 2. Header Teks di Atas Foto -->
-            <div class="holo-id-label">STUDENT ID &bull; NPM 24430121</div>
-            <h2 class="holo-main-title">Fatkhul Umam</h2>
-            <div class="holo-sub-role">Fakultas Ilmu Komputer &bull; Karomah</div>
-
-            <!-- 3. Bingkai Foto Tengah Bersinar (Utuh Tanpa Crop & Proporsional) -->
-            <div class="holo-avatar-ring">
-                <img src="img/foto_profil.jpg" alt="Fatkhul Umam" onerror="this.onerror=null; this.src='img/foto.png';">
-            </div>
-
-            <!-- 4. Nama & Verified Checkmark + Deskripsi -->
-            <div class="holo-verified-name">
-                <span>Fatkhul Umam</span>
-                <span class="holo-check-badge" title="Terverifikasi">&#10004;</span>
-            </div>
-
-            <p class="holo-bio-text">
-                Pondok Muhammadiyah Akrom (KAROMAH) Kota Metro<br>
-                Praktikum Big Data &bull; Dosen: Arif Hidayat, S.T., M.Kom<br>
-                <span class="holo-link-text">localhost/bigdata/me.php</span>
-            </p>
-
-            <!-- 5. Tiga Tombol Pill Transparan (Seperti Join | Channel | Message Me) -->
-            <div class="holo-pills-row">
-                <button type="button" class="holo-pill-btn" onclick="if(window.switchPage) switchPage('datamhs'); else window.location.href='viewmhsaja.php';">
-                    Data Mhs
-                </button>
-                <button type="button" class="holo-pill-btn" onclick="if(window.switchPage) switchPage('wanita'); else window.location.href='viewfilterwanita.php';">
-                    Filter Wanita
-                </button>
-                <button type="button" class="holo-pill-btn" onclick="if(window.switchPage) switchPage('home'); else window.location.href='index.php';">
-                    NPM 24430121
-                </button>
-            </div>
-
-            <!-- 6. Bar Bawah Bersinar (QR Code | Ikon Tengah | Ikon ID Card) -->
-            <div class="holo-bottom-bar">
-                <!-- QR Code Putih Bersih -->
-                <div class="holo-qr">
-                    <svg width="48" height="48" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="2" y="2" width="18" height="18" stroke="#ffffff" stroke-width="3.5"/>
-                        <rect x="7" y="7" width="8" height="8" fill="#ffffff"/>
-                        <rect x="48" y="2" width="18" height="18" stroke="#ffffff" stroke-width="3.5"/>
-                        <rect x="53" y="7" width="8" height="8" fill="#ffffff"/>
-                        <rect x="2" y="48" width="18" height="18" stroke="#ffffff" stroke-width="3.5"/>
-                        <rect x="7" y="53" width="8" height="8" fill="#ffffff"/>
-                        <rect x="26" y="4" width="6" height="6" fill="#ffffff"/>
-                        <rect x="36" y="14" width="6" height="10" fill="#ffffff"/>
-                        <rect x="26" y="26" width="16" height="16" stroke="#ffffff" stroke-width="3"/>
-                        <rect x="31" y="31" width="6" height="6" fill="#fef08a"/>
-                        <rect x="48" y="26" width="6" height="6" fill="#ffffff"/>
-                        <rect x="58" y="26" width="6" height="10" fill="#ffffff"/>
-                        <rect x="4" y="36" width="10" height="6" fill="#ffffff"/>
-                        <rect x="26" y="48" width="8" height="6" fill="#ffffff"/>
-                        <rect x="48" y="44" width="6" height="12" fill="#ffffff"/>
-                        <rect x="26" y="58" width="14" height="6" fill="#ffffff"/>
-                        <rect x="56" y="56" width="8" height="8" fill="#ffffff"/>
-                    </svg>
-                </div>
-
-                <!-- Ikon Pesawat Kertas / Telegram Style Glowing di Tengah -->
-                <div class="holo-center-icon">
-                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M21.5 2.5L2.5 10.5L9.5 13.5L18.5 6.5L11.5 15.5L14.5 21.5L21.5 2.5Z" fill="#ffffff" stroke="#fef08a" stroke-width="1.2" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-
-                <!-- Ikon ID Card di Kanan -->
-                <div class="holo-id-icon">
-                    <svg width="42" height="42" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="1.5" y="2.5" width="25" height="19" rx="3.5" stroke="#ffffff" stroke-width="2"/>
-                        <circle cx="9" cy="10" r="2.8" fill="#ffffff"/>
-                        <path d="M4.5 17.5C4.5 15 6.5 14 9 14C11.5 14 13.5 15 13.5 17.5" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
-                        <line x1="16.5" y1="9" x2="22.5" y2="9" stroke="#fef08a" stroke-width="2" stroke-linecap="round"/>
-                        <line x1="16.5" y1="13" x2="22.5" y2="13" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
-                        <line x1="16.5" y1="17" x2="20.5" y2="17" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                </div>
-            </div>
-        </div>
-
-        <!-- Pantulan Cahaya Neon di Lantai Bawah Kartu -->
-        <div class="holo-floor-reflection"></div>
-    </div>
-</div>
-            </div>
-        </div>
-    </section>
-</div>
-
-<!-- ==================== VIEW 2: DATA MAHASISWA & USIA (viewmhsaja.php) ==================== -->
-<div id="view-datamhs" class="page-view">
-    <section class="section">
-        <div class="container">
-            <div class="data-section-box">
-                <div class="content-header-bar">
-                    DAFTAR DATA MHS &bull; PONDOK MUHAMMADIYAH AKROM KOTA METRO
-                </div>
-
-                <div class="info-box">
-                    <span>&#128203; <strong>Soal Kuis No. 3 &amp; 4 (viewmhsaja.php):</strong> Menampilkan kolom <strong>ID, NPM, NAMA MHS,</strong> dan <strong>USIA</strong> yang dihitung otomatis dari tanggal lahir.</span>
-                </div>
-
-                <div class="toolbar-row">
-                    <span class="category-tag">Kategori: Data Mahasiswa &amp; Usia</span>
-                    <input type="text" class="search-input" placeholder="&#128269; Cari NPM atau Nama..." onkeyup="filterTable(this)">
-                </div>
-
-                <div class="table-wrapper">
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th style="width: 60px;">ID</th>
-                                <th style="width: 140px;">NPM</th>
-                                <th>NAMA MHS</th>
-                                <th style="width: 120px;">USIA</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                                                        <tr>
-                                <td><strong>1</strong></td>
-                                <td><span class="npm-pill">25510001</span></td>
-                                <td><strong>Agus Salim</strong></td>
-                                <td><span class="usia-pill">22 Tahun</span></td>
-                            </tr>
-                                                        <tr>
-                                <td><strong>2</strong></td>
-                                <td><span class="npm-pill">25510002</span></td>
-                                <td><strong>Wendiyanto</strong></td>
-                                <td><span class="usia-pill">22 Tahun</span></td>
-                            </tr>
-                                                        <tr>
-                                <td><strong>3</strong></td>
-                                <td><span class="npm-pill">25510003</span></td>
-                                <td><strong>Mujiyanti</strong></td>
-                                <td><span class="usia-pill">22 Tahun</span></td>
-                            </tr>
-                                                        <tr>
-                                <td><strong>4</strong></td>
-                                <td><span class="npm-pill">25510004</span></td>
-                                <td><strong>Fatimah</strong></td>
-                                <td><span class="usia-pill">22 Tahun</span></td>
-                            </tr>
-                                                        <tr>
-                                <td><strong>5</strong></td>
-                                <td><span class="npm-pill">25510005</span></td>
-                                <td><strong>Andri Hakim</strong></td>
-                                <td><span class="usia-pill">22 Tahun</span></td>
-                            </tr>
-                                                    </tbody>
-                    </table>
-                </div>
-
-                <div class="text-right-small">
-                    * localhost/bigdata/viewmhsaja.php &bull; Total 5 Record Mahasiswa
-                </div>
-            </div>
-        </div>
-    </section>
-</div>
-
-<!-- ==================== VIEW 3: FILTER WANITA (viewfilterwanita.php) ==================== -->
-<div id="view-wanita" class="page-view">
-    <section class="section">
-        <div class="container">
-            <div class="data-section-box">
-                <div class="content-header-bar">
-                    DAFTAR DATA MAHASISWA "WANITA" &bull; PONDOK MUHAMMADIYAH AKROM KOTA METRO
-                </div>
-
-                <div class="info-box">
-                    <span>&#128105; <strong>Soal Kuis No. 5 &amp; 6 (viewfilterwanita.php):</strong> Menampilkan hasil pemfilteran SQL <code>WHERE jenis_kelamin = 'Wanita'</code> pada kolom <strong>ID, NAMA MHS,</strong> dan <strong>JENIS KELAMIN</strong>.</span>
-                </div>
-
-                <div class="toolbar-row">
-                    <span class="category-tag">Kategori: Filter Mahasiswi Wanita</span>
-                    <input type="text" class="search-input" placeholder="&#128269; Cari Nama Mahasiswi..." onkeyup="filterTable(this)">
-                </div>
-
-                <div class="table-wrapper">
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th style="width: 65px;">ID</th>
-                                <th>NAMA MHS</th>
-                                <th style="width: 170px;">JENIS KELAMIN</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                                                        <tr>
-                                <td><strong>3</strong></td>
-                                <td><strong>Mujiyanti</strong></td>
-                                <td><span class="badge badge-wanita">Wanita</span></td>
-                            </tr>
-                                                        <tr>
-                                <td><strong>4</strong></td>
-                                <td><strong>Fatimah</strong></td>
-                                <td><span class="badge badge-wanita">Wanita</span></td>
-                            </tr>
-                                                    </tbody>
-                    </table>
-                </div>
-
-                <div class="text-right-small">
-                    * localhost/bigdata/viewfilterwanita.php &bull; Terfilter 2 Record Wanita
-                </div>
-            </div>
-        </div>
-    </section>
-</div>
-
-<!-- ==================== VIEW 4: ID CARD PEMBUAT PROGRAM (me.php) ==================== -->
-<div id="view-about" class="page-view">
-    <section class="section">
-        <div class="container">
-            <div class="data-section-box">
-                <div class="content-header-bar">
-                    ABOUT PEMBUAT PROGRAM &bull; ID CARD MAHASISWA RESMI
-                </div>
-
-                <div class="info-box">
-                    <span>&#127891; <strong>Soal Kuis No. 7 (me.php):</strong> Kartu Identitas Mahasiswa Resmi Pembuat Program (NPM: <strong>24430121</strong>, Nama: <strong>Fatkhul Umam</strong>, Fakultas: <strong>Fakultas Ilmu Komputer</strong>, Foto Almamater).</span>
-                </div>
-
-                <!-- idcard_component.php - Holographic Glassmorphism ID Card di Atas Background Gedung Mewah -->
-<div class="luxury-stage">
-    <!-- Ornamen Cahaya & Siluet Arsitektur Gedung Mewah -->
-    <div class="luxury-building-bg"></div>
-    <div class="luxury-light-orb orb-1"></div>
-    <div class="luxury-light-orb orb-2"></div>
-
-    <!-- KARTU KACA TRANSPARAN HOLOGRAFIK (SEPERTI GAMBAR REFERENSI) -->
-    <div class="glass-card-container">
-        <div class="holo-glass-card">
-            <!-- Kilau Cahaya Kaca Diagonal -->
-            <div class="glass-sheen"></div>
-
-            <!-- 1. Ikon / Logo Bersinar di Atas -->
-            <div class="holo-top-logo">
+        <!-- Pita Bawah Bertuliskan SANTAP ENAK -->
+        <rect x="18" y="81" width="84" height="16" rx="8" fill="url(#goldGrad)" stroke="#042F2E" stroke-width="1.5"/>
+        <text x="60" y="92" text-anchor="middle" fill="#042F2E" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="900" font-size="8.5" letter-spacing="0.9">SANTAP ENAK</text>
+    </svg>            </div>
+
+            <!-- 2. Header Teks di Atas Foto -->
+            <div class="holo-id-label">STUDENT ID &bull; NPM 24430121</div>
+            <h2 class="holo-main-title">Fatkhul Umam</h2>
+            <div class="holo-sub-role">Fakultas Ilmu Komputer &bull; Pondok Santap Enak</div>
+
+            <!-- 3. Bingkai Foto Tengah Bersinar (Utuh Tanpa Crop & Proporsional) -->
+            <div class="holo-avatar-ring">
+                <img src="img/foto_profil.jpg" alt="Fatkhul Umam" onerror="this.onerror=null; this.src='img/foto.png';">
+            </div>
+
+            <!-- 4. Nama & Verified Checkmark + Deskripsi -->
+            <div class="holo-verified-name">
+                <span>Fatkhul Umam</span>
+                <span class="holo-check-badge" title="Terverifikasi">&#10004;</span>
+            </div>
+
+            <p class="holo-bio-text">
+                Pondok Santap Enak Kota Metro<br>
+                Praktikum Big Data &bull; Dosen: Arif Hidayat, S.T., M.Kom<br>
+                <span class="holo-link-text">localhost/bigdata/me.php</span>
+            </p>
+
+            <!-- 5. Tiga Tombol Pill Transparan (Seperti Join | Channel | Message Me) -->
+            <div class="holo-pills-row">
+                <button type="button" class="holo-pill-btn" onclick="if(window.switchPage) switchPage('datamhs'); else window.location.href='viewmhsaja.php';">
+                    Data Mhs
+                </button>
+                <button type="button" class="holo-pill-btn" onclick="if(window.switchPage) switchPage('wanita'); else window.location.href='viewfilterwanita.php';">
+                    Filter Wanita
+                </button>
+                <button type="button" class="holo-pill-btn" onclick="if(window.switchPage) switchPage('home'); else window.location.href='index.php';">
+                    NPM 24430121
+                </button>
+            </div>
+
+            <!-- 6. Bar Bawah Bersinar (QR Code | Ikon Tengah | Ikon ID Card) -->
+            <div class="holo-bottom-bar">
+                <!-- QR Code Putih Bersih -->
+                <div class="holo-qr">
+                    <svg width="48" height="48" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2" y="2" width="18" height="18" stroke="#ffffff" stroke-width="3.5"/>
+                        <rect x="7" y="7" width="8" height="8" fill="#ffffff"/>
+                        <rect x="48" y="2" width="18" height="18" stroke="#ffffff" stroke-width="3.5"/>
+                        <rect x="53" y="7" width="8" height="8" fill="#ffffff"/>
+                        <rect x="2" y="48" width="18" height="18" stroke="#ffffff" stroke-width="3.5"/>
+                        <rect x="7" y="53" width="8" height="8" fill="#ffffff"/>
+                        <rect x="26" y="4" width="6" height="6" fill="#ffffff"/>
+                        <rect x="36" y="14" width="6" height="10" fill="#ffffff"/>
+                        <rect x="26" y="26" width="16" height="16" stroke="#ffffff" stroke-width="3"/>
+                        <rect x="31" y="31" width="6" height="6" fill="#fef08a"/>
+                        <rect x="48" y="26" width="6" height="6" fill="#ffffff"/>
+                        <rect x="58" y="26" width="6" height="10" fill="#ffffff"/>
+                        <rect x="4" y="36" width="10" height="6" fill="#ffffff"/>
+                        <rect x="26" y="48" width="8" height="6" fill="#ffffff"/>
+                        <rect x="48" y="44" width="6" height="12" fill="#ffffff"/>
+                        <rect x="26" y="58" width="14" height="6" fill="#ffffff"/>
+                        <rect x="56" y="56" width="8" height="8" fill="#ffffff"/>
+                    </svg>
+                </div>
+
+                <!-- Ikon Pesawat Kertas / Telegram Style Glowing di Tengah -->
+                <div class="holo-center-icon">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.5 2.5L2.5 10.5L9.5 13.5L18.5 6.5L11.5 15.5L14.5 21.5L21.5 2.5Z" fill="#ffffff" stroke="#fef08a" stroke-width="1.2" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+
+                <!-- Ikon ID Card di Kanan -->
+                <div class="holo-id-icon">
+                    <svg width="42" height="42" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1.5" y="2.5" width="25" height="19" rx="3.5" stroke="#ffffff" stroke-width="2"/>
+                        <circle cx="9" cy="10" r="2.8" fill="#ffffff"/>
+                        <path d="M4.5 17.5C4.5 15 6.5 14 9 14C11.5 14 13.5 15 13.5 17.5" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="16.5" y1="9" x2="22.5" y2="9" stroke="#fef08a" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="16.5" y1="13" x2="22.5" y2="13" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="16.5" y1="17" x2="20.5" y2="17" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pantulan Cahaya Neon di Lantai Bawah Kartu -->
+        <div class="holo-floor-reflection"></div>
+    </div>
+</div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- ==================== VIEW 2: DATA MAHASISWA & USIA (viewmhsaja.php) ==================== -->
+<div id="view-datamhs" class="page-view">
+    <section class="section">
+        <div class="container">
+            <div class="data-section-box">
+                <div class="content-header-bar">
+                    DAFTAR DATA MHS &bull; PONDOK SANTAP ENAK KOTA METRO
+                </div>
+
+                <div class="info-box">
+                    <span>&#128203; <strong>Soal Kuis No. 3 &amp; 4 (viewmhsaja.php):</strong> Menampilkan kolom <strong>ID, NPM, NAMA MHS,</strong> dan <strong>USIA</strong> yang dihitung otomatis dari tanggal lahir.</span>
+                </div>
+
+                <div class="toolbar-row">
+                    <span class="category-tag">Kategori: Data Mahasiswa &amp; Usia</span>
+                    <input type="text" class="search-input" placeholder="&#128269; Cari NPM atau Nama..." onkeyup="filterTable(this)">
+                </div>
+
+                <div class="table-wrapper">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 60px;">ID</th>
+                                <th style="width: 140px;">NPM</th>
+                                <th>NAMA MHS</th>
+                                <th style="width: 120px;">USIA</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                                        <tr>
+                                <td><strong>1</strong></td>
+                                <td><span class="npm-pill">25510001</span></td>
+                                <td><strong>Agus Salim</strong></td>
+                                <td><span class="usia-pill">22 Tahun</span></td>
+                            </tr>
+                                                        <tr>
+                                <td><strong>2</strong></td>
+                                <td><span class="npm-pill">25510002</span></td>
+                                <td><strong>Wendiyanto</strong></td>
+                                <td><span class="usia-pill">22 Tahun</span></td>
+                            </tr>
+                                                        <tr>
+                                <td><strong>3</strong></td>
+                                <td><span class="npm-pill">25510003</span></td>
+                                <td><strong>Mujiyanti</strong></td>
+                                <td><span class="usia-pill">22 Tahun</span></td>
+                            </tr>
+                                                        <tr>
+                                <td><strong>4</strong></td>
+                                <td><span class="npm-pill">25510004</span></td>
+                                <td><strong>Fatimah</strong></td>
+                                <td><span class="usia-pill">22 Tahun</span></td>
+                            </tr>
+                                                        <tr>
+                                <td><strong>5</strong></td>
+                                <td><span class="npm-pill">25510005</span></td>
+                                <td><strong>Andri Hakim</strong></td>
+                                <td><span class="usia-pill">22 Tahun</span></td>
+                            </tr>
+                                                    </tbody>
+                    </table>
+                </div>
+
+                <div class="text-right-small">
+                    * localhost/bigdata/viewmhsaja.php &bull; Total 5 Record Mahasiswa
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- ==================== VIEW 3: FILTER WANITA (viewfilterwanita.php) ==================== -->
+<div id="view-wanita" class="page-view">
+    <section class="section">
+        <div class="container">
+            <div class="data-section-box">
+                <div class="content-header-bar">
+                    DAFTAR DATA MAHASISWA "WANITA" &bull; PONDOK SANTAP ENAK KOTA METRO
+                </div>
+
+                <div class="info-box">
+                    <span>&#128105; <strong>Soal Kuis No. 5 &amp; 6 (viewfilterwanita.php):</strong> Menampilkan hasil pemfilteran SQL <code>WHERE jenis_kelamin = 'Wanita'</code> pada kolom <strong>ID, NAMA MHS,</strong> dan <strong>JENIS KELAMIN</strong>.</span>
+                </div>
+
+                <div class="toolbar-row">
+                    <span class="category-tag">Kategori: Filter Mahasiswi Wanita</span>
+                    <input type="text" class="search-input" placeholder="&#128269; Cari Nama Mahasiswi..." onkeyup="filterTable(this)">
+                </div>
+
+                <div class="table-wrapper">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 65px;">ID</th>
+                                <th>NAMA MHS</th>
+                                <th style="width: 170px;">JENIS KELAMIN</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                                        <tr>
+                                <td><strong>3</strong></td>
+                                <td><strong>Mujiyanti</strong></td>
+                                <td><span class="badge badge-wanita">Wanita</span></td>
+                            </tr>
+                                                        <tr>
+                                <td><strong>4</strong></td>
+                                <td><strong>Fatimah</strong></td>
+                                <td><span class="badge badge-wanita">Wanita</span></td>
+                            </tr>
+                                                    </tbody>
+                    </table>
+                </div>
+
+                <div class="text-right-small">
+                    * localhost/bigdata/viewfilterwanita.php &bull; Terfilter 2 Record Wanita
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- ==================== VIEW 4: ID CARD PEMBUAT PROGRAM (me.php) ==================== -->
+<div id="view-about" class="page-view">
+    <section class="section">
+        <div class="container">
+            <div class="data-section-box">
+                <div class="content-header-bar">
+                    ABOUT PEMBUAT PROGRAM &bull; ID CARD MAHASISWA RESMI
+                </div>
+
+                <div class="info-box">
+                    <span>&#127891; <strong>Soal Kuis No. 7 (me.php):</strong> Kartu Identitas Mahasiswa Resmi Pembuat Program (NPM: <strong>24430121</strong>, Nama: <strong>Fatkhul Umam</strong>, Fakultas: <strong>Fakultas Ilmu Komputer</strong>, Foto Almamater).</span>
+                </div>
+
+                <!-- idcard_component.php - Holographic Glassmorphism ID Card di Atas Background Gedung Mewah -->
+<div class="luxury-stage">
+    <!-- Ornamen Cahaya & Siluet Arsitektur Gedung Mewah -->
+    <div class="luxury-building-bg"></div>
+    <div class="luxury-light-orb orb-1"></div>
+    <div class="luxury-light-orb orb-2"></div>
+
+    <!-- KARTU KACA TRANSPARAN HOLOGRAFIK (SEPERTI GAMBAR REFERENSI) -->
+    <div class="glass-card-container">
+        <div class="holo-glass-card">
+            <!-- Kilau Cahaya Kaca Diagonal -->
+            <div class="glass-sheen"></div>
+
+            <!-- 1. Ikon / Logo Bersinar di Atas -->
+            <div class="holo-top-logo">
                 
     <svg width="62" height="62" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;">
         <defs>
@@ -2634,142 +2616,133 @@ a {
             </linearGradient>
         </defs>
 
-        <!-- Bingkai Perisai Segi Delapan / Lingkaran Emas Luar -->
+        <!-- Bingkai Lingkaran Emas Luar -->
         <circle cx="60" cy="60" r="56" fill="url(#greenGrad)" stroke="url(#goldGrad)" stroke-width="4"/>
         <circle cx="60" cy="60" r="49" fill="none" stroke="#FEF08A" stroke-width="1.2" stroke-dasharray="3 2"/>
 
-        <!-- 12 Sinar Matahari Muhammadiyah / Karomah -->
-        <g stroke="url(#goldGrad)" stroke-width="2.6" stroke-linecap="round">
-            <line x1="60" y1="14" x2="60" y2="24"/>
-            <line x1="60" y1="96" x2="60" y2="106"/>
-            <line x1="14" y1="60" x2="24" y2="60"/>
-            <line x1="96" y1="60" x2="106" y2="60"/>
-            <line x1="27.5" y1="27.5" x2="34.5" y2="34.5"/>
-            <line x1="85.5" y1="85.5" x2="92.5" y2="92.5"/>
-            <line x1="92.5" y1="27.5" x2="85.5" y2="34.5"/>
-            <line x1="34.5" y1="85.5" x2="27.5" y2="92.5"/>
-            <line x1="42" y1="17.5" x2="46" y2="26.5"/>
-            <line x1="78" y1="17.5" x2="74" y2="26.5"/>
-            <line x1="17.5" y1="42" x2="26.5" y2="46"/>
-            <line x1="102.5" y1="42" x2="93.5" y2="46"/>
-        </g>
+        <!-- Bintang Mahkota Kuliner / Keunggulan di Atas -->
+        <circle cx="60" cy="21" r="3.5" fill="#FEF08A"/>
+        <circle cx="46" cy="24" r="2.5" fill="url(#goldGrad)"/>
+        <circle cx="74" cy="24" r="2.5" fill="url(#goldGrad)"/>
 
-        <!-- Untaian Daun Emas Karomah (Kiri & Kanan) -->
-        <path d="M30 82 C20 65, 22 42, 36 30" stroke="url(#goldGrad)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-        <path d="M90 82 C100 65, 98 42, 84 30" stroke="url(#goldGrad)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <!-- Untaian Daun Emas (Kiri & Kanan) -->
+        <path d="M28 80 C18 63, 20 40, 35 28" stroke="url(#goldGrad)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <path d="M92 80 C102 63, 100 40, 85 28" stroke="url(#goldGrad)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
 
-        <!-- Kubah Masjid Pondok Akrom -->
-        <path d="M40 58 C40 42, 60 32, 60 28 C60 32, 80 42, 80 58 Z" fill="url(#goldGrad)"/>
-        <!-- Bulan Sabit Puncak Kubah -->
-        <circle cx="60" cy="24" r="3" fill="#FEF08A"/>
+        <!-- Kubah / Tudung Saji Mewah Emas (Simbol Pondok Santap Enak) -->
+        <path d="M35 60 C35 40, 46 31, 60 31 C74 31, 85 40, 85 60 Z" fill="url(#goldGrad)"/>
+        <circle cx="60" cy="28" r="4" fill="#FEF08A"/>
+        <!-- Garis Piring Saji -->
+        <rect x="30" y="61" width="60" height="5" rx="2.5" fill="#FFFFFF" stroke="url(#goldGrad)" stroke-width="1.5"/>
 
-        <!-- Kitab Terbuka (Al-Quran & Ilmu Pengetahuan) -->
-        <path d="M36 62 L58 66 L58 80 L36 75 Z" fill="#FFFFFF" stroke="url(#goldGrad)" stroke-width="1.5"/>
-        <path d="M84 62 L62 66 L62 80 L84 75 Z" fill="#FFFFFF" stroke="url(#goldGrad)" stroke-width="1.5"/>
+        <!-- Uap Aroma Hangat di Atas -->
+        <path d="M52 44 C50 39, 54 36, 52 33" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M60 42 C58 37, 62 34, 60 31" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M68 44 C66 39, 70 36, 68 33" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
 
-        <!-- Pita Bawah Bertuliskan KAROMAH -->
-        <rect x="26" y="83" width="68" height="15" rx="7.5" fill="url(#goldGrad)" stroke="#042F2E" stroke-width="1.5"/>
-        <text x="60" y="93.5" text-anchor="middle" fill="#042F2E" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="900" font-size="9.5" letter-spacing="1.2">KAROMAH</text>
-    </svg>            </div>
-
-            <!-- 2. Header Teks di Atas Foto -->
-            <div class="holo-id-label">STUDENT ID &bull; NPM 24430121</div>
-            <h2 class="holo-main-title">Fatkhul Umam</h2>
-            <div class="holo-sub-role">Fakultas Ilmu Komputer &bull; Karomah</div>
-
-            <!-- 3. Bingkai Foto Tengah Bersinar (Utuh Tanpa Crop & Proporsional) -->
-            <div class="holo-avatar-ring">
-                <img src="img/foto_profil.jpg" alt="Fatkhul Umam" onerror="this.onerror=null; this.src='img/foto.png';">
-            </div>
-
-            <!-- 4. Nama & Verified Checkmark + Deskripsi -->
-            <div class="holo-verified-name">
-                <span>Fatkhul Umam</span>
-                <span class="holo-check-badge" title="Terverifikasi">&#10004;</span>
-            </div>
-
-            <p class="holo-bio-text">
-                Pondok Muhammadiyah Akrom (KAROMAH) Kota Metro<br>
-                Praktikum Big Data &bull; Dosen: Arif Hidayat, S.T., M.Kom<br>
-                <span class="holo-link-text">localhost/bigdata/me.php</span>
-            </p>
-
-            <!-- 5. Tiga Tombol Pill Transparan (Seperti Join | Channel | Message Me) -->
-            <div class="holo-pills-row">
-                <button type="button" class="holo-pill-btn" onclick="if(window.switchPage) switchPage('datamhs'); else window.location.href='viewmhsaja.php';">
-                    Data Mhs
-                </button>
-                <button type="button" class="holo-pill-btn" onclick="if(window.switchPage) switchPage('wanita'); else window.location.href='viewfilterwanita.php';">
-                    Filter Wanita
-                </button>
-                <button type="button" class="holo-pill-btn" onclick="if(window.switchPage) switchPage('home'); else window.location.href='index.php';">
-                    NPM 24430121
-                </button>
-            </div>
-
-            <!-- 6. Bar Bawah Bersinar (QR Code | Ikon Tengah | Ikon ID Card) -->
-            <div class="holo-bottom-bar">
-                <!-- QR Code Putih Bersih -->
-                <div class="holo-qr">
-                    <svg width="48" height="48" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="2" y="2" width="18" height="18" stroke="#ffffff" stroke-width="3.5"/>
-                        <rect x="7" y="7" width="8" height="8" fill="#ffffff"/>
-                        <rect x="48" y="2" width="18" height="18" stroke="#ffffff" stroke-width="3.5"/>
-                        <rect x="53" y="7" width="8" height="8" fill="#ffffff"/>
-                        <rect x="2" y="48" width="18" height="18" stroke="#ffffff" stroke-width="3.5"/>
-                        <rect x="7" y="53" width="8" height="8" fill="#ffffff"/>
-                        <rect x="26" y="4" width="6" height="6" fill="#ffffff"/>
-                        <rect x="36" y="14" width="6" height="10" fill="#ffffff"/>
-                        <rect x="26" y="26" width="16" height="16" stroke="#ffffff" stroke-width="3"/>
-                        <rect x="31" y="31" width="6" height="6" fill="#fef08a"/>
-                        <rect x="48" y="26" width="6" height="6" fill="#ffffff"/>
-                        <rect x="58" y="26" width="6" height="10" fill="#ffffff"/>
-                        <rect x="4" y="36" width="10" height="6" fill="#ffffff"/>
-                        <rect x="26" y="48" width="8" height="6" fill="#ffffff"/>
-                        <rect x="48" y="44" width="6" height="12" fill="#ffffff"/>
-                        <rect x="26" y="58" width="14" height="6" fill="#ffffff"/>
-                        <rect x="56" y="56" width="8" height="8" fill="#ffffff"/>
-                    </svg>
-                </div>
-
-                <!-- Ikon Pesawat Kertas / Telegram Style Glowing di Tengah -->
-                <div class="holo-center-icon">
-                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M21.5 2.5L2.5 10.5L9.5 13.5L18.5 6.5L11.5 15.5L14.5 21.5L21.5 2.5Z" fill="#ffffff" stroke="#fef08a" stroke-width="1.2" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-
-                <!-- Ikon ID Card di Kanan -->
-                <div class="holo-id-icon">
-                    <svg width="42" height="42" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="1.5" y="2.5" width="25" height="19" rx="3.5" stroke="#ffffff" stroke-width="2"/>
-                        <circle cx="9" cy="10" r="2.8" fill="#ffffff"/>
-                        <path d="M4.5 17.5C4.5 15 6.5 14 9 14C11.5 14 13.5 15 13.5 17.5" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
-                        <line x1="16.5" y1="9" x2="22.5" y2="9" stroke="#fef08a" stroke-width="2" stroke-linecap="round"/>
-                        <line x1="16.5" y1="13" x2="22.5" y2="13" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
-                        <line x1="16.5" y1="17" x2="20.5" y2="17" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                </div>
-            </div>
-        </div>
-
-        <!-- Pantulan Cahaya Neon di Lantai Bawah Kartu -->
-        <div class="holo-floor-reflection"></div>
-    </div>
-</div>
-
-                <div class="text-right-small">
-                    * localhost/bigdata/me.php &bull; Kartu Identitas Mahasiswa Terverifikasi: Fatkhul Umam (24430121)
-                </div>
-            </div>
-        </div>
-    </section>
-</div>
-
-<!-- BOTTOM BANNER SECTION -->
-<div class="container">
-    <div class="bottom-banner">
-        <div class="banner-left">
+        <!-- Pita Bawah Bertuliskan SANTAP ENAK -->
+        <rect x="18" y="81" width="84" height="16" rx="8" fill="url(#goldGrad)" stroke="#042F2E" stroke-width="1.5"/>
+        <text x="60" y="92" text-anchor="middle" fill="#042F2E" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="900" font-size="8.5" letter-spacing="0.9">SANTAP ENAK</text>
+    </svg>            </div>
+
+            <!-- 2. Header Teks di Atas Foto -->
+            <div class="holo-id-label">STUDENT ID &bull; NPM 24430121</div>
+            <h2 class="holo-main-title">Fatkhul Umam</h2>
+            <div class="holo-sub-role">Fakultas Ilmu Komputer &bull; Pondok Santap Enak</div>
+
+            <!-- 3. Bingkai Foto Tengah Bersinar (Utuh Tanpa Crop & Proporsional) -->
+            <div class="holo-avatar-ring">
+                <img src="img/foto_profil.jpg" alt="Fatkhul Umam" onerror="this.onerror=null; this.src='img/foto.png';">
+            </div>
+
+            <!-- 4. Nama & Verified Checkmark + Deskripsi -->
+            <div class="holo-verified-name">
+                <span>Fatkhul Umam</span>
+                <span class="holo-check-badge" title="Terverifikasi">&#10004;</span>
+            </div>
+
+            <p class="holo-bio-text">
+                Pondok Santap Enak Kota Metro<br>
+                Praktikum Big Data &bull; Dosen: Arif Hidayat, S.T., M.Kom<br>
+                <span class="holo-link-text">localhost/bigdata/me.php</span>
+            </p>
+
+            <!-- 5. Tiga Tombol Pill Transparan (Seperti Join | Channel | Message Me) -->
+            <div class="holo-pills-row">
+                <button type="button" class="holo-pill-btn" onclick="if(window.switchPage) switchPage('datamhs'); else window.location.href='viewmhsaja.php';">
+                    Data Mhs
+                </button>
+                <button type="button" class="holo-pill-btn" onclick="if(window.switchPage) switchPage('wanita'); else window.location.href='viewfilterwanita.php';">
+                    Filter Wanita
+                </button>
+                <button type="button" class="holo-pill-btn" onclick="if(window.switchPage) switchPage('home'); else window.location.href='index.php';">
+                    NPM 24430121
+                </button>
+            </div>
+
+            <!-- 6. Bar Bawah Bersinar (QR Code | Ikon Tengah | Ikon ID Card) -->
+            <div class="holo-bottom-bar">
+                <!-- QR Code Putih Bersih -->
+                <div class="holo-qr">
+                    <svg width="48" height="48" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2" y="2" width="18" height="18" stroke="#ffffff" stroke-width="3.5"/>
+                        <rect x="7" y="7" width="8" height="8" fill="#ffffff"/>
+                        <rect x="48" y="2" width="18" height="18" stroke="#ffffff" stroke-width="3.5"/>
+                        <rect x="53" y="7" width="8" height="8" fill="#ffffff"/>
+                        <rect x="2" y="48" width="18" height="18" stroke="#ffffff" stroke-width="3.5"/>
+                        <rect x="7" y="53" width="8" height="8" fill="#ffffff"/>
+                        <rect x="26" y="4" width="6" height="6" fill="#ffffff"/>
+                        <rect x="36" y="14" width="6" height="10" fill="#ffffff"/>
+                        <rect x="26" y="26" width="16" height="16" stroke="#ffffff" stroke-width="3"/>
+                        <rect x="31" y="31" width="6" height="6" fill="#fef08a"/>
+                        <rect x="48" y="26" width="6" height="6" fill="#ffffff"/>
+                        <rect x="58" y="26" width="6" height="10" fill="#ffffff"/>
+                        <rect x="4" y="36" width="10" height="6" fill="#ffffff"/>
+                        <rect x="26" y="48" width="8" height="6" fill="#ffffff"/>
+                        <rect x="48" y="44" width="6" height="12" fill="#ffffff"/>
+                        <rect x="26" y="58" width="14" height="6" fill="#ffffff"/>
+                        <rect x="56" y="56" width="8" height="8" fill="#ffffff"/>
+                    </svg>
+                </div>
+
+                <!-- Ikon Pesawat Kertas / Telegram Style Glowing di Tengah -->
+                <div class="holo-center-icon">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.5 2.5L2.5 10.5L9.5 13.5L18.5 6.5L11.5 15.5L14.5 21.5L21.5 2.5Z" fill="#ffffff" stroke="#fef08a" stroke-width="1.2" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+
+                <!-- Ikon ID Card di Kanan -->
+                <div class="holo-id-icon">
+                    <svg width="42" height="42" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1.5" y="2.5" width="25" height="19" rx="3.5" stroke="#ffffff" stroke-width="2"/>
+                        <circle cx="9" cy="10" r="2.8" fill="#ffffff"/>
+                        <path d="M4.5 17.5C4.5 15 6.5 14 9 14C11.5 14 13.5 15 13.5 17.5" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="16.5" y1="9" x2="22.5" y2="9" stroke="#fef08a" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="16.5" y1="13" x2="22.5" y2="13" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="16.5" y1="17" x2="20.5" y2="17" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pantulan Cahaya Neon di Lantai Bawah Kartu -->
+        <div class="holo-floor-reflection"></div>
+    </div>
+</div>
+
+                <div class="text-right-small">
+                    * localhost/bigdata/me.php &bull; Kartu Identitas Mahasiswa Terverifikasi: Fatkhul Umam (24430121)
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- BOTTOM BANNER SECTION -->
+<div class="container">
+    <div class="bottom-banner">
+        <div class="banner-left">
             <div style="flex-shrink:0;">
     <svg width="58" height="58" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;">
         <defs>
@@ -2785,99 +2758,90 @@ a {
             </linearGradient>
         </defs>
 
-        <!-- Bingkai Perisai Segi Delapan / Lingkaran Emas Luar -->
+        <!-- Bingkai Lingkaran Emas Luar -->
         <circle cx="60" cy="60" r="56" fill="url(#greenGrad)" stroke="url(#goldGrad)" stroke-width="4"/>
         <circle cx="60" cy="60" r="49" fill="none" stroke="#FEF08A" stroke-width="1.2" stroke-dasharray="3 2"/>
 
-        <!-- 12 Sinar Matahari Muhammadiyah / Karomah -->
-        <g stroke="url(#goldGrad)" stroke-width="2.6" stroke-linecap="round">
-            <line x1="60" y1="14" x2="60" y2="24"/>
-            <line x1="60" y1="96" x2="60" y2="106"/>
-            <line x1="14" y1="60" x2="24" y2="60"/>
-            <line x1="96" y1="60" x2="106" y2="60"/>
-            <line x1="27.5" y1="27.5" x2="34.5" y2="34.5"/>
-            <line x1="85.5" y1="85.5" x2="92.5" y2="92.5"/>
-            <line x1="92.5" y1="27.5" x2="85.5" y2="34.5"/>
-            <line x1="34.5" y1="85.5" x2="27.5" y2="92.5"/>
-            <line x1="42" y1="17.5" x2="46" y2="26.5"/>
-            <line x1="78" y1="17.5" x2="74" y2="26.5"/>
-            <line x1="17.5" y1="42" x2="26.5" y2="46"/>
-            <line x1="102.5" y1="42" x2="93.5" y2="46"/>
-        </g>
+        <!-- Bintang Mahkota Kuliner / Keunggulan di Atas -->
+        <circle cx="60" cy="21" r="3.5" fill="#FEF08A"/>
+        <circle cx="46" cy="24" r="2.5" fill="url(#goldGrad)"/>
+        <circle cx="74" cy="24" r="2.5" fill="url(#goldGrad)"/>
 
-        <!-- Untaian Daun Emas Karomah (Kiri & Kanan) -->
-        <path d="M30 82 C20 65, 22 42, 36 30" stroke="url(#goldGrad)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-        <path d="M90 82 C100 65, 98 42, 84 30" stroke="url(#goldGrad)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <!-- Untaian Daun Emas (Kiri & Kanan) -->
+        <path d="M28 80 C18 63, 20 40, 35 28" stroke="url(#goldGrad)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <path d="M92 80 C102 63, 100 40, 85 28" stroke="url(#goldGrad)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
 
-        <!-- Kubah Masjid Pondok Akrom -->
-        <path d="M40 58 C40 42, 60 32, 60 28 C60 32, 80 42, 80 58 Z" fill="url(#goldGrad)"/>
-        <!-- Bulan Sabit Puncak Kubah -->
-        <circle cx="60" cy="24" r="3" fill="#FEF08A"/>
+        <!-- Kubah / Tudung Saji Mewah Emas (Simbol Pondok Santap Enak) -->
+        <path d="M35 60 C35 40, 46 31, 60 31 C74 31, 85 40, 85 60 Z" fill="url(#goldGrad)"/>
+        <circle cx="60" cy="28" r="4" fill="#FEF08A"/>
+        <!-- Garis Piring Saji -->
+        <rect x="30" y="61" width="60" height="5" rx="2.5" fill="#FFFFFF" stroke="url(#goldGrad)" stroke-width="1.5"/>
 
-        <!-- Kitab Terbuka (Al-Quran & Ilmu Pengetahuan) -->
-        <path d="M36 62 L58 66 L58 80 L36 75 Z" fill="#FFFFFF" stroke="url(#goldGrad)" stroke-width="1.5"/>
-        <path d="M84 62 L62 66 L62 80 L84 75 Z" fill="#FFFFFF" stroke="url(#goldGrad)" stroke-width="1.5"/>
+        <!-- Uap Aroma Hangat di Atas -->
+        <path d="M52 44 C50 39, 54 36, 52 33" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M60 42 C58 37, 62 34, 60 31" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M68 44 C66 39, 70 36, 68 33" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
 
-        <!-- Pita Bawah Bertuliskan KAROMAH -->
-        <rect x="26" y="83" width="68" height="15" rx="7.5" fill="url(#goldGrad)" stroke="#042F2E" stroke-width="1.5"/>
-        <text x="60" y="93.5" text-anchor="middle" fill="#042F2E" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="900" font-size="9.5" letter-spacing="1.2">KAROMAH</text>
-    </svg></div>
-            <div>
-                <h3>Pondok Muhammadiyah Akrom (KAROMAH) Kota Metro</h3>
-                <p>Aplikasi Pendataan Mahasiswa &bull; Dikembangkan untuk memenuhi tugas Kuis 1 Praktikum Big Data oleh Fatkhul Umam (NPM: 24430121), Fakultas Ilmu Komputer.</p>
-            </div>
-        </div>
-
-        <div class="banner-form-card">
-            <div class="form-grid">
-                <div class="form-group">
-                    <label>Nama Pembuat Program *</label>
-                    <input type="text" class="form-control" value="Fatkhul Umam" readonly>
-                </div>
-                <div class="form-group">
-                    <label>NPM Mahasiswa *</label>
-                    <input type="text" class="form-control" value="24430121" readonly>
-                </div>
-                <div class="form-group">
-                    <label>Fakultas *</label>
-                    <input type="text" class="form-control" value="Fakultas Ilmu Komputer" readonly>
-                </div>
-                <div class="form-group">
-                    <label>Dosen Pengampu *</label>
-                    <input type="text" class="form-control" value="Arif Hidayat, S.T., M.Kom" readonly>
-                </div>
-            </div>
-            <button type="button" onclick="switchPage('datamhs')" class="btn-pill-primary btn-full" style="cursor:pointer;">
-                &#128203; Lihat Data Mahasiswa &amp; Usia (viewmhsaja) &rarr;
-            </button>
-        </div>
-    </div>
-</div>
-
-<script>
-function switchPage(pageId) {
-    document.querySelectorAll('.page-view').forEach(function(el) {
-        el.classList.remove('active');
-    });
-    document.querySelectorAll('.nav-link').forEach(function(el) {
-        el.classList.remove('active');
-    });
-    var target = document.getElementById('view-' + pageId);
-    if (target) target.classList.add('active');
-    var navBtn = document.getElementById('nav-' + pageId);
-    if (navBtn) navBtn.classList.add('active');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-function filterTable(inputEl) {
-    var filter = inputEl.value.toLowerCase();
-    var table = inputEl.closest('.data-section-box').querySelector('.data-table');
-    var rows = table.querySelectorAll('tbody tr');
-    rows.forEach(function(row) {
-        var text = row.textContent.toLowerCase();
-        row.style.display = text.indexOf(filter) > -1 ? '' : 'none';
-    });
-}
-</script>
-</body>
-</html>
+        <!-- Pita Bawah Bertuliskan SANTAP ENAK -->
+        <rect x="18" y="81" width="84" height="16" rx="8" fill="url(#goldGrad)" stroke="#042F2E" stroke-width="1.5"/>
+        <text x="60" y="92" text-anchor="middle" fill="#042F2E" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="900" font-size="8.5" letter-spacing="0.9">SANTAP ENAK</text>
+    </svg></div>
+            <div>
+                <h3>Pondok Santap Enak Kota Metro</h3>
+                <p>Aplikasi Pendataan Mahasiswa &bull; Dikembangkan untuk memenuhi tugas Kuis 1 Praktikum Big Data oleh Fatkhul Umam (NPM: 24430121), Fakultas Ilmu Komputer.</p>
+            </div>
+        </div>
+
+        <div class="banner-form-card">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Nama Pembuat Program *</label>
+                    <input type="text" class="form-control" value="Fatkhul Umam" readonly>
+                </div>
+                <div class="form-group">
+                    <label>NPM Mahasiswa *</label>
+                    <input type="text" class="form-control" value="24430121" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Fakultas *</label>
+                    <input type="text" class="form-control" value="Fakultas Ilmu Komputer" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Dosen Pengampu *</label>
+                    <input type="text" class="form-control" value="Arif Hidayat, S.T., M.Kom" readonly>
+                </div>
+            </div>
+            <button type="button" onclick="switchPage('datamhs')" class="btn-pill-primary btn-full" style="cursor:pointer;">
+                &#128203; Lihat Data Mahasiswa &amp; Usia (viewmhsaja) &rarr;
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+function switchPage(pageId) {
+    document.querySelectorAll('.page-view').forEach(function(el) {
+        el.classList.remove('active');
+    });
+    document.querySelectorAll('.nav-link').forEach(function(el) {
+        el.classList.remove('active');
+    });
+    var target = document.getElementById('view-' + pageId);
+    if (target) target.classList.add('active');
+    var navBtn = document.getElementById('nav-' + pageId);
+    if (navBtn) navBtn.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function filterTable(inputEl) {
+    var filter = inputEl.value.toLowerCase();
+    var table = inputEl.closest('.data-section-box').querySelector('.data-table');
+    var rows = table.querySelectorAll('tbody tr');
+    rows.forEach(function(row) {
+        var text = row.textContent.toLowerCase();
+        row.style.display = text.indexOf(filter) > -1 ? '' : 'none';
+    });
+}
+</script>
+</body>
+</html>
