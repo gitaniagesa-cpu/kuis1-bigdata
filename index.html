@@ -1529,6 +1529,170 @@ a {
     .ktp-body { grid-template-columns: 1fr; }
     .ktp-header { flex-direction: column; text-align: center; }
 }
+
+/* ==================== 9. UKURAN FOTO PROPORSIONAL (TIDAK KEBESARAN & TANPA CROP) ==================== */
+.hero-blob {
+    width: 195px !important;
+    max-width: 195px !important;
+    height: auto !important;
+    border-radius: 16px !important;
+    background: #ffffff !important;
+    padding: 6px !important;
+    border: 3px solid var(--gold-border) !important;
+    box-shadow: 0 16px 35px rgba(21, 128, 61, 0.16), 0 4px 12px rgba(212, 175, 55, 0.2) !important;
+    animation: floatGentle 4.5s ease-in-out infinite;
+}
+
+.hero-blob img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 265px !important;
+    object-fit: contain !important;
+    border-radius: 10px !important;
+    display: block;
+}
+
+.floating-badge {
+    top: 12px !important;
+    right: 12% !important;
+    padding: 8px 14px !important;
+    animation: floatBadge 3.8s ease-in-out infinite 0.6s;
+}
+
+.ktp-body {
+    grid-template-columns: 1fr 160px !important;
+    gap: 20px !important;
+    padding: 20px 26px !important;
+    align-items: center !important;
+}
+
+.ktp-photo-frame {
+    width: 138px !important;
+    max-width: 138px !important;
+    padding: 5px !important;
+    background: #ffffff;
+    border: 2.5px solid var(--gold-border) !important;
+    border-radius: 10px !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.ktp-photo-frame:hover {
+    transform: scale(1.04);
+}
+
+.ktp-photo-frame img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 190px !important;
+    object-fit: contain !important; /* Utuh 100% tanpa crop & ukuran pas seperti KTP */
+    border-radius: 6px !important;
+    display: block;
+}
+
+/* ==================== 10. ANIMASI WEB ELEGAN & MEWAH ==================== */
+@keyframes floatGentle {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+}
+
+@keyframes floatBadge {
+    0%, 100% { transform: translateY(0px) scale(1); }
+    50% { transform: translateY(-6px) scale(1.03); }
+}
+
+@keyframes fadeUpLuxury {
+    0% {
+        opacity: 0;
+        transform: translateY(22px) scale(0.985);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes pulseGoldGlow {
+    0%, 100% {
+        box-shadow: 0 12px 30px rgba(21, 128, 61, 0.14), 0 0 0 0 rgba(212, 175, 55, 0.35);
+    }
+    50% {
+        box-shadow: 0 18px 40px rgba(21, 128, 61, 0.22), 0 0 20px 3px rgba(212, 175, 55, 0.28);
+    }
+}
+
+@keyframes shimmerSweep {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+/* Terapkan Animasi Masuk Elegan pada Seksi & Kartu */
+.hero-grid > div:first-child {
+    animation: fadeUpLuxury 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-visual {
+    animation: fadeUpLuxury 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
+}
+
+.features-grid > div:nth-child(1) { animation: fadeUpLuxury 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both; }
+.features-grid > div:nth-child(2) { animation: fadeUpLuxury 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both; }
+.features-grid > div:nth-child(3) { animation: fadeUpLuxury 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both; }
+.features-grid > div:nth-child(4) { animation: fadeUpLuxury 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.4s both; }
+
+.student-card:nth-child(1) { animation: fadeUpLuxury 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both; }
+.student-card:nth-child(2) { animation: fadeUpLuxury 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.18s both; }
+.student-card:nth-child(3) { animation: fadeUpLuxury 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.26s both; }
+.student-card:nth-child(4) { animation: fadeUpLuxury 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.34s both; }
+.student-card:nth-child(5) { animation: fadeUpLuxury 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.42s both; }
+
+/* Interaksi Hover Kartu Lebih Halus & Mewah */
+.feature-card,
+.student-card,
+.data-section-box {
+    transition: transform 0.38s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.38s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s ease !important;
+}
+
+.feature-card:hover,
+.student-card:hover {
+    transform: translateY(-7px) scale(1.015) !important;
+    box-shadow: 0 18px 36px rgba(21, 128, 61, 0.15), 0 6px 16px rgba(212, 175, 55, 0.25) !important;
+}
+
+/* Efek Kilau & Hover pada Kartu KTP */
+.ktp-card {
+    animation: fadeUpLuxury 0.75s cubic-bezier(0.22, 1, 0.36, 1) both, pulseGoldGlow 5s ease-in-out infinite;
+    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease;
+}
+
+.ktp-card:hover {
+    transform: translateY(-5px) scale(1.008);
+}
+
+/* Animasi Baris Tabel saat Di-hover */
+.data-table tbody tr {
+    transition: transform 0.22s ease, background-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+.data-table tbody tr:hover {
+    transform: scale(1.006);
+    box-shadow: 0 4px 12px rgba(21, 128, 61, 0.1);
+    position: relative;
+    z-index: 2;
+}
+
+/* Tombol Pill dengan Transisi Kilau Halus */
+.btn-pill-primary,
+.btn-pill-outline,
+.btn-card-link {
+    transition: all 0.32s cubic-bezier(0.22, 1, 0.36, 1) !important;
+}
+
+.btn-pill-primary:hover,
+.btn-card-link:hover {
+    transform: translateY(-3px) scale(1.03) !important;
+    box-shadow: 0 10px 22px rgba(21, 128, 61, 0.28), 0 0 12px rgba(212, 175, 55, 0.4) !important;
+}
         .page-view { display: none; animation: fadeInView 0.25s ease-out; }
         .page-view.active { display: block; }
         @keyframes fadeInView {
