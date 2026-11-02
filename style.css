@@ -1951,3 +1951,468 @@ a {
     background: radial-gradient(ellipse at center, rgba(16, 185, 129, 0.75) 0%, rgba(254, 240, 138, 0.45) 45%, transparent 75%);
     filter: blur(12px);
 }
+
+/* ==================== 12. AARAV SINGH BENTO PORTFOLIO LAYOUT (WARNA PUTIH, GARIS EMAS, GRADASI HIJAU) ==================== */
+.bento-page-wrap {
+    background: linear-gradient(180deg, #ffffff 0%, #f4fbf7 50%, #ffffff 100%);
+    padding: 18px 0 50px;
+}
+
+/* Floating Pill Navbar */
+.navbar-pill-wrap {
+    padding: 14px 0 8px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(14px);
+}
+
+.navbar-pill {
+    background: #ffffff;
+    border: 2px solid var(--gold-border);
+    border-radius: 60px;
+    padding: 8px 14px 8px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 10px 30px rgba(21, 128, 61, 0.08);
+}
+
+.pill-nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #f0fdf4;
+    padding: 5px;
+    border-radius: 50px;
+    border: 1px solid rgba(212, 175, 55, 0.5);
+}
+
+.pill-nav-item {
+    border: none;
+    background: transparent;
+    padding: 7px 16px;
+    border-radius: 50px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #475569;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.pill-nav-item:hover {
+    color: var(--green-dark);
+}
+
+.pill-nav-item.active {
+    background: var(--green-gradient);
+    color: #ffffff;
+    font-weight: 700;
+    border: 1.5px solid var(--gold-border);
+    box-shadow: 0 3px 10px rgba(21, 128, 61, 0.2);
+}
+
+/* Bento Outer Section Card */
+.bento-section-card {
+    background: #ffffff;
+    border: 2px solid var(--gold-border);
+    border-radius: 26px;
+    padding: 34px 36px;
+    margin-bottom: 22px;
+    box-shadow: 0 14px 35px rgba(21, 128, 61, 0.05), 0 4px 14px rgba(212, 175, 55, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+/* 1. Hero Bento Card */
+.bento-hero {
+    background: radial-gradient(circle at 80% 30%, #dcfce7 0%, #f0fdf4 45%, #ffffff 100%);
+    padding: 44px 42px;
+}
+
+.bento-hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 36px;
+    align-items: center;
+}
+
+.bento-hello {
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--green-primary);
+    margin-bottom: 8px;
+    display: block;
+}
+
+.bento-hero-name {
+    font-size: 2.75rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.12;
+    margin-bottom: 6px;
+}
+
+.bento-hero-role {
+    font-size: 1.55rem;
+    font-weight: 800;
+    background: var(--green-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 14px;
+}
+
+.bento-hero-desc {
+    font-size: 0.88rem;
+    color: #475569;
+    max-width: 480px;
+    margin-bottom: 24px;
+}
+
+.bento-trusted {
+    margin-top: 32px;
+    padding-top: 18px;
+    border-top: 1px dashed var(--gold-border);
+}
+
+.bento-trusted small {
+    display: block;
+    font-size: 0.7rem;
+    color: #64748b;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.bento-logos-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: #64748b;
+}
+
+.bento-logos-row span {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: #334155;
+}
+
+/* Hero Right Portrait with Tilted Frame, 5+ Card, Sparkle & +100% Impact Graph */
+.bento-hero-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 320px;
+}
+
+.bento-tilted-frame {
+    position: absolute;
+    width: 215px;
+    height: 265px;
+    border-radius: 28px;
+    border: 2.5px solid var(--gold-border);
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.14), rgba(212, 175, 55, 0.14));
+    transform: rotate(-7deg);
+    z-index: 1;
+}
+
+.bento-photo-box {
+    position: relative;
+    z-index: 2;
+    width: 195px;
+    background: #ffffff;
+    border: 3px solid var(--gold-border);
+    border-radius: 22px;
+    padding: 6px;
+    box-shadow: 0 18px 40px rgba(21, 128, 61, 0.16);
+    animation: floatGentle 4.5s ease-in-out infinite;
+}
+
+.bento-photo-box img {
+    width: 100%;
+    height: auto;
+    max-height: 255px;
+    object-fit: contain; /* Utuh 100% Tanpa Crop */
+    border-radius: 16px;
+    display: block;
+}
+
+/* Floating Card Kanan Atas: 5+ Record */
+.bento-stat-float {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    z-index: 4;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--gold-border);
+    border-radius: 18px;
+    padding: 12px 18px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    animation: floatBadge 4s ease-in-out infinite;
+}
+
+.bento-stat-float strong {
+    display: block;
+    font-size: 1.65rem;
+    font-weight: 800;
+    color: var(--green-primary);
+    line-height: 1;
+}
+
+.bento-stat-float span {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #475569;
+}
+
+/* Floating Sparkle Orb Kiri Bawah */
+.bento-sparkle-orb {
+    position: absolute;
+    bottom: 52px;
+    left: 14px;
+    z-index: 4;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: var(--green-gradient);
+    border: 2px solid var(--gold-border);
+    color: #fef08a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    box-shadow: 0 8px 20px rgba(21, 128, 61, 0.25);
+}
+
+/* Floating Impact Chart Card Kanan Bawah */
+.bento-chart-float {
+    position: absolute;
+    bottom: 6px;
+    right: 0;
+    z-index: 4;
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid var(--gold-border);
+    border-radius: 16px;
+    padding: 10px 14px;
+    width: 155px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.bento-chart-float small {
+    display: block;
+    font-size: 0.62rem;
+    color: #64748b;
+    font-weight: 700;
+}
+
+.bento-chart-float strong {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--green-dark);
+}
+
+/* 2. About Me Bento Grid */
+.bento-about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: center;
+}
+
+.bento-mini-tag {
+    font-size: 0.68rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--green-primary);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.bento-sec-title {
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.25;
+    margin-bottom: 18px;
+}
+
+.bento-3stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    background: #f0fdf4;
+    border: 1.5px solid var(--gold-border);
+    border-radius: 16px;
+    padding: 14px;
+}
+
+.bento-3stat-item strong {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--green-dark);
+}
+
+.bento-3stat-item span {
+    font-size: 0.68rem;
+    color: #475569;
+    font-weight: 600;
+}
+
+/* 3. Services I Offer (4 Bento Cards with Arrow) */
+.bento-4cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.bento-service-card {
+    background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);
+    border: 2px solid var(--gold-border);
+    border-radius: 20px;
+    padding: 20px 18px;
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.bento-service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(21, 128, 61, 0.14);
+}
+
+.bento-service-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: var(--green-gradient);
+    border: 1.5px solid var(--gold-border);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    margin-bottom: 14px;
+}
+
+.bento-service-card h4 {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 6px;
+}
+
+.bento-service-card p {
+    font-size: 0.75rem;
+    color: #64748b;
+    line-height: 1.45;
+    margin-bottom: 14px;
+}
+
+.bento-corner-arrow {
+    position: absolute;
+    bottom: 14px;
+    right: 16px;
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: var(--green-primary);
+}
+
+/* 4. Technologies I Use (8 Icon Pills Row) */
+.bento-tech-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 12px;
+}
+
+.bento-tech-item {
+    background: #ffffff;
+    border: 1.5px solid var(--gold-border);
+    border-radius: 14px;
+    padding: 12px 8px;
+    text-align: center;
+    transition: all 0.25s ease;
+}
+
+.bento-tech-item:hover {
+    transform: translateY(-4px);
+    background: #f0fdf4;
+}
+
+.bento-tech-badge {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    background: var(--green-gradient);
+    border: 1px solid var(--gold-border);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 6px;
+}
+
+.bento-tech-item span {
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: #334155;
+    display: block;
+}
+
+/* 5. Design Process I Follow (01 - 05 Cards) */
+.bento-process-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+}
+
+.bento-process-card {
+    background: #f8fafc;
+    border: 1.5px solid var(--gold-border);
+    border-radius: 16px;
+    padding: 16px 14px;
+    position: relative;
+}
+
+.bento-process-num {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--green-primary);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bento-process-card h5 {
+    font-size: 0.84rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 4px;
+}
+
+.bento-process-card p {
+    font-size: 0.7rem;
+    color: #64748b;
+    line-height: 1.4;
+}
+
+@media (max-width: 920px) {
+    .bento-hero-grid, .bento-about-grid { grid-template-columns: 1fr; }
+    .bento-4cards { grid-template-columns: repeat(2, 1fr); }
+    .bento-tech-grid { grid-template-columns: repeat(4, 1fr); }
+    .bento-process-grid { grid-template-columns: repeat(2, 1fr); }
+    .pill-nav-menu { display: none; }
+}
