@@ -1693,6 +1693,272 @@ a {
     transform: translateY(-3px) scale(1.03) !important;
     box-shadow: 0 10px 22px rgba(21, 128, 61, 0.28), 0 0 12px rgba(212, 175, 55, 0.4) !important;
 }
+
+/* ==================== 11. HOLOGRAPHIC GLASS ID CARD & BACKGROUND GEDUNG MEWAH ==================== */
+.luxury-stage {
+    position: relative;
+    width: 100%;
+    min-height: 670px;
+    border-radius: 22px;
+    border: 3px solid var(--gold-border);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 45px 20px 60px;
+    /* Latar Belakang Gedung Pencakar Langit / Kampus Mewah Malam & Senja */
+    background:
+        linear-gradient(180deg, rgba(4, 24, 36, 0.55) 0%, rgba(6, 48, 43, 0.68) 60%, rgba(3, 18, 26, 0.92) 100%),
+        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=85') center/cover no-repeat;
+    box-shadow: 0 25px 55px rgba(0, 0, 0, 0.35), inset 0 0 60px rgba(16, 185, 129, 0.15);
+}
+
+/* Siluet Arsitektur Gedung Mewah Berlapis (Fallback & Depth) */
+.luxury-building-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(circle at 20% 25%, rgba(56, 189, 248, 0.22) 0%, transparent 45%),
+        radial-gradient(circle at 80% 30%, rgba(16, 185, 129, 0.25) 0%, transparent 45%),
+        radial-gradient(circle at 50% 85%, rgba(212, 175, 55, 0.22) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.luxury-light-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(55px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.orb-1 {
+    width: 260px;
+    height: 260px;
+    background: rgba(16, 185, 129, 0.35);
+    top: 8%;
+    left: 14%;
+    animation: floatGentle 6s ease-in-out infinite;
+}
+
+.orb-2 {
+    width: 280px;
+    height: 280px;
+    background: rgba(212, 175, 55, 0.28);
+    bottom: 10%;
+    right: 14%;
+    animation: floatGentle 7s ease-in-out infinite reverse;
+}
+
+.glass-card-container {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    perspective: 1200px;
+}
+
+/* Kartu Kaca Akrilik Transparan Bersinar (Persis Gambar Referensi) */
+.holo-glass-card {
+    width: 360px;
+    max-width: 92vw;
+    background: linear-gradient(155deg, rgba(255, 255, 255, 0.18) 0%, rgba(16, 185, 129, 0.12) 45%, rgba(6, 78, 59, 0.28) 100%);
+    backdrop-filter: blur(18px) saturate(160%);
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+    border-radius: 26px;
+    border: 2px solid rgba(254, 240, 138, 0.78);
+    box-shadow:
+        0 0 28px rgba(16, 185, 129, 0.55),
+        0 0 12px rgba(254, 240, 138, 0.5),
+        inset 0 0 22px rgba(16, 185, 129, 0.32),
+        0 25px 50px rgba(0, 0, 0, 0.55);
+    padding: 28px 24px 22px;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    transform: rotateY(-4deg) rotateX(2deg);
+    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease;
+    animation: floatGentle 5s ease-in-out infinite;
+}
+
+.holo-glass-card:hover {
+    transform: rotateY(0deg) rotateX(0deg) translateY(-8px) scale(1.02);
+    box-shadow:
+        0 0 40px rgba(16, 185, 129, 0.8),
+        0 0 20px rgba(254, 240, 138, 0.75),
+        inset 0 0 28px rgba(254, 240, 138, 0.35),
+        0 30px 60px rgba(0, 0, 0, 0.65);
+}
+
+/* Kilau Kaca Akrilik */
+.glass-sheen {
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 60%;
+    height: 200%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.22), transparent);
+    transform: rotate(28deg);
+    pointer-events: none;
+    animation: glassSweep 6s ease-in-out infinite;
+}
+
+@keyframes glassSweep {
+    0%, 100% { left: -70%; }
+    50% { left: 130%; }
+}
+
+.holo-top-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 0 12px rgba(254, 240, 138, 0.65));
+}
+
+.holo-id-label {
+    font-size: 0.76rem;
+    font-weight: 700;
+    color: #fef08a;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(254, 240, 138, 0.5);
+}
+
+.holo-main-title {
+    font-size: 1.55rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    margin: 2px 0;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+}
+
+.holo-sub-role {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #a7f3d0;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+}
+
+/* Bingkai Foto Tengah Bersinar (Utuh Tanpa Crop & Tidak Kebesaran) */
+.holo-avatar-ring {
+    width: 122px;
+    margin: 0 auto 14px;
+    padding: 5px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #fef08a 0%, #10b981 50%, #d4af37 100%);
+    box-shadow: 0 0 22px rgba(16, 185, 129, 0.65), 0 0 10px rgba(254, 240, 138, 0.5);
+}
+
+.holo-avatar-ring img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 165px !important;
+    object-fit: contain !important; /* Utuh 100% tanpa di-crop */
+    border-radius: 14px;
+    display: block;
+    background: #064e3b;
+}
+
+.holo-verified-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 1.02rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+
+.holo-check-badge {
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #38bdf8, #0284c7);
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-size: 0.65rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 8px rgba(56, 189, 248, 0.8);
+}
+
+.holo-bio-text {
+    font-size: 0.74rem;
+    color: rgba(255, 255, 255, 0.88);
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+.holo-link-text {
+    color: #fef08a;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+/* 3 Tombol Pill Transparan (Join | Channel | Message Me Style) */
+.holo-pills-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.holo-pill-btn {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1.5px solid rgba(254, 240, 138, 0.75);
+    color: #ffffff;
+    padding: 7px 6px;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: inset 0 0 8px rgba(16, 185, 129, 0.25);
+    transition: all 0.25s ease;
+}
+
+.holo-pill-btn:hover {
+    background: linear-gradient(135deg, #10b981, #059669);
+    border-color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 0 14px rgba(16, 185, 129, 0.75);
+}
+
+/* Bar Bawah Bersinar (QR | Pesawat/Ikon | ID Icon) */
+.holo-bottom-bar {
+    background: linear-gradient(90deg, rgba(16, 185, 129, 0.78) 0%, rgba(5, 150, 105, 0.88) 50%, rgba(212, 175, 55, 0.82) 100%);
+    border: 1.5px solid rgba(255, 255, 255, 0.65);
+    border-radius: 16px;
+    padding: 10px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.55);
+}
+
+.holo-qr,
+.holo-center-icon,
+.holo-id-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.25));
+}
+
+/* Pantulan Cahaya di Meja/Lantai Bawah Kartu */
+.holo-floor-reflection {
+    width: 310px;
+    height: 26px;
+    margin-top: 14px;
+    background: radial-gradient(ellipse at center, rgba(16, 185, 129, 0.75) 0%, rgba(254, 240, 138, 0.45) 45%, transparent 75%);
+    filter: blur(12px);
+}
         .page-view { display: none; animation: fadeInView 0.25s ease-out; }
         .page-view.active { display: block; }
         @keyframes fadeInView {
@@ -2046,69 +2312,23 @@ a {
                 <div class="content-header-bar">
                     ID CARD MAHASISWA RESMI &bull; PEMBUAT PROGRAM (ME.PHP)
                 </div>
-                <!-- idcard_component.php - Kartu Tanda Mahasiswa (Model KTP Resmi) - Foto Utuh Tanpa Crop -->
-<div class="idcard-wrapper">
-    <div class="ktp-card">
-        <!-- Watermark Logo Karomah di Tengah Latar KTP -->
-        <div class="ktp-watermark">
-            
-    <svg width="230" height="230" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;">
-        <defs>
-            <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#FEF08A"/>
-                <stop offset="50%" stop-color="#D4AF37"/>
-                <stop offset="100%" stop-color="#996515"/>
-            </linearGradient>
-            <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#065F46"/>
-                <stop offset="55%" stop-color="#15803D"/>
-                <stop offset="100%" stop-color="#042F2E"/>
-            </linearGradient>
-        </defs>
+                <!-- idcard_component.php - Holographic Glassmorphism ID Card di Atas Background Gedung Mewah -->
+<div class="luxury-stage">
+    <!-- Ornamen Cahaya & Siluet Arsitektur Gedung Mewah -->
+    <div class="luxury-building-bg"></div>
+    <div class="luxury-light-orb orb-1"></div>
+    <div class="luxury-light-orb orb-2"></div>
 
-        <!-- Bingkai Perisai Segi Delapan / Lingkaran Emas Luar -->
-        <circle cx="60" cy="60" r="56" fill="url(#greenGrad)" stroke="url(#goldGrad)" stroke-width="4"/>
-        <circle cx="60" cy="60" r="49" fill="none" stroke="#FEF08A" stroke-width="1.2" stroke-dasharray="3 2"/>
+    <!-- KARTU KACA TRANSPARAN HOLOGRAFIK (SEPERTI GAMBAR REFERENSI) -->
+    <div class="glass-card-container">
+        <div class="holo-glass-card">
+            <!-- Kilau Cahaya Kaca Diagonal -->
+            <div class="glass-sheen"></div>
 
-        <!-- 12 Sinar Matahari Muhammadiyah / Karomah -->
-        <g stroke="url(#goldGrad)" stroke-width="2.6" stroke-linecap="round">
-            <line x1="60" y1="14" x2="60" y2="24"/>
-            <line x1="60" y1="96" x2="60" y2="106"/>
-            <line x1="14" y1="60" x2="24" y2="60"/>
-            <line x1="96" y1="60" x2="106" y2="60"/>
-            <line x1="27.5" y1="27.5" x2="34.5" y2="34.5"/>
-            <line x1="85.5" y1="85.5" x2="92.5" y2="92.5"/>
-            <line x1="92.5" y1="27.5" x2="85.5" y2="34.5"/>
-            <line x1="34.5" y1="85.5" x2="27.5" y2="92.5"/>
-            <line x1="42" y1="17.5" x2="46" y2="26.5"/>
-            <line x1="78" y1="17.5" x2="74" y2="26.5"/>
-            <line x1="17.5" y1="42" x2="26.5" y2="46"/>
-            <line x1="102.5" y1="42" x2="93.5" y2="46"/>
-        </g>
-
-        <!-- Untaian Daun Emas Karomah (Kiri & Kanan) -->
-        <path d="M30 82 C20 65, 22 42, 36 30" stroke="url(#goldGrad)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-        <path d="M90 82 C100 65, 98 42, 84 30" stroke="url(#goldGrad)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-
-        <!-- Kubah Masjid Pondok Akrom -->
-        <path d="M40 58 C40 42, 60 32, 60 28 C60 32, 80 42, 80 58 Z" fill="url(#goldGrad)"/>
-        <!-- Bulan Sabit Puncak Kubah -->
-        <circle cx="60" cy="24" r="3" fill="#FEF08A"/>
-
-        <!-- Kitab Terbuka (Al-Quran & Ilmu Pengetahuan) -->
-        <path d="M36 62 L58 66 L58 80 L36 75 Z" fill="#FFFFFF" stroke="url(#goldGrad)" stroke-width="1.5"/>
-        <path d="M84 62 L62 66 L62 80 L84 75 Z" fill="#FFFFFF" stroke="url(#goldGrad)" stroke-width="1.5"/>
-
-        <!-- Pita Bawah Bertuliskan KAROMAH -->
-        <rect x="26" y="83" width="68" height="15" rx="7.5" fill="url(#goldGrad)" stroke="#042F2E" stroke-width="1.5"/>
-        <text x="60" y="93.5" text-anchor="middle" fill="#042F2E" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="900" font-size="9.5" letter-spacing="1.2">KAROMAH</text>
-    </svg>        </div>
-
-        <!-- HEADER KTP / KTM -->
-        <div class="ktp-header">
-            <div class="ktp-header-logo">
+            <!-- 1. Ikon / Logo Bersinar di Atas -->
+            <div class="holo-top-logo">
                 
-    <svg width="58" height="58" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+    <svg width="62" height="62" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;">
         <defs>
             <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" stop-color="#FEF08A"/>
@@ -2159,146 +2379,90 @@ a {
         <rect x="26" y="83" width="68" height="15" rx="7.5" fill="url(#goldGrad)" stroke="#042F2E" stroke-width="1.5"/>
         <text x="60" y="93.5" text-anchor="middle" fill="#042F2E" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="900" font-size="9.5" letter-spacing="1.2">KAROMAH</text>
     </svg>            </div>
-            <div class="ktp-header-title">
-                <h2>PROVINSI LAMPUNG &bull; KOTA METRO</h2>
-                <h3>PONDOK MUHAMMADIYAH AKROM (KAROMAH)</h3>
-                <span>KARTU TANDA MAHASISWA &ndash; FAKULTAS ILMU KOMPUTER</span>
-            </div>
-            <div class="ktp-verified-badge">
-                &#128274; E-KTM RESMI
-            </div>
-        </div>
 
-        <!-- GARIS EMAS PEMBATAS HEADER KTP -->
-        <div class="ktp-divider"></div>
+            <!-- 2. Header Teks di Atas Foto -->
+            <div class="holo-id-label">STUDENT ID &bull; NPM 24430121</div>
+            <h2 class="holo-main-title">Fatkhul Umam</h2>
+            <div class="holo-sub-role">Fakultas Ilmu Komputer &bull; Karomah</div>
 
-        <!-- BODY KTP: KIRI BIODATA SEJAJAR, KANAN FOTO UTUH TANPA CROP + TANDA TANGAN -->
-        <div class="ktp-body">
-            <!-- Sisi Kiri: Data seperti KTP -->
-            <div class="ktp-info">
-                <div class="ktp-nik-row">
-                    <span class="ktp-nik-label">NPM / NIK</span>
-                    <span class="ktp-nik-colon">:</span>
-                    <span class="ktp-nik-value">24430121</span>
-                </div>
-
-                <table class="ktp-table">
-                    <tr>
-                        <td class="ktp-label">Nama</td>
-                        <td class="ktp-colon">:</td>
-                        <td class="ktp-val"><strong>FATKHUL UMAM</strong></td>
-                    </tr>
-                    <tr>
-                        <td class="ktp-label">Jenis Kelamin</td>
-                        <td class="ktp-colon">:</td>
-                        <td class="ktp-val">LAKI-LAKI &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Status :</strong> MAHASISWA AKTIF</td>
-                    </tr>
-                    <tr>
-                        <td class="ktp-label">Fakultas</td>
-                        <td class="ktp-colon">:</td>
-                        <td class="ktp-val"><strong>FAKULTAS ILMU KOMPUTER</strong></td>
-                    </tr>
-                    <tr>
-                        <td class="ktp-label">Pondok / Asrama</td>
-                        <td class="ktp-colon">:</td>
-                        <td class="ktp-val">PONDOK MUHAMMADIYAH AKROM (KAROMAH)</td>
-                    </tr>
-                    <tr>
-                        <td class="ktp-label">&nbsp;&nbsp;&nbsp;&nbsp;Kel/Desa &amp; Kota</td>
-                        <td class="ktp-colon">:</td>
-                        <td class="ktp-val">KOTA METRO &ndash; PROVINSI LAMPUNG</td>
-                    </tr>
-                    <tr>
-                        <td class="ktp-label">&nbsp;&nbsp;&nbsp;&nbsp;Agama</td>
-                        <td class="ktp-colon">:</td>
-                        <td class="ktp-val">ISLAM (MUHAMMADIYAH)</td>
-                    </tr>
-                    <tr>
-                        <td class="ktp-label">Mata Kuliah</td>
-                        <td class="ktp-colon">:</td>
-                        <td class="ktp-val">PRAKTIKUM BIG DATA (KUIS 1 &ndash; TABEL MAHASISWA4)</td>
-                    </tr>
-                    <tr>
-                        <td class="ktp-label">Dosen Pengampu</td>
-                        <td class="ktp-colon">:</td>
-                        <td class="ktp-val">ARIF HIDAYAT, S.T., M.KOM</td>
-                    </tr>
-                    <tr>
-                        <td class="ktp-label">Kewarganegaraan</td>
-                        <td class="ktp-colon">:</td>
-                        <td class="ktp-val">WNI</td>
-                    </tr>
-                    <tr>
-                        <td class="ktp-label">Berlaku Hingga</td>
-                        <td class="ktp-colon">:</td>
-                        <td class="ktp-val"><strong>SEUMUR HIDUP / SELAMA MAHASISWA</strong></td>
-                    </tr>
-                </table>
-
-                <!-- Barcode & Chip KTP di Kiri Bawah -->
-                <div class="ktp-bottom-meta">
-                    <div class="ktp-chip">
-                        <div class="ktp-chip-line"></div>
-                        <div class="ktp-chip-line"></div>
-                    </div>
-                    <div class="ktp-barcode-wrap">
-                        <svg width="190" height="28" viewBox="0 0 185 36" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="2" y="2" width="3" height="32" fill="#064e3b"/>
-                            <rect x="8" y="2" width="1.5" height="32" fill="#064e3b"/>
-                            <rect x="12" y="2" width="4" height="32" fill="#064e3b"/>
-                            <rect x="19" y="2" width="2" height="32" fill="#064e3b"/>
-                            <rect x="24" y="2" width="1.5" height="32" fill="#064e3b"/>
-                            <rect x="29" y="2" width="5" height="32" fill="#064e3b"/>
-                            <rect x="37" y="2" width="2" height="32" fill="#064e3b"/>
-                            <rect x="42" y="2" width="3" height="32" fill="#064e3b"/>
-                            <rect x="48" y="2" width="1.5" height="32" fill="#064e3b"/>
-                            <rect x="53" y="2" width="4" height="32" fill="#064e3b"/>
-                            <rect x="60" y="2" width="2.5" height="32" fill="#064e3b"/>
-                            <rect x="65" y="2" width="1.5" height="32" fill="#064e3b"/>
-                            <rect x="70" y="2" width="4.5" height="32" fill="#064e3b"/>
-                            <rect x="78" y="2" width="2" height="32" fill="#064e3b"/>
-                            <rect x="83" y="2" width="3.5" height="32" fill="#064e3b"/>
-                            <rect x="90" y="2" width="1.5" height="32" fill="#064e3b"/>
-                            <rect x="95" y="2" width="4" height="32" fill="#064e3b"/>
-                            <rect x="102" y="2" width="2" height="32" fill="#064e3b"/>
-                            <rect x="107" y="2" width="5" height="32" fill="#0f172a"/>
-                            <rect x="115" y="2" width="1.5" height="32" fill="#064e3b"/>
-                            <rect x="120" y="2" width="3" height="32" fill="#064e3b"/>
-                            <rect x="126" y="2" width="2" height="32" fill="#064e3b"/>
-                            <rect x="131" y="2" width="4" height="32" fill="#064e3b"/>
-                            <rect x="138" y="2" width="1.5" height="32" fill="#064e3b"/>
-                            <rect x="143" y="2" width="3.5" height="32" fill="#064e3b"/>
-                            <rect x="150" y="2" width="2" height="32" fill="#064e3b"/>
-                            <rect x="155" y="2" width="4.5" height="32" fill="#064e3b"/>
-                            <rect x="163" y="2" width="1.5" height="32" fill="#064e3b"/>
-                            <rect x="168" y="2" width="3" height="32" fill="#064e3b"/>
-                            <rect x="174" y="2" width="2" height="32" fill="#064e3b"/>
-                            <rect x="179" y="2" width="4" height="32" fill="#064e3b"/>
-                        </svg>
-                    </div>
-                </div>
+            <!-- 3. Bingkai Foto Tengah Bersinar (Utuh Tanpa Crop & Proporsional) -->
+            <div class="holo-avatar-ring">
+                <img src="img/foto_profil.jpg" alt="Fatkhul Umam" onerror="this.onerror=null; this.src='img/foto.png';">
             </div>
 
-            <!-- Sisi Kanan: Pas Foto UTUH (Tanpa Crop) + Kota, Tanggal & Tanda Tangan seperti KTP -->
-            <div class="ktp-photo-column">
-                <div class="ktp-photo-frame">
-                    <img src="img/foto_profil.jpg" alt="Foto Utuh Fatkhul Umam" onerror="this.onerror=null; this.src='img/foto.png';">
-                </div>
-                <div class="ktp-sign-area">
-                    <div class="ktp-city-date">KOTA METRO</div>
-                    <div class="ktp-issue-date">01-11-2026</div>
-                    <svg class="ktp-signature-svg" width="125" height="34" viewBox="0 0 150 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15 28C25 10 35 6 38 18C40 26 28 32 34 22C42 12 52 14 55 24C58 29 66 15 74 14C80 13 78 27 86 24C95 21 104 10 115 16C122 20 118 28 135 20" stroke="#064e3b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- 4. Nama & Verified Checkmark + Deskripsi -->
+            <div class="holo-verified-name">
+                <span>Fatkhul Umam</span>
+                <span class="holo-check-badge" title="Terverifikasi">&#10004;</span>
+            </div>
+
+            <p class="holo-bio-text">
+                Pondok Muhammadiyah Akrom (KAROMAH) Kota Metro<br>
+                Praktikum Big Data &bull; Dosen: Arif Hidayat, S.T., M.Kom<br>
+                <span class="holo-link-text">localhost/bigdata/me.php</span>
+            </p>
+
+            <!-- 5. Tiga Tombol Pill Transparan (Seperti Join | Channel | Message Me) -->
+            <div class="holo-pills-row">
+                <button type="button" class="holo-pill-btn" onclick="if(window.switchPage) switchPage('datamhs'); else window.location.href='viewmhsaja.php';">
+                    Data Mhs
+                </button>
+                <button type="button" class="holo-pill-btn" onclick="if(window.switchPage) switchPage('wanita'); else window.location.href='viewfilterwanita.php';">
+                    Filter Wanita
+                </button>
+                <button type="button" class="holo-pill-btn" onclick="if(window.switchPage) switchPage('home'); else window.location.href='index.php';">
+                    NPM 24430121
+                </button>
+            </div>
+
+            <!-- 6. Bar Bawah Bersinar (QR Code | Ikon Tengah | Ikon ID Card) -->
+            <div class="holo-bottom-bar">
+                <!-- QR Code Putih Bersih -->
+                <div class="holo-qr">
+                    <svg width="48" height="48" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2" y="2" width="18" height="18" stroke="#ffffff" stroke-width="3.5"/>
+                        <rect x="7" y="7" width="8" height="8" fill="#ffffff"/>
+                        <rect x="48" y="2" width="18" height="18" stroke="#ffffff" stroke-width="3.5"/>
+                        <rect x="53" y="7" width="8" height="8" fill="#ffffff"/>
+                        <rect x="2" y="48" width="18" height="18" stroke="#ffffff" stroke-width="3.5"/>
+                        <rect x="7" y="53" width="8" height="8" fill="#ffffff"/>
+                        <rect x="26" y="4" width="6" height="6" fill="#ffffff"/>
+                        <rect x="36" y="14" width="6" height="10" fill="#ffffff"/>
+                        <rect x="26" y="26" width="16" height="16" stroke="#ffffff" stroke-width="3"/>
+                        <rect x="31" y="31" width="6" height="6" fill="#fef08a"/>
+                        <rect x="48" y="26" width="6" height="6" fill="#ffffff"/>
+                        <rect x="58" y="26" width="6" height="10" fill="#ffffff"/>
+                        <rect x="4" y="36" width="10" height="6" fill="#ffffff"/>
+                        <rect x="26" y="48" width="8" height="6" fill="#ffffff"/>
+                        <rect x="48" y="44" width="6" height="12" fill="#ffffff"/>
+                        <rect x="26" y="58" width="14" height="6" fill="#ffffff"/>
+                        <rect x="56" y="56" width="8" height="8" fill="#ffffff"/>
                     </svg>
-                    <div class="ktp-sign-name">FATKHUL UMAM</div>
+                </div>
+
+                <!-- Ikon Pesawat Kertas / Telegram Style Glowing di Tengah -->
+                <div class="holo-center-icon">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.5 2.5L2.5 10.5L9.5 13.5L18.5 6.5L11.5 15.5L14.5 21.5L21.5 2.5Z" fill="#ffffff" stroke="#fef08a" stroke-width="1.2" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+
+                <!-- Ikon ID Card di Kanan -->
+                <div class="holo-id-icon">
+                    <svg width="42" height="42" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1.5" y="2.5" width="25" height="19" rx="3.5" stroke="#ffffff" stroke-width="2"/>
+                        <circle cx="9" cy="10" r="2.8" fill="#ffffff"/>
+                        <path d="M4.5 17.5C4.5 15 6.5 14 9 14C11.5 14 13.5 15 13.5 17.5" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="16.5" y1="9" x2="22.5" y2="9" stroke="#fef08a" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="16.5" y1="13" x2="22.5" y2="13" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="16.5" y1="17" x2="20.5" y2="17" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
                 </div>
             </div>
         </div>
 
-        <!-- FOOTER KTP -->
-        <div class="ktp-footer">
-            PONDOK MUHAMMADIYAH AKROM (KAROMAH) &nbsp;&bull;&nbsp; FAKULTAS ILMU KOMPUTER &nbsp;&bull;&nbsp; NPM 24430121
-        </div>
+        <!-- Pantulan Cahaya Neon di Lantai Bawah Kartu -->
+        <div class="holo-floor-reflection"></div>
     </div>
 </div>
             </div>
@@ -2440,69 +2604,23 @@ a {
                     <span>&#127891; <strong>Soal Kuis No. 7 (me.php):</strong> Kartu Identitas Mahasiswa Resmi Pembuat Program (NPM: <strong>24430121</strong>, Nama: <strong>Fatkhul Umam</strong>, Fakultas: <strong>Fakultas Ilmu Komputer</strong>, Foto Almamater).</span>
                 </div>
 
-                <!-- idcard_component.php - Kartu Tanda Mahasiswa (Model KTP Resmi) - Foto Utuh Tanpa Crop -->
-<div class="idcard-wrapper">
-    <div class="ktp-card">
-        <!-- Watermark Logo Karomah di Tengah Latar KTP -->
-        <div class="ktp-watermark">
-            
-    <svg width="230" height="230" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;">
-        <defs>
-            <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#FEF08A"/>
-                <stop offset="50%" stop-color="#D4AF37"/>
-                <stop offset="100%" stop-color="#996515"/>
-            </linearGradient>
-            <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#065F46"/>
-                <stop offset="55%" stop-color="#15803D"/>
-                <stop offset="100%" stop-color="#042F2E"/>
-            </linearGradient>
-        </defs>
+                <!-- idcard_component.php - Holographic Glassmorphism ID Card di Atas Background Gedung Mewah -->
+<div class="luxury-stage">
+    <!-- Ornamen Cahaya & Siluet Arsitektur Gedung Mewah -->
+    <div class="luxury-building-bg"></div>
+    <div class="luxury-light-orb orb-1"></div>
+    <div class="luxury-light-orb orb-2"></div>
 
-        <!-- Bingkai Perisai Segi Delapan / Lingkaran Emas Luar -->
-        <circle cx="60" cy="60" r="56" fill="url(#greenGrad)" stroke="url(#goldGrad)" stroke-width="4"/>
-        <circle cx="60" cy="60" r="49" fill="none" stroke="#FEF08A" stroke-width="1.2" stroke-dasharray="3 2"/>
+    <!-- KARTU KACA TRANSPARAN HOLOGRAFIK (SEPERTI GAMBAR REFERENSI) -->
+    <div class="glass-card-container">
+        <div class="holo-glass-card">
+            <!-- Kilau Cahaya Kaca Diagonal -->
+            <div class="glass-sheen"></div>
 
-        <!-- 12 Sinar Matahari Muhammadiyah / Karomah -->
-        <g stroke="url(#goldGrad)" stroke-width="2.6" stroke-linecap="round">
-            <line x1="60" y1="14" x2="60" y2="24"/>
-            <line x1="60" y1="96" x2="60" y2="106"/>
-            <line x1="14" y1="60" x2="24" y2="60"/>
-            <line x1="96" y1="60" x2="106" y2="60"/>
-            <line x1="27.5" y1="27.5" x2="34.5" y2="34.5"/>
-            <line x1="85.5" y1="85.5" x2="92.5" y2="92.5"/>
-            <line x1="92.5" y1="27.5" x2="85.5" y2="34.5"/>
-            <line x1="34.5" y1="85.5" x2="27.5" y2="92.5"/>
-            <line x1="42" y1="17.5" x2="46" y2="26.5"/>
-            <line x1="78" y1="17.5" x2="74" y2="26.5"/>
-            <line x1="17.5" y1="42" x2="26.5" y2="46"/>
-            <line x1="102.5" y1="42" x2="93.5" y2="46"/>
-        </g>
-
-        <!-- Untaian Daun Emas Karomah (Kiri & Kanan) -->
-        <path d="M30 82 C20 65, 22 42, 36 30" stroke="url(#goldGrad)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-        <path d="M90 82 C100 65, 98 42, 84 30" stroke="url(#goldGrad)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-
-        <!-- Kubah Masjid Pondok Akrom -->
-        <path d="M40 58 C40 42, 60 32, 60 28 C60 32, 80 42, 80 58 Z" fill="url(#goldGrad)"/>
-        <!-- Bulan Sabit Puncak Kubah -->
-        <circle cx="60" cy="24" r="3" fill="#FEF08A"/>
-
-        <!-- Kitab Terbuka (Al-Quran & Ilmu Pengetahuan) -->
-        <path d="M36 62 L58 66 L58 80 L36 75 Z" fill="#FFFFFF" stroke="url(#goldGrad)" stroke-width="1.5"/>
-        <path d="M84 62 L62 66 L62 80 L84 75 Z" fill="#FFFFFF" stroke="url(#goldGrad)" stroke-width="1.5"/>
-
-        <!-- Pita Bawah Bertuliskan KAROMAH -->
-        <rect x="26" y="83" width="68" height="15" rx="7.5" fill="url(#goldGrad)" stroke="#042F2E" stroke-width="1.5"/>
-        <text x="60" y="93.5" text-anchor="middle" fill="#042F2E" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="900" font-size="9.5" letter-spacing="1.2">KAROMAH</text>
-    </svg>        </div>
-
-        <!-- HEADER KTP / KTM -->
-        <div class="ktp-header">
-            <div class="ktp-header-logo">
+            <!-- 1. Ikon / Logo Bersinar di Atas -->
+            <div class="holo-top-logo">
                 
-    <svg width="58" height="58" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+    <svg width="62" height="62" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;">
         <defs>
             <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" stop-color="#FEF08A"/>
@@ -2553,146 +2671,90 @@ a {
         <rect x="26" y="83" width="68" height="15" rx="7.5" fill="url(#goldGrad)" stroke="#042F2E" stroke-width="1.5"/>
         <text x="60" y="93.5" text-anchor="middle" fill="#042F2E" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="900" font-size="9.5" letter-spacing="1.2">KAROMAH</text>
     </svg>            </div>
-            <div class="ktp-header-title">
-                <h2>PROVINSI LAMPUNG &bull; KOTA METRO</h2>
-                <h3>PONDOK MUHAMMADIYAH AKROM (KAROMAH)</h3>
-                <span>KARTU TANDA MAHASISWA &ndash; FAKULTAS ILMU KOMPUTER</span>
-            </div>
-            <div class="ktp-verified-badge">
-                &#128274; E-KTM RESMI
-            </div>
-        </div>
 
-        <!-- GARIS EMAS PEMBATAS HEADER KTP -->
-        <div class="ktp-divider"></div>
+            <!-- 2. Header Teks di Atas Foto -->
+            <div class="holo-id-label">STUDENT ID &bull; NPM 24430121</div>
+            <h2 class="holo-main-title">Fatkhul Umam</h2>
+            <div class="holo-sub-role">Fakultas Ilmu Komputer &bull; Karomah</div>
 
-        <!-- BODY KTP: KIRI BIODATA SEJAJAR, KANAN FOTO UTUH TANPA CROP + TANDA TANGAN -->
-        <div class="ktp-body">
-            <!-- Sisi Kiri: Data seperti KTP -->
-            <div class="ktp-info">
-                <div class="ktp-nik-row">
-                    <span class="ktp-nik-label">NPM / NIK</span>
-                    <span class="ktp-nik-colon">:</span>
-                    <span class="ktp-nik-value">24430121</span>
-                </div>
-
-                <table class="ktp-table">
-                    <tr>
-                        <td class="ktp-label">Nama</td>
-                        <td class="ktp-colon">:</td>
-                        <td class="ktp-val"><strong>FATKHUL UMAM</strong></td>
-                    </tr>
-                    <tr>
-                        <td class="ktp-label">Jenis Kelamin</td>
-                        <td class="ktp-colon">:</td>
-                        <td class="ktp-val">LAKI-LAKI &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Status :</strong> MAHASISWA AKTIF</td>
-                    </tr>
-                    <tr>
-                        <td class="ktp-label">Fakultas</td>
-                        <td class="ktp-colon">:</td>
-                        <td class="ktp-val"><strong>FAKULTAS ILMU KOMPUTER</strong></td>
-                    </tr>
-                    <tr>
-                        <td class="ktp-label">Pondok / Asrama</td>
-                        <td class="ktp-colon">:</td>
-                        <td class="ktp-val">PONDOK MUHAMMADIYAH AKROM (KAROMAH)</td>
-                    </tr>
-                    <tr>
-                        <td class="ktp-label">&nbsp;&nbsp;&nbsp;&nbsp;Kel/Desa &amp; Kota</td>
-                        <td class="ktp-colon">:</td>
-                        <td class="ktp-val">KOTA METRO &ndash; PROVINSI LAMPUNG</td>
-                    </tr>
-                    <tr>
-                        <td class="ktp-label">&nbsp;&nbsp;&nbsp;&nbsp;Agama</td>
-                        <td class="ktp-colon">:</td>
-                        <td class="ktp-val">ISLAM (MUHAMMADIYAH)</td>
-                    </tr>
-                    <tr>
-                        <td class="ktp-label">Mata Kuliah</td>
-                        <td class="ktp-colon">:</td>
-                        <td class="ktp-val">PRAKTIKUM BIG DATA (KUIS 1 &ndash; TABEL MAHASISWA4)</td>
-                    </tr>
-                    <tr>
-                        <td class="ktp-label">Dosen Pengampu</td>
-                        <td class="ktp-colon">:</td>
-                        <td class="ktp-val">ARIF HIDAYAT, S.T., M.KOM</td>
-                    </tr>
-                    <tr>
-                        <td class="ktp-label">Kewarganegaraan</td>
-                        <td class="ktp-colon">:</td>
-                        <td class="ktp-val">WNI</td>
-                    </tr>
-                    <tr>
-                        <td class="ktp-label">Berlaku Hingga</td>
-                        <td class="ktp-colon">:</td>
-                        <td class="ktp-val"><strong>SEUMUR HIDUP / SELAMA MAHASISWA</strong></td>
-                    </tr>
-                </table>
-
-                <!-- Barcode & Chip KTP di Kiri Bawah -->
-                <div class="ktp-bottom-meta">
-                    <div class="ktp-chip">
-                        <div class="ktp-chip-line"></div>
-                        <div class="ktp-chip-line"></div>
-                    </div>
-                    <div class="ktp-barcode-wrap">
-                        <svg width="190" height="28" viewBox="0 0 185 36" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="2" y="2" width="3" height="32" fill="#064e3b"/>
-                            <rect x="8" y="2" width="1.5" height="32" fill="#064e3b"/>
-                            <rect x="12" y="2" width="4" height="32" fill="#064e3b"/>
-                            <rect x="19" y="2" width="2" height="32" fill="#064e3b"/>
-                            <rect x="24" y="2" width="1.5" height="32" fill="#064e3b"/>
-                            <rect x="29" y="2" width="5" height="32" fill="#064e3b"/>
-                            <rect x="37" y="2" width="2" height="32" fill="#064e3b"/>
-                            <rect x="42" y="2" width="3" height="32" fill="#064e3b"/>
-                            <rect x="48" y="2" width="1.5" height="32" fill="#064e3b"/>
-                            <rect x="53" y="2" width="4" height="32" fill="#064e3b"/>
-                            <rect x="60" y="2" width="2.5" height="32" fill="#064e3b"/>
-                            <rect x="65" y="2" width="1.5" height="32" fill="#064e3b"/>
-                            <rect x="70" y="2" width="4.5" height="32" fill="#064e3b"/>
-                            <rect x="78" y="2" width="2" height="32" fill="#064e3b"/>
-                            <rect x="83" y="2" width="3.5" height="32" fill="#064e3b"/>
-                            <rect x="90" y="2" width="1.5" height="32" fill="#064e3b"/>
-                            <rect x="95" y="2" width="4" height="32" fill="#064e3b"/>
-                            <rect x="102" y="2" width="2" height="32" fill="#064e3b"/>
-                            <rect x="107" y="2" width="5" height="32" fill="#0f172a"/>
-                            <rect x="115" y="2" width="1.5" height="32" fill="#064e3b"/>
-                            <rect x="120" y="2" width="3" height="32" fill="#064e3b"/>
-                            <rect x="126" y="2" width="2" height="32" fill="#064e3b"/>
-                            <rect x="131" y="2" width="4" height="32" fill="#064e3b"/>
-                            <rect x="138" y="2" width="1.5" height="32" fill="#064e3b"/>
-                            <rect x="143" y="2" width="3.5" height="32" fill="#064e3b"/>
-                            <rect x="150" y="2" width="2" height="32" fill="#064e3b"/>
-                            <rect x="155" y="2" width="4.5" height="32" fill="#064e3b"/>
-                            <rect x="163" y="2" width="1.5" height="32" fill="#064e3b"/>
-                            <rect x="168" y="2" width="3" height="32" fill="#064e3b"/>
-                            <rect x="174" y="2" width="2" height="32" fill="#064e3b"/>
-                            <rect x="179" y="2" width="4" height="32" fill="#064e3b"/>
-                        </svg>
-                    </div>
-                </div>
+            <!-- 3. Bingkai Foto Tengah Bersinar (Utuh Tanpa Crop & Proporsional) -->
+            <div class="holo-avatar-ring">
+                <img src="img/foto_profil.jpg" alt="Fatkhul Umam" onerror="this.onerror=null; this.src='img/foto.png';">
             </div>
 
-            <!-- Sisi Kanan: Pas Foto UTUH (Tanpa Crop) + Kota, Tanggal & Tanda Tangan seperti KTP -->
-            <div class="ktp-photo-column">
-                <div class="ktp-photo-frame">
-                    <img src="img/foto_profil.jpg" alt="Foto Utuh Fatkhul Umam" onerror="this.onerror=null; this.src='img/foto.png';">
-                </div>
-                <div class="ktp-sign-area">
-                    <div class="ktp-city-date">KOTA METRO</div>
-                    <div class="ktp-issue-date">01-11-2026</div>
-                    <svg class="ktp-signature-svg" width="125" height="34" viewBox="0 0 150 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15 28C25 10 35 6 38 18C40 26 28 32 34 22C42 12 52 14 55 24C58 29 66 15 74 14C80 13 78 27 86 24C95 21 104 10 115 16C122 20 118 28 135 20" stroke="#064e3b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- 4. Nama & Verified Checkmark + Deskripsi -->
+            <div class="holo-verified-name">
+                <span>Fatkhul Umam</span>
+                <span class="holo-check-badge" title="Terverifikasi">&#10004;</span>
+            </div>
+
+            <p class="holo-bio-text">
+                Pondok Muhammadiyah Akrom (KAROMAH) Kota Metro<br>
+                Praktikum Big Data &bull; Dosen: Arif Hidayat, S.T., M.Kom<br>
+                <span class="holo-link-text">localhost/bigdata/me.php</span>
+            </p>
+
+            <!-- 5. Tiga Tombol Pill Transparan (Seperti Join | Channel | Message Me) -->
+            <div class="holo-pills-row">
+                <button type="button" class="holo-pill-btn" onclick="if(window.switchPage) switchPage('datamhs'); else window.location.href='viewmhsaja.php';">
+                    Data Mhs
+                </button>
+                <button type="button" class="holo-pill-btn" onclick="if(window.switchPage) switchPage('wanita'); else window.location.href='viewfilterwanita.php';">
+                    Filter Wanita
+                </button>
+                <button type="button" class="holo-pill-btn" onclick="if(window.switchPage) switchPage('home'); else window.location.href='index.php';">
+                    NPM 24430121
+                </button>
+            </div>
+
+            <!-- 6. Bar Bawah Bersinar (QR Code | Ikon Tengah | Ikon ID Card) -->
+            <div class="holo-bottom-bar">
+                <!-- QR Code Putih Bersih -->
+                <div class="holo-qr">
+                    <svg width="48" height="48" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2" y="2" width="18" height="18" stroke="#ffffff" stroke-width="3.5"/>
+                        <rect x="7" y="7" width="8" height="8" fill="#ffffff"/>
+                        <rect x="48" y="2" width="18" height="18" stroke="#ffffff" stroke-width="3.5"/>
+                        <rect x="53" y="7" width="8" height="8" fill="#ffffff"/>
+                        <rect x="2" y="48" width="18" height="18" stroke="#ffffff" stroke-width="3.5"/>
+                        <rect x="7" y="53" width="8" height="8" fill="#ffffff"/>
+                        <rect x="26" y="4" width="6" height="6" fill="#ffffff"/>
+                        <rect x="36" y="14" width="6" height="10" fill="#ffffff"/>
+                        <rect x="26" y="26" width="16" height="16" stroke="#ffffff" stroke-width="3"/>
+                        <rect x="31" y="31" width="6" height="6" fill="#fef08a"/>
+                        <rect x="48" y="26" width="6" height="6" fill="#ffffff"/>
+                        <rect x="58" y="26" width="6" height="10" fill="#ffffff"/>
+                        <rect x="4" y="36" width="10" height="6" fill="#ffffff"/>
+                        <rect x="26" y="48" width="8" height="6" fill="#ffffff"/>
+                        <rect x="48" y="44" width="6" height="12" fill="#ffffff"/>
+                        <rect x="26" y="58" width="14" height="6" fill="#ffffff"/>
+                        <rect x="56" y="56" width="8" height="8" fill="#ffffff"/>
                     </svg>
-                    <div class="ktp-sign-name">FATKHUL UMAM</div>
+                </div>
+
+                <!-- Ikon Pesawat Kertas / Telegram Style Glowing di Tengah -->
+                <div class="holo-center-icon">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.5 2.5L2.5 10.5L9.5 13.5L18.5 6.5L11.5 15.5L14.5 21.5L21.5 2.5Z" fill="#ffffff" stroke="#fef08a" stroke-width="1.2" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+
+                <!-- Ikon ID Card di Kanan -->
+                <div class="holo-id-icon">
+                    <svg width="42" height="42" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1.5" y="2.5" width="25" height="19" rx="3.5" stroke="#ffffff" stroke-width="2"/>
+                        <circle cx="9" cy="10" r="2.8" fill="#ffffff"/>
+                        <path d="M4.5 17.5C4.5 15 6.5 14 9 14C11.5 14 13.5 15 13.5 17.5" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="16.5" y1="9" x2="22.5" y2="9" stroke="#fef08a" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="16.5" y1="13" x2="22.5" y2="13" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="16.5" y1="17" x2="20.5" y2="17" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
                 </div>
             </div>
         </div>
 
-        <!-- FOOTER KTP -->
-        <div class="ktp-footer">
-            PONDOK MUHAMMADIYAH AKROM (KAROMAH) &nbsp;&bull;&nbsp; FAKULTAS ILMU KOMPUTER &nbsp;&bull;&nbsp; NPM 24430121
-        </div>
+        <!-- Pantulan Cahaya Neon di Lantai Bawah Kartu -->
+        <div class="holo-floor-reflection"></div>
     </div>
 </div>
 
