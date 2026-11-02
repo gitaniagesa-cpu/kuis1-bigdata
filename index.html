@@ -3,475 +3,2120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aplikasi Pendataan Mahasiswa - Fatkhul Umam (24430121)</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <title>Aplikasi Pendataan MHS - Pondok Muhammadiyah Akrom Kota Metro</title>
     <style>
-        /* Tema Gradasi Emas (Gold), Teks Putih, Garis Tepi Hijau */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+        /* style.css - Tema WellCare Layout: Background Putih, Garis Tepi Emas, Gradasi Hijau Emerald */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
-        body {
-            background: linear-gradient(135deg, #fefce8 0%, #fef3c7 50%, #ecfdf5 100%);
-            color: #1f2937;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            min-height: 100vh;
-            padding: 25px 15px;
-        }
+:root {
+    /* Warna Utama: Background Putih, Garis Tepi Emas, Gradasi Hijau */
+    --bg-white: #ffffff;
+    --gold-border: #d4af37;
+    --gold-dark: #b8860b;
+    --gold-light: #fef08a;
+    --green-primary: #15803d;
+    --green-mid: #10b981;
+    --green-dark: #065f46;
+    --green-soft: #f0fdf4;
+    --green-tint: #dcfce7;
+    --green-gradient: linear-gradient(135deg, #15803d 0%, #10b981 55%, #047857 100%);
+    --green-banner: linear-gradient(135deg, #065f46 0%, #15803d 50%, #10b981 100%);
+    --hero-gradient: linear-gradient(135deg, #ffffff 0%, #f0fdf4 65%, #dcfce7 100%);
+}
 
-        .app-container {
-            width: 100%;
-            max-width: 980px;
-            background: #ffffff;
-            border: 3px solid #15803d;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(21, 128, 61, 0.18), 0 4px 12px rgba(184, 134, 11, 0.18);
-            overflow: hidden;
-        }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
+}
 
-        .app-header {
-            background: linear-gradient(135deg, #b8860b 0%, #d4af37 50%, #996515 100%);
-            border-bottom: 3px solid #15803d;
-            padding: 18px 20px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
-        }
+body {
+    background-color: #ffffff !important; /* Background Putih Bersih */
+    color: #1e293b;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
 
-        .app-header h1 {
-            font-size: 1.15rem;
-            font-weight: 800;
-            color: #ffffff;
-            text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.45);
-            letter-spacing: 0.6px;
-            text-transform: uppercase;
-        }
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
-        .app-body {
-            display: flex;
-            min-height: 500px;
-            background-color: #fafaf9;
-        }
+.container {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
 
-        .app-sidebar {
-            width: 260px;
-            border-right: 3px solid #15803d;
-            background: linear-gradient(180deg, #fffbeb 0%, #fef3c7 100%);
-            padding: 22px 14px;
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-        }
+/* ==================== 1. TOP NAVBAR ==================== */
+.navbar {
+    background: #ffffff;
+    border-bottom: 2.5px solid var(--gold-border) !important; /* Garis Tepi Emas */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 14px 0;
+    box-shadow: 0 4px 20px rgba(21, 128, 61, 0.06);
+}
 
-        .sidebar-title {
-            font-size: 0.72rem;
-            text-transform: uppercase;
-            font-weight: 800;
-            color: #166534;
-            margin-bottom: 2px;
-            text-align: center;
-            letter-spacing: 0.8px;
-        }
+.navbar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
 
-        .nav-btn {
-            display: block;
-            width: 100%;
-            text-align: center;
-            padding: 11px 12px;
-            background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
-            border: 2px solid #15803d;
-            border-radius: 6px;
-            color: #ffffff;
-            font-weight: 700;
-            font-size: 0.82rem;
-            text-decoration: none;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-            box-shadow: 0 2px 5px rgba(184, 134, 11, 0.25);
-            transition: all 0.2s ease-in-out;
-            cursor: pointer;
-        }
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
 
-        .nav-btn:hover {
-            background: linear-gradient(135deg, #e5b948 0%, #c59b27 100%);
-            border-color: #16a34a;
-            color: #ffffff;
-            transform: translateY(-1px);
-            box-shadow: 0 5px 10px rgba(22, 163, 74, 0.3);
-        }
+.brand-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: var(--green-gradient); /* Gradasi Hijau */
+    border: 2px solid var(--gold-border); /* Garis Tepi Emas */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 10px rgba(21, 128, 61, 0.2);
+}
 
-        .nav-btn.active {
-            background: linear-gradient(135deg, #15803d 0%, #166534 100%);
-            border: 2px solid #d4af37;
-            color: #ffffff;
-            box-shadow: 0 3px 8px rgba(21, 128, 61, 0.4);
-        }
+.brand-text h2 {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--green-dark);
+    line-height: 1.1;
+}
 
-        .app-content {
-            flex: 1;
-            padding: 24px;
-            background-color: #ffffff;
-            display: flex;
-            flex-direction: column;
-        }
+.brand-text span {
+    font-size: 0.7rem;
+    color: #64748b;
+    font-weight: 600;
+}
 
-        .tab-pane {
-            display: none;
-            animation: fadeIn 0.25s ease-in-out;
-        }
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
 
-        .tab-pane.active {
-            display: block;
-        }
+.nav-link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #475569;
+    padding: 6px 2px;
+    position: relative;
+    transition: color 0.2s;
+}
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(4px); }
+.nav-link:hover,
+.nav-link.active {
+    color: var(--green-primary);
+    font-weight: 700;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--gold-border); /* Garis Emas Indikator */
+    border-radius: 4px;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Tombol Pill Gradasi Hijau + Garis Tepi Emas */
+.btn-pill-primary {
+    background: var(--green-gradient) !important; /* Gradasi Hijau */
+    color: #ffffff !important;
+    border: 2px solid var(--gold-border) !important; /* Garis Tepi Emas */
+    padding: 9px 20px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(21, 128, 61, 0.2);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s;
+}
+
+.btn-pill-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(21, 128, 61, 0.3);
+}
+
+.btn-pill-outline {
+    background: #ffffff !important;
+    color: var(--green-dark) !important;
+    border: 2px solid var(--gold-border) !important; /* Garis Tepi Emas */
+    padding: 9px 20px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+}
+
+.btn-pill-outline:hover {
+    background: var(--green-soft) !important;
+    transform: translateY(-2px);
+}
+
+/* ==================== 2. HERO SECTION ==================== */
+.hero-section {
+    background: var(--hero-gradient);
+    border-bottom: 2.5px solid var(--gold-border); /* Garis Tepi Emas */
+    padding: 48px 0 56px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    color: var(--green-dark);
+    background: #ffffff;
+    border: 2px solid var(--gold-border); /* Garis Tepi Emas */
+    padding: 5px 14px;
+    border-radius: 50px;
+    margin-bottom: 16px;
+}
+
+.hero-title {
+    font-size: 2.3rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.hero-title span {
+    background: var(--green-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: block;
+}
+
+.hero-desc {
+    font-size: 0.92rem;
+    color: #475569;
+    margin-bottom: 26px;
+    max-width: 540px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 34px;
+}
+
+.hero-trust-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding-top: 20px;
+    border-top: 1.5px dashed var(--gold-border);
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.trust-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: var(--green-gradient); /* Gradasi Hijau */
+    border: 2px solid var(--gold-border); /* Garis Tepi Emas */
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.trust-text strong {
+    display: block;
+    font-size: 0.78rem;
+    color: #0f172a;
+}
+
+.trust-text span {
+    font-size: 0.7rem;
+    color: #64748b;
+}
+
+/* Hero Visual & Floating Badge */
+.hero-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-blob {
+    width: 315px;
+    height: 355px;
+    background: var(--green-gradient); /* Gradasi Hijau */
+    border: 3.5px solid var(--gold-border); /* Garis Tepi Emas */
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(21, 128, 61, 0.18);
+}
+
+.hero-blob img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.floating-badge {
+    position: absolute;
+    top: 22px;
+    right: 0;
+    background: #ffffff;
+    border: 2.5px solid var(--gold-border); /* Garis Tepi Emas */
+    padding: 10px 16px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.floating-badge-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--green-gradient);
+    border: 1.5px solid var(--gold-border);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+}
+
+.floating-badge-text strong {
+    display: block;
+    font-size: 0.78rem;
+    color: #0f172a;
+}
+
+.floating-badge-text span {
+    font-size: 0.68rem;
+    color: var(--green-primary);
+    font-weight: 700;
+}
+
+/* ==================== 3. 4-CARD FEATURE SECTION ==================== */
+.section {
+    padding: 50px 0;
+    background-color: #ffffff;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr 1fr 1fr;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.feature-VisualCard {
+    background: var(--green-banner); /* Gradasi Hijau */
+    border: 2.5px solid var(--gold-border); /* Garis Tepi Emas */
+    border-radius: 18px;
+    padding: 26px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10px 25px rgba(21, 128, 61, 0.14);
+}
+
+.feature-VisualCard h3 {
+    font-size: 1.18rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.feature-VisualCard p {
+    font-size: 0.8rem;
+    color: #ecfdf5;
+    margin-bottom: 16px;
+}
+
+.feature-card {
+    background: #ffffff; /* Background Putih */
+    border: 2px solid var(--gold-border); /* Garis Tepi Emas */
+    border-radius: 18px;
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    transition: all 0.25s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgba(212, 175, 55, 0.18);
+}
+
+.feature-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background: var(--green-gradient); /* Gradasi Hijau */
+    border: 2px solid var(--gold-border); /* Garis Tepi Emas */
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    margin-bottom: 16px;
+}
+
+.feature-card h4 {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 4px;
+}
+
+.feature-card .sub-cat {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--green-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.feature-card p {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin-bottom: 18px;
+}
+
+.btn-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: var(--green-gradient); /* Gradasi Hijau */
+    border: 1.5px solid var(--gold-border); /* Garis Tepi Emas */
+    padding: 7px 15px;
+    border-radius: 50px;
+    width: fit-content;
+}
+
+/* ==================== 4. STUDENT CARDS SECTION ==================== */
+.students-layout {
+    display: grid;
+    grid-template-columns: 270px 1fr;
+    gap: 28px;
+    align-items: start;
+}
+
+.section-intro h3 {
+    font-size: 1.65rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.25;
+    margin-bottom: 12px;
+}
+
+.section-intro h3 span {
+    color: var(--green-primary);
+}
+
+.section-intro p {
+    font-size: 0.84rem;
+    color: #64748b;
+    margin-bottom: 20px;
+}
+
+.student-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
+    gap: 16px;
+}
+
+.student-card {
+    background: #ffffff; /* Background Putih */
+    border: 2px solid var(--gold-border); /* Garis Tepi Emas */
+    border-radius: 16px;
+    padding: 18px 14px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+    transition: all 0.2s;
+}
+
+.student-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(21, 128, 61, 0.12);
+}
+
+.student-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 0 auto 12px;
+    background: var(--green-gradient); /* Gradasi Hijau */
+    border: 2.5px solid var(--gold-border); /* Garis Tepi Emas */
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.45rem;
+    font-weight: 800;
+}
+
+.student-card h5 {
+    font-size: 0.92rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 2px;
+}
+
+.student-card .npm-tag {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--green-primary);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.student-card .meta-info {
+    font-size: 0.72rem;
+    color: #64748b;
+    margin-bottom: 12px;
+}
+
+.student-card .pill-mini {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 50px;
+    background: var(--green-gradient);
+    color: #ffffff;
+    border: 1.5px solid var(--gold-border);
+}
+
+/* ==================== 5. COMPREHENSIVE DATA TABLE SECTION ==================== */
+.data-section-box {
+    background: #ffffff; /* Background Putih */
+    border: 2.5px solid var(--gold-border); /* Garis Tepi Emas */
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.content-header-bar,
+.content-header {
+    background: var(--green-gradient) !important; /* Gradasi Hijau */
+    border: 2px solid var(--gold-border) !important; /* Garis Tepi Emas */
+    padding: 12px 20px;
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.05rem;
+    color: #ffffff !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+    margin-bottom: 16px;
+    border-radius: 12px;
+    letter-spacing: 0.6px;
+}
+
+.info-box {
+    background: var(--green-gradient) !important; /* Gradasi Hijau */
+    border: 2px solid var(--gold-border) !important; /* Garis Tepi Emas */
+    border-radius: 10px;
+    padding: 10px 16px;
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    margin-bottom: 16px;
+    font-size: 0.8rem !important;
+}
+
+.toolbar-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    gap: 10px;
+}
+
+.category-tag {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--green-dark);
+    background: var(--green-soft);
+    border: 1.5px solid var(--gold-border); /* Garis Tepi Emas */
+    padding: 4px 12px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.search-input {
+    padding: 8px 14px;
+    border: 2px solid var(--gold-border); /* Garis Tepi Emas */
+    border-radius: 50px;
+    font-size: 0.8rem;
+    width: 260px;
+    outline: none;
+    background-color: #ffffff;
+}
+
+.search-input:focus {
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 12px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid var(--gold-border) !important; /* Garis Tepi Emas */
+    font-size: 0.88rem;
+    background: #ffffff; /* Background Putih */
+}
+
+.data-table th, 
+.data-table td {
+    border: 1.5px solid var(--gold-border) !important; /* Garis Tepi Emas */
+    padding: 11px 14px;
+}
+
+/* Header Tabel (Gradasi Hijau & Teks Kategori Kecil) */
+.data-table th {
+    background: var(--green-gradient) !important; /* Gradasi Hijau */
+    color: #ffffff !important;
+    font-weight: 800;
+    text-align: center !important;
+    font-size: 0.74rem !important;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+/* Hasil Menampilkan di Tengah */
+.data-table td {
+    text-align: center !important;
+    vertical-align: middle !important;
+    background-color: #ffffff;
+}
+
+.data-table tr:nth-child(even) td {
+    background-color: #f8fafc;
+}
+
+.data-table tbody tr:hover td {
+    background-color: var(--green-soft);
+}
+
+.npm-pill {
+    display: inline-block;
+    background: var(--green-gradient); /* Gradasi Hijau */
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.76rem;
+    padding: 3px 12px;
+    border-radius: 50px;
+    border: 1.5px solid var(--gold-border); /* Garis Tepi Emas */
+}
+
+.usia-pill {
+    display: inline-block;
+    background: #ffffff;
+    color: var(--green-dark);
+    font-weight: 700;
+    font-size: 0.76rem;
+    padding: 3px 12px;
+    border-radius: 50px;
+    border: 1.5px solid var(--gold-border); /* Garis Tepi Emas */
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    border: 1.5px solid var(--gold-border) !important; /* Garis Tepi Emas */
+    text-transform: uppercase;
+}
+
+.badge-wanita {
+    background: var(--green-gradient) !important;
+    color: #ffffff !important;
+}
+
+.badge-pria {
+    background: linear-gradient(135deg, #047857 0%, #065f46 100%) !important;
+    color: #ffffff !important;
+}
+
+/* Teks Rata Kanan Kecil di Bawah Garis */
+.text-right-small {
+    text-align: right !important;
+    font-size: 0.73rem !important;
+    color: #475569 !important;
+    margin-top: 9px;
+    font-style: italic;
+}
+
+/* ==================== 6. BOTTOM BANNER SECTION ==================== */
+.bottom-banner {
+    background: var(--green-banner); /* Gradasi Hijau */
+    border: 3px solid var(--gold-border); /* Garis Tepi Emas */
+    border-radius: 22px;
+    padding: 34px;
+    margin: 24px 0 50px;
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 30px;
+    align-items: center;
+    color: #ffffff;
+    box-shadow: 0 16px 36px rgba(21, 128, 61, 0.16);
+}
+
+.banner-left {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+}
+
+.banner-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.18);
+    border: 2px solid var(--gold-border); /* Garis Tepi Emas */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    flex-shrink: 0;
+}
+
+.banner-left h3 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 6px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.banner-left p {
+    font-size: 0.84rem;
+    color: #ecfdf5;
+}
+
+.banner-form-card {
+    background: #ffffff; /* Background Putih */
+    border: 2.5px solid var(--gold-border); /* Garis Tepi Emas */
+    border-radius: 16px;
+    padding: 22px;
+    color: #1e293b;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--green-dark);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 9px 12px;
+    background: #ffffff;
+    border: 1.5px solid var(--gold-border); /* Garis Tepi Emas */
+    border-radius: 8px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.btn-full {
+    width: 100%;
+    justify-content: center;
+    padding: 11px;
+}
+
+/* Profile Card (me.php) */
+.profile-card {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    align-items: center;
+    padding: 26px;
+    background: var(--green-banner) !important; /* Gradasi Hijau */
+    border: 3px solid var(--gold-border) !important; /* Garis Tepi Emas */
+    border-radius: 18px;
+    color: #ffffff;
+    box-shadow: 0 12px 28px rgba(21, 128, 61, 0.16);
+}
+
+.profile-img-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.profile-img-container {
+    width: 165px;
+    height: 220px;
+    border-radius: 12px;
+    border: 3px solid var(--gold-border) !important; /* Garis Tepi Emas */
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.profile-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.verified-tag {
+    background: #ffffff;
+    color: var(--green-dark);
+    border: 1.5px solid var(--gold-border);
+    font-size: 0.68rem;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 50px;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-info table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid var(--gold-border);
+}
+
+.profile-info td {
+    padding: 10px 14px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.4) !important;
+    font-size: 0.9rem;
+    color: #ffffff !important;
+    text-align: left !important;
+}
+
+.profile-info tr:last-child td {
+    border-bottom: none !important;
+}
+
+.profile-info td:first-child {
+    font-weight: 700;
+    width: 145px;
+    font-size: 0.75rem !important;
+    color: var(--gold-light) !important;
+    text-transform: uppercase;
+}
+
+@media (max-width: 920px) {
+    .hero-grid, .features-grid, .students-layout, .bottom-banner {
+        grid-template-columns: 1fr;
+    }
+    .nav-links { display: none; }
+    .profile-card { flex-direction: column; text-align: center; }
+}
+
+/* ==================== 7. LUXURY STUDENT ID CARD (Seperti Gambar Referensi) ==================== */
+.idcard-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0 25px;
+}
+
+.idcard {
+    width: 100%;
+    max-width: 820px;
+    background: #f8fafc;
+    border-radius: 22px;
+    border: 3px solid var(--gold-border);
+    box-shadow: 0 25px 50px rgba(6, 95, 70, 0.22), 0 8px 20px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    position: relative;
+    color: #0f172a;
+}
+
+/* Lanyard Slot di Tengah Atas */
+.idcard-slot {
+    width: 76px;
+    height: 15px;
+    background: #ffffff;
+    border: 2px solid var(--gold-border);
+    border-radius: 20px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.25);
+}
+
+/* Header ID Card (Hijau Gelap + Aksen Garis Emas Miring) */
+.idcard-header {
+    background: linear-gradient(135deg, #042f2e 0%, #065f46 55%, #15803d 100%);
+    padding: 28px 32px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-bottom: 5px solid var(--gold-border);
+}
+
+.idcard-header::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    width: 48%;
+    height: 10px;
+    background: linear-gradient(90deg, transparent, #d4af37, #fef08a);
+}
+
+.idcard-org {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.idcard-crest {
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    border: 2.5px solid var(--gold-border);
+    background: rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.idcard-org-text h2 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 0.8px;
+    line-height: 1.15;
+    text-transform: uppercase;
+}
+
+.idcard-org-text h4 {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #eab308;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    margin-top: 2px;
+}
+
+.idcard-org-text p {
+    font-size: 0.72rem;
+    color: #d1fae5;
+    margin-top: 2px;
+}
+
+.idcard-verified {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+}
+
+.idcard-verified-icon {
+    width: 44px;
+    height: 44px;
+    border: 2px solid var(--gold-border);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #eab308;
+    font-size: 1.25rem;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.idcard-verified-text {
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    line-height: 1.25;
+    text-transform: uppercase;
+}
+
+/* Body ID Card */
+.idcard-body {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    background: #ffffff;
+    position: relative;
+}
+
+/* Kolom Kiri: Foto & Barcode NPM */
+.idcard-left {
+    display: flex;
+    flex-direction: column;
+    border-right: 1.5px solid #cbd5e1;
+    background: #ffffff;
+}
+
+.idcard-photo-wrap {
+    padding: 20px 22px 16px;
+}
+
+.idcard-photo {
+    width: 100%;
+    height: 230px;
+    border-radius: 12px;
+    border: 2.5px solid #065f46;
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    background: #e2e8f0;
+}
+
+.idcard-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.idcard-npm-box {
+    background: linear-gradient(135deg, #042f2e 0%, #065f46 100%);
+    padding: 14px 16px 18px;
+    text-align: center;
+    margin-top: auto;
+    border-top: 3px solid var(--gold-border);
+}
+
+.idcard-npm-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.idcard-npm-number {
+    font-size: 1.28rem;
+    font-weight: 800;
+    color: #eab308;
+    letter-spacing: 1.5px;
+    margin: 2px 0 8px;
+}
+
+.idcard-barcode {
+    background: #ffffff;
+    padding: 6px 8px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Kolom Kanan: Detail Mahasiswa, Tanda Tangan, QR Code */
+.idcard-right {
+    padding: 22px 28px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.idcard-name {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #064e3b;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    line-height: 1.15;
+}
+
+.idcard-role {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #b8860b;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    margin-top: 3px;
+    padding-bottom: 10px;
+    border-bottom: 1.5px solid #e2e8f0;
+}
+
+.idcard-details {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    margin: 14px 0;
+}
+
+.idcard-detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.idcard-detail-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #065f46 0%, #15803d 100%);
+    border: 1.5px solid var(--gold-border);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.idcard-detail-text strong {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 800;
+    color: #064e3b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.idcard-detail-text span {
+    font-size: 0.8rem;
+    color: #334155;
+    font-weight: 500;
+}
+
+/* Baris Bawah Kanan: Signature, Issue Date, QR */
+.idcard-bottom-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-top: 10px;
+    border-top: 1px dashed #cbd5e1;
+    gap: 16px;
+}
+
+.idcard-sign-box {
+    text-align: center;
+    flex: 1;
+}
+
+.idcard-sign-svg {
+    height: 38px;
+    margin-bottom: 2px;
+}
+
+.idcard-sign-line {
+    border-top: 1.5px solid #475569;
+    padding-top: 4px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #475569;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+}
+
+.idcard-date-box {
+    text-align: center;
+    padding: 0 16px;
+    border-left: 1.5px solid #cbd5e1;
+}
+
+.idcard-date-box small {
+    display: block;
+    font-size: 0.65rem;
+    font-weight: 800;
+    color: #475569;
+    letter-spacing: 0.5px;
+}
+
+.idcard-date-box strong {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: #064e3b;
+}
+
+.idcard-qr-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.idcard-qr-frame {
+    width: 82px;
+    height: 82px;
+    border: 2px solid #065f46;
+    border-radius: 8px;
+    padding: 5px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.idcard-qr-label {
+    background: linear-gradient(135deg, #b8860b 0%, #d4af37 100%);
+    color: #ffffff;
+    font-size: 0.6rem;
+    font-weight: 800;
+    padding: 3px 10px;
+    border-radius: 4px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+}
+
+/* Footer Strip ID Card */
+.idcard-footer {
+    background: linear-gradient(135deg, #042f2e 0%, #065f46 100%);
+    border-top: 3px solid var(--gold-border);
+    padding: 9px 20px;
+    text-align: center;
+    font-size: 0.72rem;
+    font-weight: 800;
+    color: #eab308;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    .idcard-body { grid-template-columns: 1fr; }
+    .idcard-left { border-right: none; border-bottom: 2px solid var(--gold-border); }
+    .idcard-header { flex-direction: column; text-align: center; gap: 12px; }
+    .idcard-org { flex-direction: column; }
+    .idcard-bottom-row { flex-direction: column; align-items: center; }
+    .idcard-date-box { border-left: none; }
+}
+        .page-view { display: none; animation: fadeInView 0.25s ease-out; }
+        .page-view.active { display: block; }
+        @keyframes fadeInView {
+            from { opacity: 0; transform: translateY(6px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
-        .content-header {
-            background: linear-gradient(135deg, #b8860b 0%, #d4af37 50%, #996515 100%);
-            border: 2px solid #15803d;
-            padding: 11px 16px;
-            text-align: center;
-            font-weight: 800;
-            font-size: 1.05rem;
-            color: #ffffff;
-            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
-            margin-bottom: 16px;
-            border-radius: 6px;
-            letter-spacing: 0.5px;
-            box-shadow: 0 2px 6px rgba(184, 134, 11, 0.2);
-        }
-
-        .info-box {
-            background: linear-gradient(135deg, #c59b27 0%, #d4af37 50%, #b8860b 100%);
-            border: 2px solid #15803d;
-            border-radius: 6px;
-            padding: 10px 14px;
-            color: #ffffff;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-            margin-bottom: 16px;
-            box-shadow: 0 2px 6px rgba(184, 134, 11, 0.18);
-            font-size: 0.82rem;
-            line-height: 1.45;
-        }
-
-        .text-right-small {
-            text-align: right;
-            font-size: 0.74rem;
-            color: #4b5563;
-            margin-top: 8px;
-            font-style: italic;
-            letter-spacing: 0.3px;
-        }
-
-        .table-wrapper {
-            width: 100%;
-            overflow-x: auto;
-        }
-
-        .data-table {
-            width: 100%;
-            border-collapse: collapse;
-            border: 2px solid #15803d;
-            font-size: 0.9rem;
-            border-radius: 6px;
-            overflow: hidden;
-        }
-
-        .data-table th, 
-        .data-table td {
-            border: 1.5px solid #15803d;
-            padding: 10px 12px;
-        }
-
-        .data-table th {
-            background: linear-gradient(135deg, #b8860b 0%, #d4af37 100%);
-            color: #ffffff;
-            font-weight: 750;
-            text-align: center;
-            font-size: 0.78rem;
-            letter-spacing: 0.8px;
-            text-transform: uppercase;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
-        }
-
-        .data-table td {
-            text-align: center;
-            vertical-align: middle;
-        }
-
-        .data-table tr:nth-child(even) {
-            background-color: #fffdf5;
-        }
-
-        .data-table tr:hover {
-            background-color: #fef3c7;
-        }
-
-        .badge {
-            display: inline-block;
-            padding: 4px 12px;
-            border-radius: 16px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            border: 1.5px solid #15803d;
-        }
-
-        .badge-wanita {
-            background: linear-gradient(135deg, #db2777 0%, #be185d 100%);
-            color: #ffffff;
-            box-shadow: 0 2px 4px rgba(190, 24, 93, 0.25);
-        }
-
-        .profile-card {
-            display: flex;
-            flex-direction: row;
-            gap: 22px;
-            align-items: center;
-            padding: 20px;
-            background: linear-gradient(135deg, #b8860b 0%, #d4af37 50%, #996515 100%);
-            border: 2.5px solid #15803d;
-            border-radius: 10px;
-            box-shadow: 0 5px 14px rgba(21, 128, 61, 0.25);
-            color: #ffffff;
-        }
-
-        .profile-img-container {
-            flex-shrink: 0;
-            width: 160px;
-            height: 215px;
-            border-radius: 8px;
-            border: 2.5px solid #15803d;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
-            overflow: hidden;
-            background-color: #fff;
-        }
-
-        .profile-img-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .profile-info {
-            flex: 1;
-        }
-
-        .profile-info table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .profile-info td {
-            padding: 8px 10px;
-            border-bottom: 1px solid rgba(21, 128, 61, 0.45);
-            font-size: 0.92rem;
-            color: #ffffff;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
-            text-align: left;
-        }
-
-        .profile-info tr:last-child td {
-            border-bottom: none;
-        }
-
-        .profile-info td:first-child {
-            font-weight: 700;
-            width: 140px;
-            font-size: 0.8rem;
-            color: #fef08a;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        @media (max-width: 768px) {
-            .app-body { flex-direction: column; }
-            .app-sidebar { width: 100%; border-right: none; border-bottom: 3px solid #15803d; }
-            .profile-card { flex-direction: column; text-align: center; }
-            .profile-info td { text-align: center; }
-        }
+        .nav-link { cursor: pointer; background: none; border: none; }
     </style>
 </head>
 <body>
 
-<div class="app-container">
-    <div class="app-header">
-        <h1>APLIKASI PENDATAAN MHS PONDOK MUHAMMADIYAH XYZ KOTA METRO</h1>
-    </div>
+<!-- 1. TOP NAVBAR (1 LINK NAVIGATION) -->
+<header class="navbar">
+    <div class="container navbar-inner">
+        <a href="#home" onclick="switchPage('home'); return false;" class="brand">
+            <div class="brand-icon">&#127891;</div>
+            <div class="brand-text">
+                <h2>Pondok Muhammadiyah Akrom</h2>
+                <span>Aplikasi Pendataan MHS &bull; Kota Metro</span>
+            </div>
+        </a>
 
-    <div class="app-body">
-        <div class="app-sidebar">
-            <span class="sidebar-title">Menu Navigasi</span>
-            
-            <button type="button" class="nav-btn active" onclick="showTab('home', this)">
-                HOME
-            </button>
-            
-            <button type="button" class="nav-btn" onclick="showTab('datamhs', this)">
-                DATA MHS
-            </button>
-            
-            <button type="button" class="nav-btn" onclick="showTab('wanita', this)">
-                FILTER DATA MHS "WANITA"
-            </button>
-            
-            <button type="button" class="nav-btn" onclick="showTab('about', this)">
-                ABOUT PEMBUAT PROGRAM
+        <nav class="nav-links">
+            <button type="button" id="nav-home" class="nav-link active" onclick="switchPage('home')">Home (Rancangan)</button>
+            <button type="button" id="nav-datamhs" class="nav-link" onclick="switchPage('datamhs')">Data Mahasiswa (No. 3)</button>
+            <button type="button" id="nav-wanita" class="nav-link" onclick="switchPage('wanita')">Filter Wanita (No. 5)</button>
+            <button type="button" id="nav-about" class="nav-link" onclick="switchPage('about')">ID Card Pembuat (No. 7)</button>
+        </nav>
+
+        <div class="nav-actions">
+            <button type="button" onclick="switchPage('about')" class="btn-pill-primary" style="cursor:pointer;">
+                &#129706; ID Card Fatkhul Umam &rarr;
             </button>
         </div>
+    </div>
+</header>
 
-        <div class="app-content">
-            <!-- TAB 1: HOME -->
-            <div id="tab-home" class="tab-pane active">
-                <div class="content-header">DAFTAR DATA MHS</div>
-                <div class="info-box">
-                    <span>📌 <strong>Informasi Sistem:</strong> Aplikasi Pendataan Mahasiswa Pondok Muhammadiyah XYZ Kota Metro. Data dan perhitungan usia diproses secara otomatis.</span>
+<!-- ==================== VIEW 1: HOME (ALL-IN-ONE LANDING PAGE) ==================== -->
+<div id="view-home" class="page-view active">
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="container hero-grid">
+            <div>
+                <span class="hero-tag">&#10024; Kuis 1 Praktikum Big Data &bull; Halaman 19</span>
+                <h1 class="hero-title">
+                    Aplikasi Pendataan MHS
+                    <span>Pondok Muhammadiyah Akrom Kota Metro</span>
+                </h1>
+                <p class="hero-desc">
+                    Sistem informasi terpadu untuk mengelola basis data mahasiswa Pondok Muhammadiyah Akrom Kota Metro, menghitung usia secara otomatis dari tanggal lahir, serta memfilter data mahasiswi secara presisi dalam 1 link praktis.
+                </p>
+                <div class="hero-buttons">
+                    <button type="button" onclick="switchPage('datamhs')" class="btn-pill-primary" style="cursor:pointer;">
+                        &#128203; Lihat Data Mahasiswa &rarr;
+                    </button>
+                    <button type="button" onclick="switchPage('wanita')" class="btn-pill-outline" style="cursor:pointer;">
+                        &#128105; Filter Mahasiswi "Wanita"
+                    </button>
                 </div>
+
+                <div class="hero-trust-row">
+                    <div class="trust-item">
+                        <div class="trust-icon">&#128451;</div>
+                        <div class="trust-text">
+                            <strong>Tabel mahasiswa4</strong>
+                            <span>MySQL Database Aktif</span>
+                        </div>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">&#128101;</div>
+                        <div class="trust-text">
+                            <strong>5 Mahasiswa</strong>
+                            <span>3 Pria &amp; 2 Wanita</span>
+                        </div>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">&#127891;</div>
+                        <div class="trust-text">
+                            <strong>Fatkhul Umam</strong>
+                            <span>NPM: 24430121 &bull; FIKOM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-blob">
+                    <img src="img/foto_profil.jpg" alt="Fatkhul Umam" onerror="this.onerror=null; this.src='img/foto.png';">
+                </div>
+                <div class="floating-badge">
+                    <div class="floating-badge-icon">&#10004;</div>
+                    <div class="floating-badge-text">
+                        <strong>Fatkhul Umam</strong>
+                        <span>NPM: 24430121</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4-CARD FEATURE SECTION -->
+    <section class="section">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-VisualCard">
+                    <div>
+                        <span class="hero-tag" style="background:#fff; margin-bottom:12px;">Rancangan No. 8</span>
+                        <h3>Pondok Muhammadiyah Akrom Kota Metro</h3>
+                        <p>Semua fitur soal Kuis 1 (No. 1 s/d No. 8) terintegrasi dalam 1 halaman praktis.</p>
+                    </div>
+                    <a href="#tabel-utama" class="btn-pill-outline" style="width:fit-content;">
+                        Tabel Utama &darr;
+                    </a>
+                </div>
+
+                <div class="feature-card">
+                    <div>
+                        <div class="feature-icon">&#128203;</div>
+                        <h4>Data Mhs &amp; Usia</h4>
+                        <span class="sub-cat">viewmhsaja.php &bull; Soal No. 3</span>
+                        <p>Menampilkan kolom ID, NPM, Nama Mahasiswa, dan kalkulasi Usia otomatis dari tanggal lahir.</p>
+                    </div>
+                    <button type="button" onclick="switchPage('datamhs')" class="btn-card-link" style="cursor:pointer;">Buka viewmhsaja &rarr;</button>
+                </div>
+
+                <div class="feature-card">
+                    <div>
+                        <div class="feature-icon">&#128105;</div>
+                        <h4>Filter Wanita</h4>
+                        <span class="sub-cat">viewfilterwanita.php &bull; Soal No. 5</span>
+                        <p>Menampilkan daftar mahasiswi khusus berjenis kelamin Wanita (Mujiyanti &amp; Fatimah).</p>
+                    </div>
+                    <button type="button" onclick="switchPage('wanita')" class="btn-card-link" style="cursor:pointer;">Buka Filter Wanita &rarr;</button>
+                </div>
+
+                <div class="feature-card">
+                    <div>
+                        <div class="feature-icon">&#127891;</div>
+                        <h4>ID Card Pembuat</h4>
+                        <span class="sub-cat">me.php &bull; Soal No. 7</span>
+                        <p>Kartu Identitas Mahasiswa resmi: NPM 24430121, Fatkhul Umam, Fakultas Ilmu Komputer, dan Foto.</p>
+                    </div>
+                    <button type="button" onclick="switchPage('about')" class="btn-card-link" style="cursor:pointer;">Buka ID Card Me &rarr;</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STUDENT PROFILE CARDS SECTION -->
+    <section class="section" style="padding-top: 10px;">
+        <div class="container">
+            <div class="students-layout">
+                <div class="section-intro">
+                    <span class="category-tag" style="display:inline-block; margin-bottom:10px;">Record Database</span>
+                    <h3>Daftar <span>Mahasiswa</span> Pondok Akrom</h3>
+                    <p>Data diambil secara langsung dari tabel <code>mahasiswa4</code> pada server MySQL.</p>
+                    <button type="button" onclick="switchPage('datamhs')" class="btn-pill-primary" style="cursor:pointer;">Lihat Detail Usia &rarr;</button>
+                </div>
+
+                <div class="student-cards-grid">
+                                        <div class="student-card">
+                        <div class="student-avatar">A</div>
+                        <h5>Agus Salim</h5>
+                        <span class="npm-tag">NPM: 25510001</span>
+                        <div class="meta-info">
+                            &#128197; 22 Tahun &bull; Pria                        </div>
+                        <button type="button" onclick="switchPage('datamhs')" class="pill-mini" style="cursor:pointer;">ID #1 &rarr;</button>
+                    </div>
+                                        <div class="student-card">
+                        <div class="student-avatar">W</div>
+                        <h5>Wendiyanto</h5>
+                        <span class="npm-tag">NPM: 25510002</span>
+                        <div class="meta-info">
+                            &#128197; 22 Tahun &bull; Pria                        </div>
+                        <button type="button" onclick="switchPage('datamhs')" class="pill-mini" style="cursor:pointer;">ID #2 &rarr;</button>
+                    </div>
+                                        <div class="student-card">
+                        <div class="student-avatar">M</div>
+                        <h5>Mujiyanti</h5>
+                        <span class="npm-tag">NPM: 25510003</span>
+                        <div class="meta-info">
+                            &#128197; 22 Tahun &bull; Wanita                        </div>
+                        <button type="button" onclick="switchPage('datamhs')" class="pill-mini" style="cursor:pointer;">ID #3 &rarr;</button>
+                    </div>
+                                        <div class="student-card">
+                        <div class="student-avatar">F</div>
+                        <h5>Fatimah</h5>
+                        <span class="npm-tag">NPM: 25510004</span>
+                        <div class="meta-info">
+                            &#128197; 22 Tahun &bull; Wanita                        </div>
+                        <button type="button" onclick="switchPage('datamhs')" class="pill-mini" style="cursor:pointer;">ID #4 &rarr;</button>
+                    </div>
+                                        <div class="student-card">
+                        <div class="student-avatar">A</div>
+                        <h5>Andri Hakim</h5>
+                        <span class="npm-tag">NPM: 25510005</span>
+                        <div class="meta-info">
+                            &#128197; 22 Tahun &bull; Pria                        </div>
+                        <button type="button" onclick="switchPage('datamhs')" class="pill-mini" style="cursor:pointer;">ID #5 &rarr;</button>
+                    </div>
+                                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TABEL DATA LENGKAP -->
+    <section class="section" id="tabel-utama" style="padding-top: 10px;">
+        <div class="container">
+            <div class="data-section-box">
+                <div class="content-header-bar">
+                    APLIKASI PENDATAAN MHS PONDOK MUHAMMADIYAH AKROM KOTA METRO
+                </div>
+
+                <div class="info-box">
+                    <span>&#128204; <strong>Daftar Data Mahasiswa (No. 8):</strong> Menampilkan NO, NPM, NAMA MHS, dan USIA dengan hasil rata tengah, garis tepi emas, dan gradasi hijau.</span>
+                </div>
+
+                <div class="toolbar-row">
+                    <span class="category-tag">Tabel Database: mahasiswa4</span>
+                    <input type="text" class="search-input" placeholder="&#128269; Cari NPM atau Nama Mahasiswa..." onkeyup="filterTable(this)">
+                </div>
+
                 <div class="table-wrapper">
                     <table class="data-table">
                         <thead>
                             <tr>
-                                <th style="width: 50px;">NO</th>
-                                <th style="width: 120px;">NPM</th>
+                                <th style="width: 60px;">NO</th>
+                                <th style="width: 140px;">NPM</th>
                                 <th>NAMA MHS</th>
-                                <th style="width: 80px;">USIA</th>
+                                <th style="width: 120px;">USIA</th>
+                                <th style="width: 140px;">JENIS KELAMIN</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr><td>1</td><td>25510001</td><td>Agus Salim</td><td>22</td></tr>
-                            <tr><td>2</td><td>25510002</td><td>Wendiyanto</td><td>22</td></tr>
-                            <tr><td>3</td><td>25510003</td><td>Mujiyanti</td><td>22</td></tr>
-                            <tr><td>4</td><td>25510004</td><td>Fatimah</td><td>22</td></tr>
-                            <tr><td>5</td><td>25510005</td><td>Andri Hakim</td><td>22</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="text-right-small">* Menampilkan total 5 data mahasiswa terdaftar</div>
-            </div>
-
-            <!-- TAB 2: DATA MHS (viewmhsaja.php / viewmhsall.php) -->
-            <div id="tab-datamhs" class="tab-pane">
-                <div class="content-header">DAFTAR DATA MHS</div>
-                <div class="info-box">
-                    <span>📋 <strong>Kuis 1 No. 3:</strong> Menampilkan ID, NPM, NAMA MHS, dan kalkulasi USIA otomatis dari tanggal lahir.</span>
-                </div>
-                <div class="table-wrapper">
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th style="width: 50px;">ID</th>
-                                <th style="width: 120px;">NPM</th>
-                                <th>NAMA MHS</th>
-                                <th style="width: 90px;">USIA</th>
+                                                        <tr>
+                                <td><strong>1</strong></td>
+                                <td><span class="npm-pill">25510001</span></td>
+                                <td><strong>Agus Salim</strong></td>
+                                <td><span class="usia-pill">22 Tahun</span></td>
+                                <td>
+                                    <span class="badge badge-pria">
+                                        Pria                                    </span>
+                                </td>
                             </tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>1</td><td>25510001</td><td>Agus Salim</td><td>22 Tahun</td></tr>
-                            <tr><td>2</td><td>25510002</td><td>Wendiyanto</td><td>22 Tahun</td></tr>
-                            <tr><td>3</td><td>25510003</td><td>Mujiyanti</td><td>22 Tahun</td></tr>
-                            <tr><td>4</td><td>25510004</td><td>Fatimah</td><td>22 Tahun</td></tr>
-                            <tr><td>5</td><td>25510005</td><td>Andri Hakim</td><td>22 Tahun</td></tr>
-                        </tbody>
+                                                        <tr>
+                                <td><strong>2</strong></td>
+                                <td><span class="npm-pill">25510002</span></td>
+                                <td><strong>Wendiyanto</strong></td>
+                                <td><span class="usia-pill">22 Tahun</span></td>
+                                <td>
+                                    <span class="badge badge-pria">
+                                        Pria                                    </span>
+                                </td>
+                            </tr>
+                                                        <tr>
+                                <td><strong>3</strong></td>
+                                <td><span class="npm-pill">25510003</span></td>
+                                <td><strong>Mujiyanti</strong></td>
+                                <td><span class="usia-pill">22 Tahun</span></td>
+                                <td>
+                                    <span class="badge badge-wanita">
+                                        Wanita                                    </span>
+                                </td>
+                            </tr>
+                                                        <tr>
+                                <td><strong>4</strong></td>
+                                <td><span class="npm-pill">25510004</span></td>
+                                <td><strong>Fatimah</strong></td>
+                                <td><span class="usia-pill">22 Tahun</span></td>
+                                <td>
+                                    <span class="badge badge-wanita">
+                                        Wanita                                    </span>
+                                </td>
+                            </tr>
+                                                        <tr>
+                                <td><strong>5</strong></td>
+                                <td><span class="npm-pill">25510005</span></td>
+                                <td><strong>Andri Hakim</strong></td>
+                                <td><span class="usia-pill">22 Tahun</span></td>
+                                <td>
+                                    <span class="badge badge-pria">
+                                        Pria                                    </span>
+                                </td>
+                            </tr>
+                                                    </tbody>
                     </table>
                 </div>
-                <div class="text-right-small">* localhost/bigdata/viewmhsaja.php &bull; 5 Record</div>
+
+                <div class="text-right-small">
+                    * Menampilkan total 5 record mahasiswa Pondok Muhammadiyah Akrom Kota Metro
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEKSI ID CARD MAHASISWA PEMBUAT PROGRAM -->
+    <section class="section" style="padding-top: 10px;">
+        <div class="container">
+            <div class="data-section-box">
+                <div class="content-header-bar">
+                    ID CARD MAHASISWA RESMI &bull; PEMBUAT PROGRAM (ME.PHP)
+                </div>
+                <!-- idcard_component.php - Komponen ID Card Mahasiswa (Fatkhul Umam - NPM 24430121) -->
+<div class="idcard-wrapper">
+    <div class="idcard">
+        <!-- Lubang Gantungan ID Card (Lanyard Slot) -->
+        <div class="idcard-slot"></div>
+
+        <!-- Header ID Card -->
+        <div class="idcard-header">
+            <div class="idcard-org">
+                <div class="idcard-crest">
+                    <!-- Emblem Gold SVG -->
+                    <svg width="42" height="42" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="32" cy="32" r="28" stroke="#eab308" stroke-width="2.5"/>
+                        <ellipse cx="32" cy="32" rx="14" ry="28" stroke="#eab308" stroke-width="1.8"/>
+                        <line x1="4" y1="32" x2="60" y2="32" stroke="#eab308" stroke-width="1.8"/>
+                        <line x1="8" y1="20" x2="56" y2="20" stroke="#eab308" stroke-width="1.5"/>
+                        <line x1="8" y1="44" x2="56" y2="44" stroke="#eab308" stroke-width="1.5"/>
+                        <path d="M32 10L37 22H27L32 10Z" fill="#fef08a"/>
+                        <circle cx="32" cy="32" r="6" fill="#eab308"/>
+                    </svg>
+                </div>
+                <div class="idcard-org-text">
+                    <h2>PONDOK MUHAMMADIYAH AKROM</h2>
+                    <h4>FAKULTAS ILMU KOMPUTER &bull; KOTA METRO</h4>
+                    <p>Investing in Knowledge, Building the Future of Big Data</p>
+                </div>
             </div>
 
-            <!-- TAB 3: FILTER WANITA (viewfilterwanita.php) -->
-            <div id="tab-wanita" class="tab-pane">
-                <div class="content-header">DAFTAR DATA MAHASISWA "WANITA"</div>
-                <div class="info-box">
-                    <span>👩 <strong>Kuis 1 No. 5:</strong> Menampilkan hasil filter data khusus mahasiswi berjenis kelamin <strong>Wanita</strong>.</span>
+            <div class="idcard-verified">
+                <div class="idcard-verified-icon">&#128274;</div>
+                <div class="idcard-verified-text">
+                    VERIFIED<br>&amp; SECURED
                 </div>
+            </div>
+        </div>
+
+        <!-- Body ID Card -->
+        <div class="idcard-body">
+            <!-- Kiri: Foto & Barcode NPM -->
+            <div class="idcard-left">
+                <div class="idcard-photo-wrap">
+                    <div class="idcard-photo">
+                        <img src="img/foto_profil.jpg" alt="Fatkhul Umam" onerror="this.onerror=null; this.src='img/foto.png';">
+                    </div>
+                </div>
+
+                <div class="idcard-npm-box">
+                    <div class="idcard-npm-label">STUDENT ID / NPM</div>
+                    <div class="idcard-npm-number">24430121</div>
+                    <div class="idcard-barcode">
+                        <!-- Realistic Barcode SVG -->
+                        <svg width="185" height="36" viewBox="0 0 185 36" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="2" width="3" height="32" fill="#0f172a"/>
+                            <rect x="8" y="2" width="1.5" height="32" fill="#0f172a"/>
+                            <rect x="12" y="2" width="4" height="32" fill="#0f172a"/>
+                            <rect x="19" y="2" width="2" height="32" fill="#0f172a"/>
+                            <rect x="24" y="2" width="1.5" height="32" fill="#0f172a"/>
+                            <rect x="29" y="2" width="5" height="32" fill="#0f172a"/>
+                            <rect x="37" y="2" width="2" height="32" fill="#0f172a"/>
+                            <rect x="42" y="2" width="3" height="32" fill="#0f172a"/>
+                            <rect x="48" y="2" width="1.5" height="32" fill="#0f172a"/>
+                            <rect x="53" y="2" width="4" height="32" fill="#0f172a"/>
+                            <rect x="60" y="2" width="2.5" height="32" fill="#0f172a"/>
+                            <rect x="65" y="2" width="1.5" height="32" fill="#0f172a"/>
+                            <rect x="70" y="2" width="4.5" height="32" fill="#0f172a"/>
+                            <rect x="78" y="2" width="2" height="32" fill="#0f172a"/>
+                            <rect x="83" y="2" width="3.5" height="32" fill="#0f172a"/>
+                            <rect x="90" y="2" width="1.5" height="32" fill="#0f172a"/>
+                            <rect x="95" y="2" width="4" height="32" fill="#0f172a"/>
+                            <rect x="102" y="2" width="2" height="32" fill="#0f172a"/>
+                            <rect x="107" y="2" width="5" height="32" fill="#0f172a"/>
+                            <rect x="115" y="2" width="1.5" height="32" fill="#0f172a"/>
+                            <rect x="120" y="2" width="3" height="32" fill="#0f172a"/>
+                            <rect x="126" y="2" width="2" height="32" fill="#0f172a"/>
+                            <rect x="131" y="2" width="4" height="32" fill="#0f172a"/>
+                            <rect x="138" y="2" width="1.5" height="32" fill="#0f172a"/>
+                            <rect x="143" y="2" width="3.5" height="32" fill="#0f172a"/>
+                            <rect x="150" y="2" width="2" height="32" fill="#0f172a"/>
+                            <rect x="155" y="2" width="4.5" height="32" fill="#0f172a"/>
+                            <rect x="163" y="2" width="1.5" height="32" fill="#0f172a"/>
+                            <rect x="168" y="2" width="3" height="32" fill="#0f172a"/>
+                            <rect x="174" y="2" width="2" height="32" fill="#0f172a"/>
+                            <rect x="179" y="2" width="4" height="32" fill="#0f172a"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kanan: Informasi Mahasiswa, Signature, Issue Date, QR -->
+            <div class="idcard-right">
+                <div>
+                    <div class="idcard-name">FATKHUL UMAM</div>
+                    <div class="idcard-role">MAHASISWA &ndash; FAKULTAS ILMU KOMPUTER</div>
+
+                    <div class="idcard-details">
+                        <div class="idcard-detail-item">
+                            <div class="idcard-detail-icon">&#128100;</div>
+                            <div class="idcard-detail-text">
+                                <strong>DEPARTMENT / FAKULTAS</strong>
+                                <span>Fakultas Ilmu Komputer &bull; Pondok Muhammadiyah Akrom Kota Metro</span>
+                            </div>
+                        </div>
+
+                        <div class="idcard-detail-item">
+                            <div class="idcard-detail-icon">&#128737;</div>
+                            <div class="idcard-detail-text">
+                                <strong>AUTHORITY &amp; PROJECT</strong>
+                                <span>Lead Developer Aplikasi Pendataan Mahasiswa (Database MySQL Tabel <code>mahasiswa4</code>)</span>
+                            </div>
+                        </div>
+
+                        <div class="idcard-detail-item">
+                            <div class="idcard-detail-icon">&#128202;</div>
+                            <div class="idcard-detail-text">
+                                <strong>ACADEMIC SUPERVISOR / DOSEN PENGAMPU</strong>
+                                <span>Arif Hidayat, S.T., M.Kom &ndash; Praktikum Big Data (Kuis 1)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Baris Bawah: Tanda Tangan, Tanggal, QR Code -->
+                <div class="idcard-bottom-row">
+                    <div class="idcard-sign-box">
+                        <svg class="idcard-sign-svg" width="150" height="38" viewBox="0 0 150 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 28C25 10 35 6 38 18C40 26 28 32 34 22C42 12 52 14 55 24C58 29 66 15 74 14C80 13 78 27 86 24C95 21 104 10 115 16C122 20 118 28 135 20" stroke="#064e3b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <div class="idcard-sign-line">AUTHORIZED SIGNATURE</div>
+                    </div>
+
+                    <div class="idcard-date-box">
+                        <small>ISSUE DATE</small>
+                        <strong>01 NOV 2026</strong>
+                    </div>
+
+                    <div class="idcard-qr-box">
+                        <div class="idcard-qr-frame">
+                            <!-- Crisp QR Code SVG -->
+                            <svg width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2" y="2" width="18" height="18" stroke="#064e3b" stroke-width="3"/>
+                                <rect x="7" y="7" width="8" height="8" fill="#064e3b"/>
+                                <rect x="48" y="2" width="18" height="18" stroke="#064e3b" stroke-width="3"/>
+                                <rect x="53" y="7" width="8" height="8" fill="#064e3b"/>
+                                <rect x="2" y="48" width="18" height="18" stroke="#064e3b" stroke-width="3"/>
+                                <rect x="7" y="53" width="8" height="8" fill="#064e3b"/>
+                                <rect x="26" y="4" width="5" height="5" fill="#064e3b"/>
+                                <rect x="35" y="4" width="6" height="5" fill="#064e3b"/>
+                                <rect x="26" y="13" width="6" height="6" fill="#064e3b"/>
+                                <rect x="36" y="14" width="5" height="10" fill="#064e3b"/>
+                                <rect x="4" y="26" width="6" height="6" fill="#064e3b"/>
+                                <rect x="14" y="26" width="8" height="5" fill="#064e3b"/>
+                                <rect x="26" y="26" width="16" height="16" stroke="#064e3b" stroke-width="2.5"/>
+                                <rect x="31" y="31" width="6" height="6" fill="#eab308"/>
+                                <rect x="48" y="26" width="6" height="6" fill="#064e3b"/>
+                                <rect x="58" y="26" width="6" height="10" fill="#064e3b"/>
+                                <rect x="4" y="36" width="10" height="6" fill="#064e3b"/>
+                                <rect x="26" y="48" width="6" height="6" fill="#064e3b"/>
+                                <rect x="36" y="48" width="8" height="6" fill="#064e3b"/>
+                                <rect x="48" y="44" width="6" height="12" fill="#064e3b"/>
+                                <rect x="58" y="48" width="6" height="6" fill="#064e3b"/>
+                                <rect x="26" y="58" width="12" height="6" fill="#064e3b"/>
+                                <rect x="44" y="58" width="10" height="6" fill="#064e3b"/>
+                                <rect x="58" y="58" width="6" height="6" fill="#064e3b"/>
+                            </svg>
+                        </div>
+                        <span class="idcard-qr-label">SCAN TO VERIFY</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Strip ID Card -->
+        <div class="idcard-footer">
+            INTEGRITY &nbsp;&bull;&nbsp; TRANSPARENCY &nbsp;&bull;&nbsp; SECURITY &nbsp;&bull;&nbsp; TRUST
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- ==================== VIEW 2: DATA MAHASISWA & USIA (viewmhsaja.php) ==================== -->
+<div id="view-datamhs" class="page-view">
+    <section class="section">
+        <div class="container">
+            <div class="data-section-box">
+                <div class="content-header-bar">
+                    DAFTAR DATA MHS &bull; PONDOK MUHAMMADIYAH AKROM KOTA METRO
+                </div>
+
+                <div class="info-box">
+                    <span>&#128203; <strong>Soal Kuis No. 3 &amp; 4 (viewmhsaja.php):</strong> Menampilkan kolom <strong>ID, NPM, NAMA MHS,</strong> dan <strong>USIA</strong> yang dihitung otomatis dari tanggal lahir.</span>
+                </div>
+
+                <div class="toolbar-row">
+                    <span class="category-tag">Kategori: Data Mahasiswa &amp; Usia</span>
+                    <input type="text" class="search-input" placeholder="&#128269; Cari NPM atau Nama..." onkeyup="filterTable(this)">
+                </div>
+
                 <div class="table-wrapper">
                     <table class="data-table">
                         <thead>
                             <tr>
                                 <th style="width: 60px;">ID</th>
+                                <th style="width: 140px;">NPM</th>
                                 <th>NAMA MHS</th>
-                                <th style="width: 160px;">JENIS KELAMIN</th>
+                                <th style="width: 120px;">USIA</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>3</td>
-                                <td>Mujiyanti</td>
-                                <td><span class="badge badge-wanita">Wanita</span></td>
+                                                        <tr>
+                                <td><strong>1</strong></td>
+                                <td><span class="npm-pill">25510001</span></td>
+                                <td><strong>Agus Salim</strong></td>
+                                <td><span class="usia-pill">22 Tahun</span></td>
                             </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>Fatimah</td>
-                                <td><span class="badge badge-wanita">Wanita</span></td>
+                                                        <tr>
+                                <td><strong>2</strong></td>
+                                <td><span class="npm-pill">25510002</span></td>
+                                <td><strong>Wendiyanto</strong></td>
+                                <td><span class="usia-pill">22 Tahun</span></td>
                             </tr>
-                        </tbody>
+                                                        <tr>
+                                <td><strong>3</strong></td>
+                                <td><span class="npm-pill">25510003</span></td>
+                                <td><strong>Mujiyanti</strong></td>
+                                <td><span class="usia-pill">22 Tahun</span></td>
+                            </tr>
+                                                        <tr>
+                                <td><strong>4</strong></td>
+                                <td><span class="npm-pill">25510004</span></td>
+                                <td><strong>Fatimah</strong></td>
+                                <td><span class="usia-pill">22 Tahun</span></td>
+                            </tr>
+                                                        <tr>
+                                <td><strong>5</strong></td>
+                                <td><span class="npm-pill">25510005</span></td>
+                                <td><strong>Andri Hakim</strong></td>
+                                <td><span class="usia-pill">22 Tahun</span></td>
+                            </tr>
+                                                    </tbody>
                     </table>
                 </div>
-                <div class="text-right-small">* localhost/bigdata/viewfilterwanita.php &bull; Terfilter 2 Record Wanita</div>
+
+                <div class="text-right-small">
+                    * localhost/bigdata/viewmhsaja.php &bull; Total 5 Record Mahasiswa
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- ==================== VIEW 3: FILTER WANITA (viewfilterwanita.php) ==================== -->
+<div id="view-wanita" class="page-view">
+    <section class="section">
+        <div class="container">
+            <div class="data-section-box">
+                <div class="content-header-bar">
+                    DAFTAR DATA MAHASISWA "WANITA" &bull; PONDOK MUHAMMADIYAH AKROM KOTA METRO
+                </div>
+
+                <div class="info-box">
+                    <span>&#128105; <strong>Soal Kuis No. 5 &amp; 6 (viewfilterwanita.php):</strong> Menampilkan hasil pemfilteran SQL <code>WHERE jenis_kelamin = 'Wanita'</code> pada kolom <strong>ID, NAMA MHS,</strong> dan <strong>JENIS KELAMIN</strong>.</span>
+                </div>
+
+                <div class="toolbar-row">
+                    <span class="category-tag">Kategori: Filter Mahasiswi Wanita</span>
+                    <input type="text" class="search-input" placeholder="&#128269; Cari Nama Mahasiswi..." onkeyup="filterTable(this)">
+                </div>
+
+                <div class="table-wrapper">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 65px;">ID</th>
+                                <th>NAMA MHS</th>
+                                <th style="width: 170px;">JENIS KELAMIN</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                                        <tr>
+                                <td><strong>3</strong></td>
+                                <td><strong>Mujiyanti</strong></td>
+                                <td><span class="badge badge-wanita">Wanita</span></td>
+                            </tr>
+                                                        <tr>
+                                <td><strong>4</strong></td>
+                                <td><strong>Fatimah</strong></td>
+                                <td><span class="badge badge-wanita">Wanita</span></td>
+                            </tr>
+                                                    </tbody>
+                    </table>
+                </div>
+
+                <div class="text-right-small">
+                    * localhost/bigdata/viewfilterwanita.php &bull; Terfilter 2 Record Wanita
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- ==================== VIEW 4: ID CARD PEMBUAT PROGRAM (me.php) ==================== -->
+<div id="view-about" class="page-view">
+    <section class="section">
+        <div class="container">
+            <div class="data-section-box">
+                <div class="content-header-bar">
+                    ABOUT PEMBUAT PROGRAM &bull; ID CARD MAHASISWA RESMI
+                </div>
+
+                <div class="info-box">
+                    <span>&#127891; <strong>Soal Kuis No. 7 (me.php):</strong> Kartu Identitas Mahasiswa Resmi Pembuat Program (NPM: <strong>24430121</strong>, Nama: <strong>Fatkhul Umam</strong>, Fakultas: <strong>Fakultas Ilmu Komputer</strong>, Foto Almamater).</span>
+                </div>
+
+                <!-- idcard_component.php - Komponen ID Card Mahasiswa (Fatkhul Umam - NPM 24430121) -->
+<div class="idcard-wrapper">
+    <div class="idcard">
+        <!-- Lubang Gantungan ID Card (Lanyard Slot) -->
+        <div class="idcard-slot"></div>
+
+        <!-- Header ID Card -->
+        <div class="idcard-header">
+            <div class="idcard-org">
+                <div class="idcard-crest">
+                    <!-- Emblem Gold SVG -->
+                    <svg width="42" height="42" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="32" cy="32" r="28" stroke="#eab308" stroke-width="2.5"/>
+                        <ellipse cx="32" cy="32" rx="14" ry="28" stroke="#eab308" stroke-width="1.8"/>
+                        <line x1="4" y1="32" x2="60" y2="32" stroke="#eab308" stroke-width="1.8"/>
+                        <line x1="8" y1="20" x2="56" y2="20" stroke="#eab308" stroke-width="1.5"/>
+                        <line x1="8" y1="44" x2="56" y2="44" stroke="#eab308" stroke-width="1.5"/>
+                        <path d="M32 10L37 22H27L32 10Z" fill="#fef08a"/>
+                        <circle cx="32" cy="32" r="6" fill="#eab308"/>
+                    </svg>
+                </div>
+                <div class="idcard-org-text">
+                    <h2>PONDOK MUHAMMADIYAH AKROM</h2>
+                    <h4>FAKULTAS ILMU KOMPUTER &bull; KOTA METRO</h4>
+                    <p>Investing in Knowledge, Building the Future of Big Data</p>
+                </div>
             </div>
 
-            <!-- TAB 4: ABOUT PEMBUAT PROGRAM (me.php) -->
-            <div id="tab-about" class="tab-pane">
-                <div class="content-header">ABOUT PEMBUAT PROGRAM</div>
-                <div class="info-box">
-                    <span>🎓 <strong>Biodata Programmer:</strong> Informasi resmi mahasiswa pengembang aplikasi pendataan data mahasiswa Pondok Muhammadiyah XYZ Kota Metro.</span>
+            <div class="idcard-verified">
+                <div class="idcard-verified-icon">&#128274;</div>
+                <div class="idcard-verified-text">
+                    VERIFIED<br>&amp; SECURED
                 </div>
-                <div class="profile-card">
-                    <div class="profile-img-container">
-                        <img src="img/foto_profil.jpg" alt="Foto Fatkhul Umam" onerror="this.onerror=null; this.src='img/foto.png';">
-                    </div>
-                    <div class="profile-info">
-                        <table>
-                            <tr>
-                                <td>NPM</td>
-                                <td>: <strong>24430121</strong></td>
-                            </tr>
-                            <tr>
-                                <td>Nama Mahasiswa</td>
-                                <td>: <strong>Fatkhul Umam</strong></td>
-                            </tr>
-                            <tr>
-                                <td>Fakultas</td>
-                                <td>: <strong>Fakultas Ilmu Komputer</strong></td>
-                            </tr>
-                            <tr>
-                                <td>Mata Kuliah</td>
-                                <td>: Big Data (Praktikum)</td>
-                            </tr>
-                            <tr>
-                                <td>Dosen Pengampu</td>
-                                <td>: Arif Hidayat, S.T., M.Kom</td>
-                            </tr>
-                            <tr>
-                                <td>Tugas</td>
-                                <td>: KUIS 1 - Analisis, Database & Perancangan Antarmuka</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                <div class="text-right-small">* localhost/bigdata/me.php &bull; Fatkhul Umam (24430121)</div>
             </div>
+        </div>
+
+        <!-- Body ID Card -->
+        <div class="idcard-body">
+            <!-- Kiri: Foto & Barcode NPM -->
+            <div class="idcard-left">
+                <div class="idcard-photo-wrap">
+                    <div class="idcard-photo">
+                        <img src="img/foto_profil.jpg" alt="Fatkhul Umam" onerror="this.onerror=null; this.src='img/foto.png';">
+                    </div>
+                </div>
+
+                <div class="idcard-npm-box">
+                    <div class="idcard-npm-label">STUDENT ID / NPM</div>
+                    <div class="idcard-npm-number">24430121</div>
+                    <div class="idcard-barcode">
+                        <!-- Realistic Barcode SVG -->
+                        <svg width="185" height="36" viewBox="0 0 185 36" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="2" width="3" height="32" fill="#0f172a"/>
+                            <rect x="8" y="2" width="1.5" height="32" fill="#0f172a"/>
+                            <rect x="12" y="2" width="4" height="32" fill="#0f172a"/>
+                            <rect x="19" y="2" width="2" height="32" fill="#0f172a"/>
+                            <rect x="24" y="2" width="1.5" height="32" fill="#0f172a"/>
+                            <rect x="29" y="2" width="5" height="32" fill="#0f172a"/>
+                            <rect x="37" y="2" width="2" height="32" fill="#0f172a"/>
+                            <rect x="42" y="2" width="3" height="32" fill="#0f172a"/>
+                            <rect x="48" y="2" width="1.5" height="32" fill="#0f172a"/>
+                            <rect x="53" y="2" width="4" height="32" fill="#0f172a"/>
+                            <rect x="60" y="2" width="2.5" height="32" fill="#0f172a"/>
+                            <rect x="65" y="2" width="1.5" height="32" fill="#0f172a"/>
+                            <rect x="70" y="2" width="4.5" height="32" fill="#0f172a"/>
+                            <rect x="78" y="2" width="2" height="32" fill="#0f172a"/>
+                            <rect x="83" y="2" width="3.5" height="32" fill="#0f172a"/>
+                            <rect x="90" y="2" width="1.5" height="32" fill="#0f172a"/>
+                            <rect x="95" y="2" width="4" height="32" fill="#0f172a"/>
+                            <rect x="102" y="2" width="2" height="32" fill="#0f172a"/>
+                            <rect x="107" y="2" width="5" height="32" fill="#0f172a"/>
+                            <rect x="115" y="2" width="1.5" height="32" fill="#0f172a"/>
+                            <rect x="120" y="2" width="3" height="32" fill="#0f172a"/>
+                            <rect x="126" y="2" width="2" height="32" fill="#0f172a"/>
+                            <rect x="131" y="2" width="4" height="32" fill="#0f172a"/>
+                            <rect x="138" y="2" width="1.5" height="32" fill="#0f172a"/>
+                            <rect x="143" y="2" width="3.5" height="32" fill="#0f172a"/>
+                            <rect x="150" y="2" width="2" height="32" fill="#0f172a"/>
+                            <rect x="155" y="2" width="4.5" height="32" fill="#0f172a"/>
+                            <rect x="163" y="2" width="1.5" height="32" fill="#0f172a"/>
+                            <rect x="168" y="2" width="3" height="32" fill="#0f172a"/>
+                            <rect x="174" y="2" width="2" height="32" fill="#0f172a"/>
+                            <rect x="179" y="2" width="4" height="32" fill="#0f172a"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kanan: Informasi Mahasiswa, Signature, Issue Date, QR -->
+            <div class="idcard-right">
+                <div>
+                    <div class="idcard-name">FATKHUL UMAM</div>
+                    <div class="idcard-role">MAHASISWA &ndash; FAKULTAS ILMU KOMPUTER</div>
+
+                    <div class="idcard-details">
+                        <div class="idcard-detail-item">
+                            <div class="idcard-detail-icon">&#128100;</div>
+                            <div class="idcard-detail-text">
+                                <strong>DEPARTMENT / FAKULTAS</strong>
+                                <span>Fakultas Ilmu Komputer &bull; Pondok Muhammadiyah Akrom Kota Metro</span>
+                            </div>
+                        </div>
+
+                        <div class="idcard-detail-item">
+                            <div class="idcard-detail-icon">&#128737;</div>
+                            <div class="idcard-detail-text">
+                                <strong>AUTHORITY &amp; PROJECT</strong>
+                                <span>Lead Developer Aplikasi Pendataan Mahasiswa (Database MySQL Tabel <code>mahasiswa4</code>)</span>
+                            </div>
+                        </div>
+
+                        <div class="idcard-detail-item">
+                            <div class="idcard-detail-icon">&#128202;</div>
+                            <div class="idcard-detail-text">
+                                <strong>ACADEMIC SUPERVISOR / DOSEN PENGAMPU</strong>
+                                <span>Arif Hidayat, S.T., M.Kom &ndash; Praktikum Big Data (Kuis 1)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Baris Bawah: Tanda Tangan, Tanggal, QR Code -->
+                <div class="idcard-bottom-row">
+                    <div class="idcard-sign-box">
+                        <svg class="idcard-sign-svg" width="150" height="38" viewBox="0 0 150 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 28C25 10 35 6 38 18C40 26 28 32 34 22C42 12 52 14 55 24C58 29 66 15 74 14C80 13 78 27 86 24C95 21 104 10 115 16C122 20 118 28 135 20" stroke="#064e3b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <div class="idcard-sign-line">AUTHORIZED SIGNATURE</div>
+                    </div>
+
+                    <div class="idcard-date-box">
+                        <small>ISSUE DATE</small>
+                        <strong>01 NOV 2026</strong>
+                    </div>
+
+                    <div class="idcard-qr-box">
+                        <div class="idcard-qr-frame">
+                            <!-- Crisp QR Code SVG -->
+                            <svg width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2" y="2" width="18" height="18" stroke="#064e3b" stroke-width="3"/>
+                                <rect x="7" y="7" width="8" height="8" fill="#064e3b"/>
+                                <rect x="48" y="2" width="18" height="18" stroke="#064e3b" stroke-width="3"/>
+                                <rect x="53" y="7" width="8" height="8" fill="#064e3b"/>
+                                <rect x="2" y="48" width="18" height="18" stroke="#064e3b" stroke-width="3"/>
+                                <rect x="7" y="53" width="8" height="8" fill="#064e3b"/>
+                                <rect x="26" y="4" width="5" height="5" fill="#064e3b"/>
+                                <rect x="35" y="4" width="6" height="5" fill="#064e3b"/>
+                                <rect x="26" y="13" width="6" height="6" fill="#064e3b"/>
+                                <rect x="36" y="14" width="5" height="10" fill="#064e3b"/>
+                                <rect x="4" y="26" width="6" height="6" fill="#064e3b"/>
+                                <rect x="14" y="26" width="8" height="5" fill="#064e3b"/>
+                                <rect x="26" y="26" width="16" height="16" stroke="#064e3b" stroke-width="2.5"/>
+                                <rect x="31" y="31" width="6" height="6" fill="#eab308"/>
+                                <rect x="48" y="26" width="6" height="6" fill="#064e3b"/>
+                                <rect x="58" y="26" width="6" height="10" fill="#064e3b"/>
+                                <rect x="4" y="36" width="10" height="6" fill="#064e3b"/>
+                                <rect x="26" y="48" width="6" height="6" fill="#064e3b"/>
+                                <rect x="36" y="48" width="8" height="6" fill="#064e3b"/>
+                                <rect x="48" y="44" width="6" height="12" fill="#064e3b"/>
+                                <rect x="58" y="48" width="6" height="6" fill="#064e3b"/>
+                                <rect x="26" y="58" width="12" height="6" fill="#064e3b"/>
+                                <rect x="44" y="58" width="10" height="6" fill="#064e3b"/>
+                                <rect x="58" y="58" width="6" height="6" fill="#064e3b"/>
+                            </svg>
+                        </div>
+                        <span class="idcard-qr-label">SCAN TO VERIFY</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Strip ID Card -->
+        <div class="idcard-footer">
+            INTEGRITY &nbsp;&bull;&nbsp; TRANSPARENCY &nbsp;&bull;&nbsp; SECURITY &nbsp;&bull;&nbsp; TRUST
+        </div>
+    </div>
+</div>
+
+                <div class="text-right-small">
+                    * localhost/bigdata/me.php &bull; Kartu Identitas Mahasiswa Terverifikasi: Fatkhul Umam (24430121)
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- BOTTOM BANNER SECTION -->
+<div class="container">
+    <div class="bottom-banner">
+        <div class="banner-left">
+            <div class="banner-icon">&#128187;</div>
+            <div>
+                <h3>Pondok Muhammadiyah Akrom Kota Metro</h3>
+                <p>Aplikasi Pendataan Mahasiswa &bull; Dikembangkan untuk memenuhi tugas Kuis 1 Praktikum Big Data oleh Fatkhul Umam (NPM: 24430121), Fakultas Ilmu Komputer.</p>
+            </div>
+        </div>
+
+        <div class="banner-form-card">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Nama Pembuat Program *</label>
+                    <input type="text" class="form-control" value="Fatkhul Umam" readonly>
+                </div>
+                <div class="form-group">
+                    <label>NPM Mahasiswa *</label>
+                    <input type="text" class="form-control" value="24430121" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Fakultas *</label>
+                    <input type="text" class="form-control" value="Fakultas Ilmu Komputer" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Dosen Pengampu *</label>
+                    <input type="text" class="form-control" value="Arif Hidayat, S.T., M.Kom" readonly>
+                </div>
+            </div>
+            <button type="button" onclick="switchPage('datamhs')" class="btn-pill-primary btn-full" style="cursor:pointer;">
+                &#128203; Lihat Data Mahasiswa &amp; Usia (viewmhsaja) &rarr;
+            </button>
         </div>
     </div>
 </div>
 
 <script>
-function showTab(tabId, btnElement) {
-    var panes = document.querySelectorAll('.tab-pane');
-    for (var i = 0; i < panes.length; i++) {
-        panes[i].classList.remove('active');
-    }
-    var btns = document.querySelectorAll('.nav-btn');
-    for (var j = 0; j < btns.length; j++) {
-        btns[j].classList.remove('active');
-    }
-    document.getElementById('tab-' + tabId).classList.add('active');
-    btnElement.classList.add('active');
+function switchPage(pageId) {
+    document.querySelectorAll('.page-view').forEach(function(el) {
+        el.classList.remove('active');
+    });
+    document.querySelectorAll('.nav-link').forEach(function(el) {
+        el.classList.remove('active');
+    });
+    var target = document.getElementById('view-' + pageId);
+    if (target) target.classList.add('active');
+    var navBtn = document.getElementById('nav-' + pageId);
+    if (navBtn) navBtn.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function filterTable(inputEl) {
+    var filter = inputEl.value.toLowerCase();
+    var table = inputEl.closest('.data-section-box').querySelector('.data-table');
+    var rows = table.querySelectorAll('tbody tr');
+    rows.forEach(function(row) {
+        var text = row.textContent.toLowerCase();
+        row.style.display = text.indexOf(filter) > -1 ? '' : 'none';
+    });
 }
 </script>
-
 </body>
 </html>

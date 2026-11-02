@@ -1,7 +1,7 @@
 <?php
-// layout_header.php - Header dan Sidebar Navigasi Sesuai Rancangan Soal No. 8
+// layout_header.php - Navbar Atas (WellCare Style: Background Putih, Garis Tepi Emas, Gradasi Hijau)
 if (!isset($active_menu)) {
-    $active_menu = '';
+    $active_menu = 'home';
 }
 ?>
 <!DOCTYPE html>
@@ -12,8 +12,7 @@ if (!isset($active_menu)) {
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <title><?php echo isset($page_title) ? $page_title : 'Aplikasi Pendataan Mahasiswa'; ?></title>
-    <!-- Include CSS secara langsung agar browser tidak memakai cache lama -->
+    <title><?php echo isset($page_title) ? $page_title : 'Pondok Muhammadiyah Akrom Kota Metro - Big Data'; ?></title>
     <style>
         <?php 
         $css_file = __DIR__ . '/style.css';
@@ -26,33 +25,29 @@ if (!isset($active_menu)) {
 </head>
 <body>
 
-<div class="app-container">
-    <!-- Header Aplikasi Sesuai Rancangan -->
-    <div class="app-header">
-        <h1>APLIKASI PENDATAAN MHS PONDOK MUHAMMADIYAH XYZ KOTA METRO</h1>
-    </div>
+<!-- 1. TOP NAVBAR -->
+<header class="navbar">
+    <div class="container navbar-inner">
+        <a href="index.php" class="brand">
+            <div class="brand-icon">&#127891;</div>
+            <div class="brand-text">
+                <h2>Pondok Muhammadiyah Akrom</h2>
+                <span>Aplikasi Pendataan MHS &bull; Kota Metro</span>
+            </div>
+        </a>
 
-    <div class="app-body">
-        <!-- Sidebar Menu Navigasi Sesuai Rancangan -->
-        <div class="app-sidebar">
-            <span class="sidebar-title">Menu Navigasi</span>
-            
-            <a href="index.php" class="nav-btn <?php echo ($active_menu == 'home') ? 'active' : ''; ?>">
-                HOME
-            </a>
-            
-            <a href="viewmhsall.php" class="nav-btn <?php echo ($active_menu == 'datamhs') ? 'active' : ''; ?>">
-                DATA MHS
-            </a>
-            
-            <a href="viewfilterwanita.php" class="nav-btn <?php echo ($active_menu == 'wanita') ? 'active' : ''; ?>">
-                FILTER DATA MHS "WANITA"
-            </a>
-            
-            <a href="me.php" class="nav-btn <?php echo ($active_menu == 'about') ? 'active' : ''; ?>">
-                ABOUT PEMBUAT PROGRAM
+        <nav class="nav-links">
+            <a href="index.php" class="nav-link <?php echo ($active_menu == 'home') ? 'active' : ''; ?>">Home</a>
+            <a href="viewmhsaja.php" class="nav-link <?php echo ($active_menu == 'datamhs') ? 'active' : ''; ?>">Data Mahasiswa</a>
+            <a href="viewfilterwanita.php" class="nav-link <?php echo ($active_menu == 'wanita') ? 'active' : ''; ?>">Filter Wanita</a>
+            <a href="me.php" class="nav-link <?php echo ($active_menu == 'about') ? 'active' : ''; ?>">About Pembuat</a>
+            <a href="viewmhsall.php" class="nav-link <?php echo ($active_menu == 'all') ? 'active' : ''; ?>">Tabel Lengkap</a>
+        </nav>
+
+        <div class="nav-actions">
+            <a href="me.php" class="btn-pill-primary">
+                Fatkhul Umam &rarr;
             </a>
         </div>
-
-        <!-- Konten Halaman -->
-        <div class="app-content">
+    </div>
+</header>
